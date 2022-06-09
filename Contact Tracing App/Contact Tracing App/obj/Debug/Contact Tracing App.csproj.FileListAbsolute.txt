@@ -1,0 +1,11 @@
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\Contact Tracing App.exe.config
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\Contact Tracing App.exe
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\Contact Tracing App.pdb
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.csproj.AssemblyReference.cache
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.csproj.SuggestedBindingRedirects.cache
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact_Tracing_App.Form1.resources
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact_Tracing_App.Properties.Resources.resources
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.csproj.GenerateResource.cache
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.csproj.CoreCompileInputs.cache
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.exe
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.pdb
