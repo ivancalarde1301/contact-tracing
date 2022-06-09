@@ -35,7 +35,7 @@ namespace Contact_Tracing_App
             this.lblHeader = new System.Windows.Forms.Label();
             this.lblHeader2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxInfo1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtBoxFirstName = new System.Windows.Forms.TextBox();
@@ -45,31 +45,38 @@ namespace Contact_Tracing_App
             this.lvlBirthDate = new System.Windows.Forms.Label();
             this.txtBoxBirthDate = new System.Windows.Forms.TextBox();
             this.lblmmddyyy = new System.Windows.Forms.Label();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtBoxAge = new System.Windows.Forms.TextBox();
             this.lvlFullAddress = new System.Windows.Forms.Label();
             this.txtBoxUBL = new System.Windows.Forms.TextBox();
             this.lblUBL = new System.Windows.Forms.Label();
             this.lblStreet = new System.Windows.Forms.Label();
-            this.txtBoxStreet = new System.Windows.Forms.TextBox();
-            this.txtBoxVillageSubdivision = new System.Windows.Forms.TextBox();
             this.lblVillageSubdivision = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
-            this.txtBoxProvince = new System.Windows.Forms.TextBox();
             this.lblProvince = new System.Windows.Forms.Label();
             this.txtLandline = new System.Windows.Forms.TextBox();
-            this.lblLandline = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.lblMiddleName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblSuffix = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxSex = new System.Windows.Forms.TextBox();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.txtBoxStreet = new System.Windows.Forms.TextBox();
+            this.txtBoxVillageSubdivision = new System.Windows.Forms.TextBox();
+            this.txtBoxCity = new System.Windows.Forms.TextBox();
+            this.txtBoxProvince = new System.Windows.Forms.TextBox();
+            this.txtBoxCountry = new System.Windows.Forms.TextBox();
+            this.lblCountry = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(12, 523);
+            this.btnSubmit.Location = new System.Drawing.Point(388, 523);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(165, 32);
             this.btnSubmit.TabIndex = 0;
@@ -92,9 +99,9 @@ namespace Contact_Tracing_App
             this.lblHeader.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblHeader.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.White;
-            this.lblHeader.Location = new System.Drawing.Point(9, 11);
+            this.lblHeader.Location = new System.Drawing.Point(12, 13);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(348, 39);
+            this.lblHeader.Size = new System.Drawing.Size(877, 39);
             this.lblHeader.TabIndex = 8;
             this.lblHeader.Text = "Online Contact Tracing Form";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,28 +111,29 @@ namespace Contact_Tracing_App
             this.lblHeader2.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader2.Location = new System.Drawing.Point(12, 65);
             this.lblHeader2.Name = "lblHeader2";
-            this.lblHeader2.Size = new System.Drawing.Size(262, 26);
+            this.lblHeader2.Size = new System.Drawing.Size(877, 26);
             this.lblHeader2.TabIndex = 9;
-            this.lblHeader2.Text = "Object-oriented Programming";
+            this.lblHeader2.Text = "Personal Information";
+            this.lblHeader2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.Size = new System.Drawing.Size(877, 20);
             this.label1.TabIndex = 10;
-            this.label1.Text = "BSCOE 1-5";
+            this.label1.Text = "Please enter your personal information.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // picBoxInfo1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(911, 462);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.picBoxInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxInfo1.Location = new System.Drawing.Point(-5, 114);
+            this.picBoxInfo1.Name = "picBoxInfo1";
+            this.picBoxInfo1.Size = new System.Drawing.Size(911, 462);
+            this.picBoxInfo1.TabIndex = 11;
+            this.picBoxInfo1.TabStop = false;
             // 
             // lblName
             // 
@@ -195,29 +203,29 @@ namespace Contact_Tracing_App
             // lblmmddyyy
             // 
             this.lblmmddyyy.AutoSize = true;
-            this.lblmmddyyy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmmddyyy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmmddyyy.Location = new System.Drawing.Point(411, 155);
             this.lblmmddyyy.Name = "lblmmddyyy";
-            this.lblmmddyyy.Size = new System.Drawing.Size(82, 16);
+            this.lblmmddyyy.Size = new System.Drawing.Size(89, 16);
             this.lblmmddyyy.TabIndex = 20;
-            this.lblmmddyyy.Text = "(mm-dd-yyy)";
+            this.lblmmddyyy.Text = "(mm-dd-yyyy)";
             // 
-            // lblPhoneNumber
+            // lblAge
             // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(569, 147);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(104, 24);
-            this.lblPhoneNumber.TabIndex = 21;
-            this.lblPhoneNumber.Text = "Phone Number";
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(569, 147);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(33, 24);
+            this.lblAge.TabIndex = 21;
+            this.lblAge.Text = "Age";
             // 
-            // txtBoxPhoneNumber
+            // txtBoxAge
             // 
-            this.txtBoxPhoneNumber.Location = new System.Drawing.Point(573, 174);
-            this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
-            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(153, 22);
-            this.txtBoxPhoneNumber.TabIndex = 22;
+            this.txtBoxAge.Location = new System.Drawing.Point(573, 174);
+            this.txtBoxAge.Name = "txtBoxAge";
+            this.txtBoxAge.Size = new System.Drawing.Size(54, 22);
+            this.txtBoxAge.TabIndex = 22;
             // 
             // lvlFullAddress
             // 
@@ -233,7 +241,7 @@ namespace Contact_Tracing_App
             // 
             this.txtBoxUBL.Location = new System.Drawing.Point(17, 255);
             this.txtBoxUBL.Name = "txtBoxUBL";
-            this.txtBoxUBL.Size = new System.Drawing.Size(232, 22);
+            this.txtBoxUBL.Size = new System.Drawing.Size(131, 22);
             this.txtBoxUBL.TabIndex = 24;
             // 
             // lblUBL
@@ -250,65 +258,37 @@ namespace Contact_Tracing_App
             // 
             this.lblStreet.AutoSize = true;
             this.lblStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStreet.Location = new System.Drawing.Point(252, 236);
+            this.lblStreet.Location = new System.Drawing.Point(151, 236);
             this.lblStreet.Name = "lblStreet";
             this.lblStreet.Size = new System.Drawing.Size(42, 16);
             this.lblStreet.TabIndex = 26;
             this.lblStreet.Text = "Street";
             // 
-            // txtBoxStreet
-            // 
-            this.txtBoxStreet.Location = new System.Drawing.Point(255, 255);
-            this.txtBoxStreet.Name = "txtBoxStreet";
-            this.txtBoxStreet.Size = new System.Drawing.Size(153, 22);
-            this.txtBoxStreet.TabIndex = 27;
-            // 
-            // txtBoxVillageSubdivision
-            // 
-            this.txtBoxVillageSubdivision.Location = new System.Drawing.Point(414, 255);
-            this.txtBoxVillageSubdivision.Name = "txtBoxVillageSubdivision";
-            this.txtBoxVillageSubdivision.Size = new System.Drawing.Size(153, 22);
-            this.txtBoxVillageSubdivision.TabIndex = 28;
-            // 
             // lblVillageSubdivision
             // 
             this.lblVillageSubdivision.AutoSize = true;
             this.lblVillageSubdivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVillageSubdivision.Location = new System.Drawing.Point(411, 236);
+            this.lblVillageSubdivision.Location = new System.Drawing.Point(288, 236);
             this.lblVillageSubdivision.Name = "lblVillageSubdivision";
             this.lblVillageSubdivision.Size = new System.Drawing.Size(129, 16);
             this.lblVillageSubdivision.TabIndex = 29;
             this.lblVillageSubdivision.Text = "Village / Subdivision";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(573, 255);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 22);
-            this.textBox1.TabIndex = 30;
-            // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(570, 236);
+            this.lblCity.Location = new System.Drawing.Point(455, 236);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(29, 16);
             this.lblCity.TabIndex = 31;
             this.lblCity.Text = "City";
             // 
-            // txtBoxProvince
-            // 
-            this.txtBoxProvince.Location = new System.Drawing.Point(732, 255);
-            this.txtBoxProvince.Name = "txtBoxProvince";
-            this.txtBoxProvince.Size = new System.Drawing.Size(153, 22);
-            this.txtBoxProvince.TabIndex = 32;
-            // 
             // lblProvince
             // 
             this.lblProvince.AutoSize = true;
             this.lblProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvince.Location = new System.Drawing.Point(729, 236);
+            this.lblProvince.Location = new System.Drawing.Point(592, 236);
             this.lblProvince.Name = "lblProvince";
             this.lblProvince.Size = new System.Drawing.Size(60, 16);
             this.lblProvince.TabIndex = 33;
@@ -321,15 +301,15 @@ namespace Contact_Tracing_App
             this.txtLandline.Size = new System.Drawing.Size(153, 22);
             this.txtLandline.TabIndex = 34;
             // 
-            // lblLandline
+            // lblPhoneNumber
             // 
-            this.lblLandline.AutoSize = true;
-            this.lblLandline.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLandline.Location = new System.Drawing.Point(728, 147);
-            this.lblLandline.Name = "lblLandline";
-            this.lblLandline.Size = new System.Drawing.Size(132, 24);
-            this.lblLandline.TabIndex = 35;
-            this.lblLandline.Text = "Telephone Number";
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(728, 147);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(104, 24);
+            this.lblPhoneNumber.TabIndex = 35;
+            this.lblPhoneNumber.Text = "Phone Number";
             // 
             // lblMiddleName
             // 
@@ -361,30 +341,119 @@ namespace Contact_Tracing_App
             this.lblSuffix.TabIndex = 38;
             this.lblSuffix.Text = "Suffix";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 297);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(911, 279);
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 301);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(877, 26);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Personal Information";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxSex
+            // 
+            this.textBoxSex.Location = new System.Drawing.Point(633, 174);
+            this.textBoxSex.Name = "textBoxSex";
+            this.textBoxSex.Size = new System.Drawing.Size(93, 22);
+            this.textBoxSex.TabIndex = 41;
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(629, 147);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(32, 24);
+            this.lblSex.TabIndex = 42;
+            this.lblSex.Text = "Sex";
+            this.lblSex.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtBoxStreet
+            // 
+            this.txtBoxStreet.Location = new System.Drawing.Point(154, 255);
+            this.txtBoxStreet.Name = "txtBoxStreet";
+            this.txtBoxStreet.Size = new System.Drawing.Size(131, 22);
+            this.txtBoxStreet.TabIndex = 43;
+            // 
+            // txtBoxVillageSubdivision
+            // 
+            this.txtBoxVillageSubdivision.Location = new System.Drawing.Point(291, 255);
+            this.txtBoxVillageSubdivision.Name = "txtBoxVillageSubdivision";
+            this.txtBoxVillageSubdivision.Size = new System.Drawing.Size(161, 22);
+            this.txtBoxVillageSubdivision.TabIndex = 44;
+            // 
+            // txtBoxCity
+            // 
+            this.txtBoxCity.Location = new System.Drawing.Point(458, 255);
+            this.txtBoxCity.Name = "txtBoxCity";
+            this.txtBoxCity.Size = new System.Drawing.Size(131, 22);
+            this.txtBoxCity.TabIndex = 45;
+            // 
+            // txtBoxProvince
+            // 
+            this.txtBoxProvince.Location = new System.Drawing.Point(595, 255);
+            this.txtBoxProvince.Name = "txtBoxProvince";
+            this.txtBoxProvince.Size = new System.Drawing.Size(131, 22);
+            this.txtBoxProvince.TabIndex = 46;
+            // 
+            // txtBoxCountry
+            // 
+            this.txtBoxCountry.Location = new System.Drawing.Point(732, 255);
+            this.txtBoxCountry.Name = "txtBoxCountry";
+            this.txtBoxCountry.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxCountry.TabIndex = 47;
+            // 
+            // lblCountry
+            // 
+            this.lblCountry.AutoSize = true;
+            this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.Location = new System.Drawing.Point(729, 236);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(52, 16);
+            this.lblCountry.TabIndex = 48;
+            this.lblCountry.Text = "Country";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 567);
+            this.Controls.Add(this.lblCountry);
+            this.Controls.Add(this.txtBoxCountry);
+            this.Controls.Add(this.txtBoxProvince);
+            this.Controls.Add(this.txtBoxCity);
+            this.Controls.Add(this.txtBoxVillageSubdivision);
+            this.Controls.Add(this.txtBoxStreet);
+            this.Controls.Add(this.lblSex);
+            this.Controls.Add(this.textBoxSex);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblSuffix);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblMiddleName);
-            this.Controls.Add(this.lblLandline);
+            this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.txtLandline);
             this.Controls.Add(this.lblProvince);
-            this.Controls.Add(this.txtBoxProvince);
             this.Controls.Add(this.lblCity);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblVillageSubdivision);
-            this.Controls.Add(this.txtBoxVillageSubdivision);
-            this.Controls.Add(this.txtBoxStreet);
             this.Controls.Add(this.lblStreet);
             this.Controls.Add(this.lblUBL);
             this.Controls.Add(this.txtBoxUBL);
             this.Controls.Add(this.lvlFullAddress);
-            this.Controls.Add(this.txtBoxPhoneNumber);
-            this.Controls.Add(this.lblPhoneNumber);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtBoxAge);
+            this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblmmddyyy);
             this.Controls.Add(this.txtBoxBirthDate);
             this.Controls.Add(this.lvlBirthDate);
@@ -394,7 +463,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.txtBoxFirstName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBoxInfo1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblHeader2);
             this.Controls.Add(this.lblHeader);
@@ -402,6 +471,7 @@ namespace Contact_Tracing_App
             this.Name = "Form1";
             this.Text = "Contact Tracing App";
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -415,7 +485,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Label lblHeader2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxInfo1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox txtBoxFirstName;
@@ -425,25 +495,31 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lvlBirthDate;
         private System.Windows.Forms.TextBox txtBoxBirthDate;
         private System.Windows.Forms.Label lblmmddyyy;
-        private System.Windows.Forms.Label lblPhoneNumber;
-        private System.Windows.Forms.TextBox txtBoxPhoneNumber;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.TextBox txtBoxAge;
         private System.Windows.Forms.Label lvlFullAddress;
         private System.Windows.Forms.TextBox txtBoxUBL;
         private System.Windows.Forms.Label lblUBL;
         private System.Windows.Forms.Label lblStreet;
-        private System.Windows.Forms.TextBox txtBoxStreet;
-        private System.Windows.Forms.TextBox txtBoxVillageSubdivision;
         private System.Windows.Forms.Label lblVillageSubdivision;
         private EventHandler txtBoxFirstName_TextChanged;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.TextBox txtBoxProvince;
         private System.Windows.Forms.Label lblProvince;
         private System.Windows.Forms.TextBox txtLandline;
-        private System.Windows.Forms.Label lblLandline;
+        private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Label lblMiddleName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblSuffix;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxSex;
+        private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.TextBox txtBoxStreet;
+        private System.Windows.Forms.TextBox txtBoxVillageSubdivision;
+        private System.Windows.Forms.TextBox txtBoxCity;
+        private System.Windows.Forms.TextBox txtBoxProvince;
+        private System.Windows.Forms.TextBox txtBoxCountry;
+        private System.Windows.Forms.Label lblCountry;
     }
 }
 
