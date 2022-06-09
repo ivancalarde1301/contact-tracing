@@ -1,4 +1,6 @@
-﻿namespace Contact_Tracing_App
+﻿using System;
+
+namespace Contact_Tracing_App
 {
     partial class Form1
     {
@@ -28,87 +30,379 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.picboxDesign = new System.Windows.Forms.PictureBox();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.lblHeader2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.txtBoxFirstName = new System.Windows.Forms.TextBox();
+            this.txtBoxMiddleName = new System.Windows.Forms.TextBox();
+            this.txtBoxLastName = new System.Windows.Forms.TextBox();
+            this.txtBoxSuffix = new System.Windows.Forms.TextBox();
+            this.lvlBirthDate = new System.Windows.Forms.Label();
+            this.txtBoxBirthDate = new System.Windows.Forms.TextBox();
+            this.lblmmddyyy = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lvlFullAddress = new System.Windows.Forms.Label();
+            this.txtBoxUBL = new System.Windows.Forms.TextBox();
+            this.lblUBL = new System.Windows.Forms.Label();
+            this.lblStreet = new System.Windows.Forms.Label();
+            this.txtBoxStreet = new System.Windows.Forms.TextBox();
+            this.txtBoxVillageSubdivision = new System.Windows.Forms.TextBox();
+            this.lblVillageSubdivision = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.txtBoxProvince = new System.Windows.Forms.TextBox();
+            this.lblProvince = new System.Windows.Forms.Label();
+            this.txtLandline = new System.Windows.Forms.TextBox();
+            this.lblLandline = new System.Windows.Forms.Label();
+            this.lblMiddleName = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblSuffix = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSubmit
             // 
-            this.button1.Location = new System.Drawing.Point(120, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Enter";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSubmit.Location = new System.Drawing.Point(12, 523);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(165, 32);
+            this.btnSubmit.TabIndex = 0;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // picboxDesign
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 22);
-            this.textBox1.TabIndex = 1;
+            this.picboxDesign.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.picboxDesign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picboxDesign.Location = new System.Drawing.Point(-5, -1);
+            this.picboxDesign.Name = "picboxDesign";
+            this.picboxDesign.Size = new System.Drawing.Size(911, 63);
+            this.picboxDesign.TabIndex = 7;
+            this.picboxDesign.TabStop = false;
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblHeader.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.Color.White;
+            this.lblHeader.Location = new System.Drawing.Point(9, 11);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(348, 39);
+            this.lblHeader.TabIndex = 8;
+            this.lblHeader.Text = "Online Contact Tracing Form";
+            this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblHeader2
+            // 
+            this.lblHeader2.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader2.Location = new System.Drawing.Point(12, 65);
+            this.lblHeader2.Name = "lblHeader2";
+            this.lblHeader2.Size = new System.Drawing.Size(262, 26);
+            this.lblHeader2.TabIndex = 9;
+            this.lblHeader2.Text = "Object-oriented Programming";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 44);
+            this.label1.Font = new System.Drawing.Font("Bebas Neue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "First Name";
+            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "BSCOE 1-5";
             // 
-            // textBox2
+            // pictureBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 22);
-            this.textBox2.TabIndex = 3;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(911, 462);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Middle Name";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(13, 131);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 24);
+            this.lblName.TabIndex = 12;
+            this.lblName.Text = "Name";
             // 
-            // label3
+            // lblFirstName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Last Name";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(14, 155);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(72, 16);
+            this.lblFirstName.TabIndex = 13;
+            this.lblFirstName.Text = "First Name";
             // 
-            // textBox3
+            // txtBoxFirstName
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 22);
-            this.textBox3.TabIndex = 6;
+            this.txtBoxFirstName.Location = new System.Drawing.Point(16, 174);
+            this.txtBoxFirstName.Name = "txtBoxFirstName";
+            this.txtBoxFirstName.Size = new System.Drawing.Size(113, 22);
+            this.txtBoxFirstName.TabIndex = 14;
+            // 
+            // txtBoxMiddleName
+            // 
+            this.txtBoxMiddleName.Location = new System.Drawing.Point(135, 174);
+            this.txtBoxMiddleName.Name = "txtBoxMiddleName";
+            this.txtBoxMiddleName.Size = new System.Drawing.Size(113, 22);
+            this.txtBoxMiddleName.TabIndex = 15;
+            // 
+            // txtBoxLastName
+            // 
+            this.txtBoxLastName.Location = new System.Drawing.Point(254, 174);
+            this.txtBoxLastName.Name = "txtBoxLastName";
+            this.txtBoxLastName.Size = new System.Drawing.Size(113, 22);
+            this.txtBoxLastName.TabIndex = 16;
+            // 
+            // txtBoxSuffix
+            // 
+            this.txtBoxSuffix.Location = new System.Drawing.Point(373, 174);
+            this.txtBoxSuffix.Name = "txtBoxSuffix";
+            this.txtBoxSuffix.Size = new System.Drawing.Size(34, 22);
+            this.txtBoxSuffix.TabIndex = 17;
+            // 
+            // lvlBirthDate
+            // 
+            this.lvlBirthDate.AutoSize = true;
+            this.lvlBirthDate.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlBirthDate.Location = new System.Drawing.Point(410, 131);
+            this.lvlBirthDate.Name = "lvlBirthDate";
+            this.lvlBirthDate.Size = new System.Drawing.Size(77, 24);
+            this.lvlBirthDate.TabIndex = 18;
+            this.lvlBirthDate.Text = "Birth Date";
+            // 
+            // txtBoxBirthDate
+            // 
+            this.txtBoxBirthDate.Location = new System.Drawing.Point(414, 174);
+            this.txtBoxBirthDate.Name = "txtBoxBirthDate";
+            this.txtBoxBirthDate.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxBirthDate.TabIndex = 19;
+            // 
+            // lblmmddyyy
+            // 
+            this.lblmmddyyy.AutoSize = true;
+            this.lblmmddyyy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmmddyyy.Location = new System.Drawing.Point(411, 155);
+            this.lblmmddyyy.Name = "lblmmddyyy";
+            this.lblmmddyyy.Size = new System.Drawing.Size(82, 16);
+            this.lblmmddyyy.TabIndex = 20;
+            this.lblmmddyyy.Text = "(mm-dd-yyy)";
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(569, 147);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(104, 24);
+            this.lblPhoneNumber.TabIndex = 21;
+            this.lblPhoneNumber.Text = "Phone Number";
+            // 
+            // txtBoxPhoneNumber
+            // 
+            this.txtBoxPhoneNumber.Location = new System.Drawing.Point(573, 174);
+            this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
+            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxPhoneNumber.TabIndex = 22;
+            // 
+            // lvlFullAddress
+            // 
+            this.lvlFullAddress.AutoSize = true;
+            this.lvlFullAddress.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlFullAddress.Location = new System.Drawing.Point(13, 212);
+            this.lvlFullAddress.Name = "lvlFullAddress";
+            this.lvlFullAddress.Size = new System.Drawing.Size(95, 24);
+            this.lvlFullAddress.TabIndex = 23;
+            this.lvlFullAddress.Text = "Full Address";
+            // 
+            // txtBoxUBL
+            // 
+            this.txtBoxUBL.Location = new System.Drawing.Point(17, 255);
+            this.txtBoxUBL.Name = "txtBoxUBL";
+            this.txtBoxUBL.Size = new System.Drawing.Size(232, 22);
+            this.txtBoxUBL.TabIndex = 24;
+            // 
+            // lblUBL
+            // 
+            this.lblUBL.AutoSize = true;
+            this.lblUBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUBL.Location = new System.Drawing.Point(14, 236);
+            this.lblUBL.Name = "lblUBL";
+            this.lblUBL.Size = new System.Drawing.Size(102, 16);
+            this.lblUBL.TabIndex = 25;
+            this.lblUBL.Text = "Unit / Block / Lot";
+            // 
+            // lblStreet
+            // 
+            this.lblStreet.AutoSize = true;
+            this.lblStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStreet.Location = new System.Drawing.Point(252, 236);
+            this.lblStreet.Name = "lblStreet";
+            this.lblStreet.Size = new System.Drawing.Size(42, 16);
+            this.lblStreet.TabIndex = 26;
+            this.lblStreet.Text = "Street";
+            // 
+            // txtBoxStreet
+            // 
+            this.txtBoxStreet.Location = new System.Drawing.Point(255, 255);
+            this.txtBoxStreet.Name = "txtBoxStreet";
+            this.txtBoxStreet.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxStreet.TabIndex = 27;
+            // 
+            // txtBoxVillageSubdivision
+            // 
+            this.txtBoxVillageSubdivision.Location = new System.Drawing.Point(414, 255);
+            this.txtBoxVillageSubdivision.Name = "txtBoxVillageSubdivision";
+            this.txtBoxVillageSubdivision.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxVillageSubdivision.TabIndex = 28;
+            // 
+            // lblVillageSubdivision
+            // 
+            this.lblVillageSubdivision.AutoSize = true;
+            this.lblVillageSubdivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVillageSubdivision.Location = new System.Drawing.Point(411, 236);
+            this.lblVillageSubdivision.Name = "lblVillageSubdivision";
+            this.lblVillageSubdivision.Size = new System.Drawing.Size(129, 16);
+            this.lblVillageSubdivision.TabIndex = 29;
+            this.lblVillageSubdivision.Text = "Village / Subdivision";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(573, 255);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 22);
+            this.textBox1.TabIndex = 30;
+            // 
+            // lblCity
+            // 
+            this.lblCity.AutoSize = true;
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.Location = new System.Drawing.Point(570, 236);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(29, 16);
+            this.lblCity.TabIndex = 31;
+            this.lblCity.Text = "City";
+            // 
+            // txtBoxProvince
+            // 
+            this.txtBoxProvince.Location = new System.Drawing.Point(732, 255);
+            this.txtBoxProvince.Name = "txtBoxProvince";
+            this.txtBoxProvince.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxProvince.TabIndex = 32;
+            // 
+            // lblProvince
+            // 
+            this.lblProvince.AutoSize = true;
+            this.lblProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvince.Location = new System.Drawing.Point(729, 236);
+            this.lblProvince.Name = "lblProvince";
+            this.lblProvince.Size = new System.Drawing.Size(60, 16);
+            this.lblProvince.TabIndex = 33;
+            this.lblProvince.Text = "Province";
+            // 
+            // txtLandline
+            // 
+            this.txtLandline.Location = new System.Drawing.Point(732, 174);
+            this.txtLandline.Name = "txtLandline";
+            this.txtLandline.Size = new System.Drawing.Size(153, 22);
+            this.txtLandline.TabIndex = 34;
+            // 
+            // lblLandline
+            // 
+            this.lblLandline.AutoSize = true;
+            this.lblLandline.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLandline.Location = new System.Drawing.Point(728, 147);
+            this.lblLandline.Name = "lblLandline";
+            this.lblLandline.Size = new System.Drawing.Size(132, 24);
+            this.lblLandline.TabIndex = 35;
+            this.lblLandline.Text = "Telephone Number";
+            // 
+            // lblMiddleName
+            // 
+            this.lblMiddleName.AutoSize = true;
+            this.lblMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiddleName.Location = new System.Drawing.Point(132, 155);
+            this.lblMiddleName.Name = "lblMiddleName";
+            this.lblMiddleName.Size = new System.Drawing.Size(88, 16);
+            this.lblMiddleName.TabIndex = 36;
+            this.lblMiddleName.Text = "Middle Name";
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(252, 155);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(72, 16);
+            this.lblLastName.TabIndex = 37;
+            this.lblLastName.Text = "Last Name";
+            // 
+            // lblSuffix
+            // 
+            this.lblSuffix.AutoSize = true;
+            this.lblSuffix.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuffix.Location = new System.Drawing.Point(370, 155);
+            this.lblSuffix.Name = "lblSuffix";
+            this.lblSuffix.Size = new System.Drawing.Size(38, 16);
+            this.lblSuffix.TabIndex = 38;
+            this.lblSuffix.Text = "Suffix";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 215);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(901, 567);
+            this.Controls.Add(this.lblSuffix);
+            this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.lblMiddleName);
+            this.Controls.Add(this.lblLandline);
+            this.Controls.Add(this.txtLandline);
+            this.Controls.Add(this.lblProvince);
+            this.Controls.Add(this.txtBoxProvince);
+            this.Controls.Add(this.lblCity);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblVillageSubdivision);
+            this.Controls.Add(this.txtBoxVillageSubdivision);
+            this.Controls.Add(this.txtBoxStreet);
+            this.Controls.Add(this.lblStreet);
+            this.Controls.Add(this.lblUBL);
+            this.Controls.Add(this.txtBoxUBL);
+            this.Controls.Add(this.lvlFullAddress);
+            this.Controls.Add(this.txtBoxPhoneNumber);
+            this.Controls.Add(this.lblPhoneNumber);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.lblmmddyyy);
+            this.Controls.Add(this.txtBoxBirthDate);
+            this.Controls.Add(this.lvlBirthDate);
+            this.Controls.Add(this.txtBoxSuffix);
+            this.Controls.Add(this.txtBoxLastName);
+            this.Controls.Add(this.txtBoxMiddleName);
+            this.Controls.Add(this.txtBoxFirstName);
+            this.Controls.Add(this.lblFirstName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblHeader2);
+            this.Controls.Add(this.lblHeader);
+            this.Controls.Add(this.picboxDesign);
             this.Name = "Form1";
             this.Text = "Contact Tracing App";
+            ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,13 +410,40 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.PictureBox picboxDesign;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.Label lblHeader2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox txtBoxFirstName;
+        private System.Windows.Forms.TextBox txtBoxMiddleName;
+        private System.Windows.Forms.TextBox txtBoxLastName;
+        private System.Windows.Forms.TextBox txtBoxSuffix;
+        private System.Windows.Forms.Label lvlBirthDate;
+        private System.Windows.Forms.TextBox txtBoxBirthDate;
+        private System.Windows.Forms.Label lblmmddyyy;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.TextBox txtBoxPhoneNumber;
+        private System.Windows.Forms.Label lvlFullAddress;
+        private System.Windows.Forms.TextBox txtBoxUBL;
+        private System.Windows.Forms.Label lblUBL;
+        private System.Windows.Forms.Label lblStreet;
+        private System.Windows.Forms.TextBox txtBoxStreet;
+        private System.Windows.Forms.TextBox txtBoxVillageSubdivision;
+        private System.Windows.Forms.Label lblVillageSubdivision;
+        private EventHandler txtBoxFirstName_TextChanged;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblCity;
+        private System.Windows.Forms.TextBox txtBoxProvince;
+        private System.Windows.Forms.Label lblProvince;
+        private System.Windows.Forms.TextBox txtLandline;
+        private System.Windows.Forms.Label lblLandline;
+        private System.Windows.Forms.Label lblMiddleName;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblSuffix;
     }
 }
 

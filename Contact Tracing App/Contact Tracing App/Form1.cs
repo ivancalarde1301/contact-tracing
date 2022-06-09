@@ -21,7 +21,9 @@ namespace Contact_Tracing_App
         private void button1_Click(object sender, EventArgs e)
         {
             StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\test.txt", true);
-            file.WriteLine("Welcome to my Contact Tracing App");
+            file.WriteLine("First Name: " + txtboxFirstName.Text);
+            file.WriteLine("Middle Name: " + txtboxMiddleName.Text);
+            file.WriteLine("Last Name: " + txtboxLastName.Text);
             file.Close();
         }
     }
