@@ -47,21 +47,21 @@ namespace Contact_Tracing_App
             this.lblmmddyyy = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.txtBoxAge = new System.Windows.Forms.TextBox();
-            this.lvlFullAddress = new System.Windows.Forms.Label();
-            this.txtBoxUBL = new System.Windows.Forms.TextBox();
+            this.lblFullAddress = new System.Windows.Forms.Label();
+            this.txtBoxSex = new System.Windows.Forms.TextBox();
             this.lblUBL = new System.Windows.Forms.Label();
             this.lblStreet = new System.Windows.Forms.Label();
             this.lblVillageSubdivision = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblProvince = new System.Windows.Forms.Label();
-            this.txtLandline = new System.Windows.Forms.TextBox();
+            this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.lblMiddleName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblSuffix = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSex = new System.Windows.Forms.TextBox();
+            this.txtBoxUBL = new System.Windows.Forms.TextBox();
             this.lblSex = new System.Windows.Forms.Label();
             this.txtBoxStreet = new System.Windows.Forms.TextBox();
             this.txtBoxVillageSubdivision = new System.Windows.Forms.TextBox();
@@ -227,28 +227,28 @@ namespace Contact_Tracing_App
             this.txtBoxAge.Size = new System.Drawing.Size(54, 22);
             this.txtBoxAge.TabIndex = 22;
             // 
-            // lvlFullAddress
+            // lblFullAddress
             // 
-            this.lvlFullAddress.AutoSize = true;
-            this.lvlFullAddress.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvlFullAddress.Location = new System.Drawing.Point(13, 212);
-            this.lvlFullAddress.Name = "lvlFullAddress";
-            this.lvlFullAddress.Size = new System.Drawing.Size(95, 24);
-            this.lvlFullAddress.TabIndex = 23;
-            this.lvlFullAddress.Text = "Full Address";
+            this.lblFullAddress.AutoSize = true;
+            this.lblFullAddress.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullAddress.Location = new System.Drawing.Point(13, 212);
+            this.lblFullAddress.Name = "lblFullAddress";
+            this.lblFullAddress.Size = new System.Drawing.Size(95, 24);
+            this.lblFullAddress.TabIndex = 23;
+            this.lblFullAddress.Text = "Full Address";
             // 
-            // txtBoxUBL
+            // txtBoxSex
             // 
-            this.txtBoxUBL.Location = new System.Drawing.Point(17, 255);
-            this.txtBoxUBL.Name = "txtBoxUBL";
-            this.txtBoxUBL.Size = new System.Drawing.Size(131, 22);
-            this.txtBoxUBL.TabIndex = 24;
+            this.txtBoxSex.Location = new System.Drawing.Point(633, 174);
+            this.txtBoxSex.Name = "txtBoxSex";
+            this.txtBoxSex.Size = new System.Drawing.Size(93, 22);
+            this.txtBoxSex.TabIndex = 24;
             // 
             // lblUBL
             // 
             this.lblUBL.AutoSize = true;
             this.lblUBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUBL.Location = new System.Drawing.Point(14, 236);
+            this.lblUBL.Location = new System.Drawing.Point(12, 236);
             this.lblUBL.Name = "lblUBL";
             this.lblUBL.Size = new System.Drawing.Size(102, 16);
             this.lblUBL.TabIndex = 25;
@@ -258,7 +258,7 @@ namespace Contact_Tracing_App
             // 
             this.lblStreet.AutoSize = true;
             this.lblStreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStreet.Location = new System.Drawing.Point(151, 236);
+            this.lblStreet.Location = new System.Drawing.Point(147, 236);
             this.lblStreet.Name = "lblStreet";
             this.lblStreet.Size = new System.Drawing.Size(42, 16);
             this.lblStreet.TabIndex = 26;
@@ -268,7 +268,7 @@ namespace Contact_Tracing_App
             // 
             this.lblVillageSubdivision.AutoSize = true;
             this.lblVillageSubdivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVillageSubdivision.Location = new System.Drawing.Point(288, 236);
+            this.lblVillageSubdivision.Location = new System.Drawing.Point(284, 236);
             this.lblVillageSubdivision.Name = "lblVillageSubdivision";
             this.lblVillageSubdivision.Size = new System.Drawing.Size(129, 16);
             this.lblVillageSubdivision.TabIndex = 29;
@@ -278,7 +278,7 @@ namespace Contact_Tracing_App
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(455, 236);
+            this.lblCity.Location = new System.Drawing.Point(451, 236);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(29, 16);
             this.lblCity.TabIndex = 31;
@@ -288,18 +288,18 @@ namespace Contact_Tracing_App
             // 
             this.lblProvince.AutoSize = true;
             this.lblProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvince.Location = new System.Drawing.Point(592, 236);
+            this.lblProvince.Location = new System.Drawing.Point(588, 236);
             this.lblProvince.Name = "lblProvince";
             this.lblProvince.Size = new System.Drawing.Size(60, 16);
             this.lblProvince.TabIndex = 33;
             this.lblProvince.Text = "Province";
             // 
-            // txtLandline
+            // txtBoxPhoneNumber
             // 
-            this.txtLandline.Location = new System.Drawing.Point(732, 174);
-            this.txtLandline.Name = "txtLandline";
-            this.txtLandline.Size = new System.Drawing.Size(153, 22);
-            this.txtLandline.TabIndex = 34;
+            this.txtBoxPhoneNumber.Location = new System.Drawing.Point(732, 174);
+            this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
+            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxPhoneNumber.TabIndex = 34;
             // 
             // lblPhoneNumber
             // 
@@ -349,7 +349,6 @@ namespace Contact_Tracing_App
             this.pictureBox1.Size = new System.Drawing.Size(911, 279);
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -361,12 +360,12 @@ namespace Contact_Tracing_App
             this.label2.Text = "Personal Information";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxSex
+            // txtBoxUBL
             // 
-            this.textBoxSex.Location = new System.Drawing.Point(633, 174);
-            this.textBoxSex.Name = "textBoxSex";
-            this.textBoxSex.Size = new System.Drawing.Size(93, 22);
-            this.textBoxSex.TabIndex = 41;
+            this.txtBoxUBL.Location = new System.Drawing.Point(15, 255);
+            this.txtBoxUBL.Name = "txtBoxUBL";
+            this.txtBoxUBL.Size = new System.Drawing.Size(129, 22);
+            this.txtBoxUBL.TabIndex = 41;
             // 
             // lblSex
             // 
@@ -377,39 +376,38 @@ namespace Contact_Tracing_App
             this.lblSex.Size = new System.Drawing.Size(32, 24);
             this.lblSex.TabIndex = 42;
             this.lblSex.Text = "Sex";
-            this.lblSex.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtBoxStreet
             // 
-            this.txtBoxStreet.Location = new System.Drawing.Point(154, 255);
+            this.txtBoxStreet.Location = new System.Drawing.Point(150, 255);
             this.txtBoxStreet.Name = "txtBoxStreet";
             this.txtBoxStreet.Size = new System.Drawing.Size(131, 22);
             this.txtBoxStreet.TabIndex = 43;
             // 
             // txtBoxVillageSubdivision
             // 
-            this.txtBoxVillageSubdivision.Location = new System.Drawing.Point(291, 255);
+            this.txtBoxVillageSubdivision.Location = new System.Drawing.Point(287, 255);
             this.txtBoxVillageSubdivision.Name = "txtBoxVillageSubdivision";
             this.txtBoxVillageSubdivision.Size = new System.Drawing.Size(161, 22);
             this.txtBoxVillageSubdivision.TabIndex = 44;
             // 
             // txtBoxCity
             // 
-            this.txtBoxCity.Location = new System.Drawing.Point(458, 255);
+            this.txtBoxCity.Location = new System.Drawing.Point(454, 255);
             this.txtBoxCity.Name = "txtBoxCity";
             this.txtBoxCity.Size = new System.Drawing.Size(131, 22);
             this.txtBoxCity.TabIndex = 45;
             // 
             // txtBoxProvince
             // 
-            this.txtBoxProvince.Location = new System.Drawing.Point(595, 255);
+            this.txtBoxProvince.Location = new System.Drawing.Point(591, 255);
             this.txtBoxProvince.Name = "txtBoxProvince";
             this.txtBoxProvince.Size = new System.Drawing.Size(131, 22);
             this.txtBoxProvince.TabIndex = 46;
             // 
             // txtBoxCountry
             // 
-            this.txtBoxCountry.Location = new System.Drawing.Point(732, 255);
+            this.txtBoxCountry.Location = new System.Drawing.Point(728, 255);
             this.txtBoxCountry.Name = "txtBoxCountry";
             this.txtBoxCountry.Size = new System.Drawing.Size(153, 22);
             this.txtBoxCountry.TabIndex = 47;
@@ -418,7 +416,7 @@ namespace Contact_Tracing_App
             // 
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.Location = new System.Drawing.Point(729, 236);
+            this.lblCountry.Location = new System.Drawing.Point(725, 236);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(52, 16);
             this.lblCountry.TabIndex = 48;
@@ -436,7 +434,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.txtBoxVillageSubdivision);
             this.Controls.Add(this.txtBoxStreet);
             this.Controls.Add(this.lblSex);
-            this.Controls.Add(this.textBoxSex);
+            this.Controls.Add(this.txtBoxUBL);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.pictureBox1);
@@ -444,14 +442,14 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblMiddleName);
             this.Controls.Add(this.lblPhoneNumber);
-            this.Controls.Add(this.txtLandline);
+            this.Controls.Add(this.txtBoxPhoneNumber);
             this.Controls.Add(this.lblProvince);
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.lblVillageSubdivision);
             this.Controls.Add(this.lblStreet);
             this.Controls.Add(this.lblUBL);
-            this.Controls.Add(this.txtBoxUBL);
-            this.Controls.Add(this.lvlFullAddress);
+            this.Controls.Add(this.txtBoxSex);
+            this.Controls.Add(this.lblFullAddress);
             this.Controls.Add(this.txtBoxAge);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblmmddyyy);
@@ -497,22 +495,22 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lblmmddyyy;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.TextBox txtBoxAge;
-        private System.Windows.Forms.Label lvlFullAddress;
-        private System.Windows.Forms.TextBox txtBoxUBL;
+        private System.Windows.Forms.Label lblFullAddress;
+        private System.Windows.Forms.TextBox txtBoxSex;
         private System.Windows.Forms.Label lblUBL;
         private System.Windows.Forms.Label lblStreet;
         private System.Windows.Forms.Label lblVillageSubdivision;
         private EventHandler txtBoxFirstName_TextChanged;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblProvince;
-        private System.Windows.Forms.TextBox txtLandline;
+        private System.Windows.Forms.TextBox txtBoxPhoneNumber;
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Label lblMiddleName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblSuffix;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxSex;
+        private System.Windows.Forms.TextBox txtBoxUBL;
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.TextBox txtBoxStreet;
         private System.Windows.Forms.TextBox txtBoxVillageSubdivision;
@@ -520,6 +518,8 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxProvince;
         private System.Windows.Forms.TextBox txtBoxCountry;
         private System.Windows.Forms.Label lblCountry;
+        private EventHandler label3_Click;
+        private EventHandler pictureBox1_Click;
     }
 }
 
