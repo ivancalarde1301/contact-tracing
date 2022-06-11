@@ -16,6 +16,9 @@ namespace Contact_Tracing_App
         public Form1()
         {
             InitializeComponent();
+
+            txtBoxSex.MaxLength = 6;
+            maskedTextBox1.MaxLength = 11;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,13 +42,13 @@ namespace Contact_Tracing_App
             file.WriteLine("Birth Date: " + mskdTxtBoxBirthDate.Text);
             file.WriteLine("Age: " + txtBoxAge.Text);
             file.WriteLine("Sex: " + txtBoxUBL.Text);
-            file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);
+            file.WriteLine("Phone Number: " + maskedTextBox1.Text);
             file.WriteLine("FULL ADDRESS");
             file.WriteLine("Unit / Block / Lot: " + txtBoxSex.Text);
             file.WriteLine("Street: " + txtBoxStreet.Text);
             file.WriteLine("Village / Subdivision: " + txtBoxVillageSubdivision.Text);
             file.WriteLine("City: " + txtBoxCity.Text);
-            file.WriteLine("Country: " + txtBoxCountry.Text);
+            file.WriteLine("Zip Code: " + txtBoxZipCode.Text);
             file.Close();
         }
 
@@ -63,6 +66,11 @@ namespace Contact_Tracing_App
                 txtBoxAge.Text = "122";
                 MessageBox.Show("Please enter a different age.");
             }
+        }
+
+        private void txtBoxPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
