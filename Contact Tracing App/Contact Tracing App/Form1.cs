@@ -48,5 +48,21 @@ namespace Contact_Tracing_App
             file.WriteLine("Country: " + txtBoxCountry.Text);
             file.Close();
         }
+
+        private void txtBoxAge_TextChanged(object sender, EventArgs e)
+        {
+            int box_int = 0;
+            Int32.TryParse(txtBoxAge.Text, out box_int);
+            if (box_int < 1 && txtBoxAge.Text != "")
+            {
+                txtBoxAge.Text = "0";
+                MessageBox.Show("Please enter a different age.");
+            }
+            else if (box_int > 99 && txtBoxAge.Text != "")
+            {
+                txtBoxAge.Text = "122";
+                MessageBox.Show("Please enter a different age.");
+            }
+        }
     }
 }

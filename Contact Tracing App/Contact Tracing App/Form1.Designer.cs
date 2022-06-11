@@ -226,6 +226,7 @@ namespace Contact_Tracing_App
             this.txtBoxAge.Name = "txtBoxAge";
             this.txtBoxAge.Size = new System.Drawing.Size(54, 22);
             this.txtBoxAge.TabIndex = 22;
+            this.txtBoxAge.TextChanged += new System.EventHandler(this.txtBoxAge_TextChanged);
             // 
             // lblFullAddress
             // 
