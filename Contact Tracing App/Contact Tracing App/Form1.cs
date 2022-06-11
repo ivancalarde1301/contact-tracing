@@ -18,7 +18,7 @@ namespace Contact_Tracing_App
             InitializeComponent();
 
             txtBoxSex.MaxLength = 6;
-            maskedTextBox1.MaxLength = 11;
+            txtBoxPhoneNumber.MaxLength = 11;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Contact_Tracing_App
             file.WriteLine("Birth Date: " + mskdTxtBoxBirthDate.Text);
             file.WriteLine("Age: " + txtBoxAge.Text);
             file.WriteLine("Sex: " + txtBoxUBL.Text);
-            file.WriteLine("Phone Number: " + maskedTextBox1.Text);
+            file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);
             file.WriteLine("FULL ADDRESS");
             file.WriteLine("Unit / Block / Lot: " + txtBoxSex.Text);
             file.WriteLine("Street: " + txtBoxStreet.Text);
@@ -61,16 +61,11 @@ namespace Contact_Tracing_App
                 txtBoxAge.Text = "0";
                 MessageBox.Show("Please enter a different age.");
             }
-            else if (box_int > 99 && txtBoxAge.Text != "")
+            else if (box_int > 122 && txtBoxAge.Text != "")
             {
-                txtBoxAge.Text = "122";
+                txtBoxAge.Text = "0";
                 MessageBox.Show("Please enter a different age.");
             }
-        }
-
-        private void txtBoxPhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
