@@ -25,7 +25,17 @@ namespace Contact_Tracing_App
             file.WriteLine("First Name: " + txtBoxFirstName.Text);
             file.WriteLine("Middle Name: " + txtBoxMiddleName.Text);
             file.WriteLine("Last Name: " + txtBoxLastName.Text);
-            file.WriteLine("Suffix: " + txtBoxSuffix.Text);
+            //file.WriteLine("Suffix: " + txtBoxSuffix.Text);
+            {
+                if (txtBoxSuffix.Text != "")
+                {
+                    file.WriteLine("Suffix: " + txtBoxSuffix.Text);
+                }
+                else if (txtBoxSuffix.Text != null)
+                {
+                    file.WriteLine("Suffix: N/A");
+                }
+            }
             file.WriteLine("Birth Date: " + txtBoxBirthDate.Text);
             file.WriteLine("Age: " + txtBoxAge.Text);
             file.WriteLine("Sex: " + txtBoxUBL.Text);
