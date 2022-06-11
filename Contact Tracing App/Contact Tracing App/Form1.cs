@@ -36,7 +36,7 @@ namespace Contact_Tracing_App
                     file.WriteLine("Suffix: N/A");
                 }
             }
-            file.WriteLine("Birth Date: " + txtBoxBirthDate.Text);
+            file.WriteLine("Birth Date: " + mskdTxtBoxBirthDate.Text);
             file.WriteLine("Age: " + txtBoxAge.Text);
             file.WriteLine("Sex: " + txtBoxUBL.Text);
             file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);

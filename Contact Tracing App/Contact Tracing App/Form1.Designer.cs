@@ -69,6 +69,7 @@ namespace Contact_Tracing_App
             this.txtBoxProvince = new System.Windows.Forms.TextBox();
             this.txtBoxCountry = new System.Windows.Forms.TextBox();
             this.lblCountry = new System.Windows.Forms.Label();
+            this.mskdTxtBoxBirthDate = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -195,7 +196,7 @@ namespace Contact_Tracing_App
             // 
             // txtBoxBirthDate
             // 
-            this.txtBoxBirthDate.Location = new System.Drawing.Point(414, 174);
+            this.txtBoxBirthDate.Location = new System.Drawing.Point(474, 403);
             this.txtBoxBirthDate.Name = "txtBoxBirthDate";
             this.txtBoxBirthDate.Size = new System.Drawing.Size(153, 22);
             this.txtBoxBirthDate.TabIndex = 19;
@@ -423,11 +424,21 @@ namespace Contact_Tracing_App
             this.lblCountry.TabIndex = 48;
             this.lblCountry.Text = "Country";
             // 
+            // mskdTxtBoxBirthDate
+            // 
+            this.mskdTxtBoxBirthDate.Location = new System.Drawing.Point(413, 174);
+            this.mskdTxtBoxBirthDate.Mask = "00-00-0000";
+            this.mskdTxtBoxBirthDate.Name = "mskdTxtBoxBirthDate";
+            this.mskdTxtBoxBirthDate.Size = new System.Drawing.Size(153, 22);
+            this.mskdTxtBoxBirthDate.TabIndex = 49;
+            this.mskdTxtBoxBirthDate.ValidatingType = typeof(System.DateTime);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 567);
+            this.Controls.Add(this.mskdTxtBoxBirthDate);
             this.Controls.Add(this.lblCountry);
             this.Controls.Add(this.txtBoxCountry);
             this.Controls.Add(this.txtBoxProvince);
@@ -521,6 +532,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lblCountry;
         private EventHandler label3_Click;
         private EventHandler pictureBox1_Click;
+        private System.Windows.Forms.MaskedTextBox mskdTxtBoxBirthDate;
     }
 }
 
