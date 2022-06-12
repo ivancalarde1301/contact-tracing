@@ -50,7 +50,7 @@ namespace Contact_Tracing_App
             this.txtBoxSex = new System.Windows.Forms.TextBox();
             this.lblUBL = new System.Windows.Forms.Label();
             this.lblStreet = new System.Windows.Forms.Label();
-            this.lblVillageSubdivision = new System.Windows.Forms.Label();
+            this.lblBarangay = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblProvince = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@ namespace Contact_Tracing_App
             this.txtBoxUBL = new System.Windows.Forms.TextBox();
             this.lblSex = new System.Windows.Forms.Label();
             this.txtBoxStreet = new System.Windows.Forms.TextBox();
-            this.txtBoxVillageSubdivision = new System.Windows.Forms.TextBox();
+            this.txtBoxBarangay = new System.Windows.Forms.TextBox();
             this.txtBoxCity = new System.Windows.Forms.TextBox();
             this.txtBoxProvince = new System.Windows.Forms.TextBox();
             this.txtBoxZipCode = new System.Windows.Forms.TextBox();
@@ -95,7 +95,6 @@ namespace Contact_Tracing_App
             this.lblSpecifyTravel = new System.Windows.Forms.Label();
             this.txtBoxSpecifyTravel = new System.Windows.Forms.TextBox();
             this.chckBoxSpecify = new System.Windows.Forms.CheckBox();
-            this.chckBoxAll = new System.Windows.Forms.CheckBox();
             this.lblSpecify2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
@@ -248,7 +247,6 @@ namespace Contact_Tracing_App
             this.txtBoxAge.Name = "txtBoxAge";
             this.txtBoxAge.Size = new System.Drawing.Size(54, 22);
             this.txtBoxAge.TabIndex = 22;
-            this.txtBoxAge.Text = "0";
             this.txtBoxAge.TextChanged += new System.EventHandler(this.txtBoxAge_TextChanged);
             // 
             // lblFullAddress
@@ -288,15 +286,15 @@ namespace Contact_Tracing_App
             this.lblStreet.TabIndex = 26;
             this.lblStreet.Text = "Street";
             // 
-            // lblVillageSubdivision
+            // lblBarangay
             // 
-            this.lblVillageSubdivision.AutoSize = true;
-            this.lblVillageSubdivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVillageSubdivision.Location = new System.Drawing.Point(284, 236);
-            this.lblVillageSubdivision.Name = "lblVillageSubdivision";
-            this.lblVillageSubdivision.Size = new System.Drawing.Size(129, 16);
-            this.lblVillageSubdivision.TabIndex = 29;
-            this.lblVillageSubdivision.Text = "Village / Subdivision";
+            this.lblBarangay.AutoSize = true;
+            this.lblBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarangay.Location = new System.Drawing.Point(284, 236);
+            this.lblBarangay.Name = "lblBarangay";
+            this.lblBarangay.Size = new System.Drawing.Size(66, 16);
+            this.lblBarangay.TabIndex = 29;
+            this.lblBarangay.Text = "Barangay";
             // 
             // lblCity
             // 
@@ -401,12 +399,12 @@ namespace Contact_Tracing_App
             this.txtBoxStreet.Size = new System.Drawing.Size(131, 22);
             this.txtBoxStreet.TabIndex = 43;
             // 
-            // txtBoxVillageSubdivision
+            // txtBoxBarangay
             // 
-            this.txtBoxVillageSubdivision.Location = new System.Drawing.Point(287, 255);
-            this.txtBoxVillageSubdivision.Name = "txtBoxVillageSubdivision";
-            this.txtBoxVillageSubdivision.Size = new System.Drawing.Size(161, 22);
-            this.txtBoxVillageSubdivision.TabIndex = 44;
+            this.txtBoxBarangay.Location = new System.Drawing.Point(287, 255);
+            this.txtBoxBarangay.Name = "txtBoxBarangay";
+            this.txtBoxBarangay.Size = new System.Drawing.Size(161, 22);
+            this.txtBoxBarangay.TabIndex = 44;
             // 
             // txtBoxCity
             // 
@@ -716,17 +714,6 @@ namespace Contact_Tracing_App
             this.chckBoxSpecify.UseVisualStyleBackColor = true;
             this.chckBoxSpecify.CheckedChanged += new System.EventHandler(this.chckBoxSpecify_CheckedChanged);
             // 
-            // chckBoxAll
-            // 
-            this.chckBoxAll.AutoSize = true;
-            this.chckBoxAll.Location = new System.Drawing.Point(628, 541);
-            this.chckBoxAll.Name = "chckBoxAll";
-            this.chckBoxAll.Size = new System.Drawing.Size(44, 20);
-            this.chckBoxAll.TabIndex = 81;
-            this.chckBoxAll.Text = "All";
-            this.chckBoxAll.UseVisualStyleBackColor = true;
-            this.chckBoxAll.CheckedChanged += new System.EventHandler(this.chckBoxAll_CheckedChanged);
-            // 
             // lblSpecify2
             // 
             this.lblSpecify2.AutoSize = true;
@@ -742,7 +729,6 @@ namespace Contact_Tracing_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 722);
             this.Controls.Add(this.lblSpecify2);
-            this.Controls.Add(this.chckBoxAll);
             this.Controls.Add(this.chckBoxSpecify);
             this.Controls.Add(this.txtBoxSpecifyTravel);
             this.Controls.Add(this.lblSpecifyTravel);
@@ -773,7 +759,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.txtBoxZipCode);
             this.Controls.Add(this.txtBoxProvince);
             this.Controls.Add(this.txtBoxCity);
-            this.Controls.Add(this.txtBoxVillageSubdivision);
+            this.Controls.Add(this.txtBoxBarangay);
             this.Controls.Add(this.txtBoxStreet);
             this.Controls.Add(this.lblSex);
             this.Controls.Add(this.txtBoxUBL);
@@ -787,7 +773,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.txtBoxPhoneNumber);
             this.Controls.Add(this.lblProvince);
             this.Controls.Add(this.lblCity);
-            this.Controls.Add(this.lblVillageSubdivision);
+            this.Controls.Add(this.lblBarangay);
             this.Controls.Add(this.lblStreet);
             this.Controls.Add(this.lblUBL);
             this.Controls.Add(this.txtBoxSex);
@@ -841,7 +827,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxSex;
         private System.Windows.Forms.Label lblUBL;
         private System.Windows.Forms.Label lblStreet;
-        private System.Windows.Forms.Label lblVillageSubdivision;
+        private System.Windows.Forms.Label lblBarangay;
         private EventHandler txtBoxFirstName_TextChanged;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblProvince;
@@ -854,7 +840,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxUBL;
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.TextBox txtBoxStreet;
-        private System.Windows.Forms.TextBox txtBoxVillageSubdivision;
+        private System.Windows.Forms.TextBox txtBoxBarangay;
         private System.Windows.Forms.TextBox txtBoxCity;
         private System.Windows.Forms.TextBox txtBoxProvince;
         private System.Windows.Forms.TextBox txtBoxZipCode;
@@ -889,7 +875,6 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lblSpecifyTravel;
         private System.Windows.Forms.TextBox txtBoxSpecifyTravel;
         private System.Windows.Forms.CheckBox chckBoxSpecify;
-        private System.Windows.Forms.CheckBox chckBoxAll;
         private System.Windows.Forms.Label lblSpecify2;
     }
 }

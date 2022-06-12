@@ -30,7 +30,6 @@ namespace Contact_Tracing_App
             chckBoxCough.Enabled = false;
             chckBoxTiredness.Enabled = false;
             chckBoxLoss.Enabled = false;
-            chckBoxAll.Enabled = false;
             lblSpecify2.Enabled = false;
             txtBoxOther2.Enabled = false;
             lblSpecifyTravel.Enabled = false;
@@ -41,31 +40,39 @@ namespace Contact_Tracing_App
         {
             StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\test.txt");
             file.WriteLine("PERSONAL INFORMATION");
-            file.WriteLine("FULL NAME");
-            file.WriteLine("First Name: " + txtBoxFirstName.Text);
-            file.WriteLine("Middle Name: " + txtBoxMiddleName.Text);
-            file.WriteLine("Last Name: " + txtBoxLastName.Text);
+            file.WriteLine("");
+            file.WriteLine("Full Name: " + txtBoxFirstName.Text + " " + txtBoxMiddleName.Text
+                           + " " + txtBoxLastName.Text + " " + txtBoxSuffix.Text);
             {
-                if (txtBoxSuffix.Text != "")
+                //if (txtBoxSuffix.Text != "")
                 {
-                    file.WriteLine("Suffix: " + txtBoxSuffix.Text);
+                    //file.WriteLine("Suffix: " + txtBoxSuffix.Text);
                 }
-                else if (txtBoxSuffix.Text != null)
+                //else if (txtBoxSuffix.Text != null)
                 {
-                    file.WriteLine("Suffix: N/A");
+                    //file.WriteLine("Suffix: N/A");
                 }
             }
+            file.WriteLine("");
             file.WriteLine("Birth Date: " + mskdTxtBoxBirthDate.Text);
+            file.WriteLine("");
             file.WriteLine("Age: " + txtBoxAge.Text);
+            file.WriteLine("");
             file.WriteLine("Sex: " + txtBoxSex.Text);
+            file.WriteLine("");
             file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);
-            file.WriteLine("FULL ADDRESS");
-            file.WriteLine("Unit / Block / Lot: " + txtBoxUBL.Text);
-            file.WriteLine("Street: " + txtBoxStreet.Text);
-            file.WriteLine("Village / Subdivision: " + txtBoxVillageSubdivision.Text);
-            file.WriteLine("City: " + txtBoxCity.Text);
-            file.WriteLine("Zip Code: " + txtBoxZipCode.Text);
+            file.WriteLine("");
+            file.WriteLine("Full Address: " + txtBoxUBL.Text + " " + txtBoxStreet.Text
+                           + " " + txtBoxBarangay.Text + " " + txtBoxCity.Text
+                           + " " + txtBoxProvince.Text + " " + txtBoxZipCode.Text);
+            file.WriteLine("");
+            //file.WriteLine("Unit / Block / Lot: " + txtBoxUBL.Text);
+            //file.WriteLine("Street: " + txtBoxStreet.Text);
+            //file.WriteLine("Village / Subdivision: " + txtBoxBarangay.Text);
+            //file.WriteLine("City: " + txtBoxCity.Text);
+            //file.WriteLine("Zip Code: " + txtBoxZipCode.Text);
             file.WriteLine("HEALTH INFORMATION");
+            file.WriteLine("");
             {
                 if (chckBoxVaxYes.Checked == true)
                 {
@@ -95,29 +102,47 @@ namespace Contact_Tracing_App
                 {
                     file.WriteLine("Vaccinated: No");
                 }
+                file.WriteLine("");
                 if (chckBoxSymptomsYes.Checked == true)
                 {
                     file.WriteLine("Experienced any COVID-19 symptoms recently: Yes");
                 }
+                if (chckBoxSymptomsNo.Checked == true)
+                {
+                    file.WriteLine("Experienced any COVID-19 symptoms recently: No");
+                }
                 if (chckBoxFever.Checked == true)
                 {
-                    file.WriteLine("Symptoms: Fever");
+                    file.WriteLine("Symptom #1: Fever");
                 }
                 if (chckBoxCough.Checked == true)
                 {
-                    file.WriteLine("Symptom: Cough");
+                    file.WriteLine("Symptom #2: Cough");
                 }
                 if (chckBoxTiredness.Checked == true)
                 {
-                    file.WriteLine("Symptom: Tiredness");
+                    file.WriteLine("Symptom #3: Tiredness");
                 }
                 if (chckBoxLoss.Checked == true)
                 {
-                    file.WriteLine("Symptom: Loss of Taste and/or Smell");
+                    file.WriteLine("Symptom #4: Loss of Taste and/or Smell");
                 }
                 if (txtBoxOther2.Text != "")
                 {
                     file.WriteLine("Description of Symptom/s: " + txtBoxOther2.Text);
+                }
+                file.WriteLine("");
+                if (chckBoxTravelYes.Checked == true)
+                {
+                    file.WriteLine("Traveled Outside the Country in the Last 14 Days: Yes");
+                }
+                if (txtBoxSpecifyTravel.Text != "")
+                {
+                    file.WriteLine("Traveled from: " + txtBoxSpecifyTravel.Text);
+                }
+                if (chckBoxTravelNo.Checked == true)
+                {
+                    file.WriteLine("Traveled Outside the Country in the Last 14 Days: No");
                 }
             }
             file.Close();
@@ -149,7 +174,6 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax3.Enabled = true;
                 chckBoxSpecifyVax4.Enabled = true;
                 chckBoxSpecify.Enabled = true;
-                txtBoxOther.Enabled = true;
             }
             else if (chckBoxVaxYes.Checked == false)
             {
@@ -237,6 +261,11 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax2.Checked = false;
                 chckBoxSpecifyVax3.Checked = false;
                 chckBoxSpecifyVax4.Checked = false;
+                txtBoxOther.Enabled = true;
+            }
+            else if (chckBoxSpecify.Checked == false)
+            {
+                txtBoxOther.Enabled = false;
             }
         }
 
@@ -249,7 +278,6 @@ namespace Contact_Tracing_App
                 chckBoxCough.Enabled = true;
                 chckBoxTiredness.Enabled = true;
                 chckBoxLoss.Enabled = true;
-                chckBoxAll.Enabled = true;
                 lblSpecify2.Enabled = true;
                 txtBoxOther2.Enabled = true;
             }
@@ -259,7 +287,6 @@ namespace Contact_Tracing_App
                 chckBoxCough.Checked = false;
                 chckBoxTiredness.Checked = false;
                 chckBoxLoss.Checked = false;
-                chckBoxAll.Checked = false;
                 lblSpecify2.Enabled = false;
                 txtBoxOther2.Text = "";
                 chckBoxFever.Enabled = false;
@@ -328,24 +355,6 @@ namespace Contact_Tracing_App
                 lblSpecify2.Enabled = true;
                 txtBoxOther2.Enabled = true;
                 txtBoxOther2.Text = "";
-            }
-        }
-
-        private void chckBoxAll_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chckBoxAll.Checked == true)
-            {
-                chckBoxFever.Checked = true;
-                chckBoxCough.Checked = true;
-                chckBoxTiredness.Checked = true;
-                chckBoxLoss.Checked = true;
-            }
-            else if(chckBoxAll.Checked == false)
-            {
-                chckBoxFever.Checked = false;
-                chckBoxCough.Checked = false;
-                chckBoxTiredness.Checked = false;
-                chckBoxLoss.Checked = false;
             }
         }
 
