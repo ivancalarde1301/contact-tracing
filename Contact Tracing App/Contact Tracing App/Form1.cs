@@ -24,7 +24,6 @@ namespace Contact_Tracing_App
             chckBoxSpecifyVax2.Enabled = false;
             chckBoxSpecifyVax3.Enabled = false;
             chckBoxSpecifyVax4.Enabled = false;
-            chckBoxOther.Enabled = false;
             lblSpecify.Enabled = false;
             txtBoxOther.Enabled = false;
         }
@@ -57,10 +56,31 @@ namespace Contact_Tracing_App
             file.WriteLine("Village / Subdivision: " + txtBoxVillageSubdivision.Text);
             file.WriteLine("City: " + txtBoxCity.Text);
             file.WriteLine("Zip Code: " + txtBoxZipCode.Text);
+            file.WriteLine("HEALTH INFORMATION");
             {
                 if (chckBoxVaxYes.Checked == true)
                 {
                     file.WriteLine("Vaccinated: Yes");
+                }
+                if (chckBoxSpecifyVax.Checked == true)
+                {
+                    file.WriteLine("Vaccine: Pfizer-BioNTech");
+                }
+                if (chckBoxSpecifyVax2.Checked == true)
+                {
+                    file.WriteLine("Vaccine: Moderna");
+                }
+                if (chckBoxSpecifyVax3.Checked == true)
+                {
+                    file.WriteLine("Vaccine: AstraZeneca");
+                }
+                if (chckBoxSpecifyVax4.Checked == true)
+                {
+                    file.WriteLine("Vaccine: Sinovac");
+                }
+                if (txtBoxOther.Text == "")
+                {
+                    file.WriteLine(txtBoxOther.Text);
                 }
                 if (chckBoxVaxNo.Checked == true)
                 {
@@ -95,18 +115,23 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax2.Enabled = true;
                 chckBoxSpecifyVax3.Enabled = true;
                 chckBoxSpecifyVax4.Enabled = true;
-                chckBoxOther.Enabled = true;
+                txtBoxOther.Enabled = true;
                 lblSpecify.Enabled = true;
                 txtBoxOther.Enabled = true;
             }
             else if (chckBoxVaxYes.Checked == false)
             {
+                chckBoxSpecifyVax.Checked = false;
+                chckBoxSpecifyVax2.Checked = false;
+                chckBoxSpecifyVax3.Checked = false;
+                chckBoxSpecifyVax4.Checked = false;
+                txtBoxOther.Text = "";
                 chckBoxVaxNo.Enabled = true;
                 chckBoxSpecifyVax.Enabled = false;
                 chckBoxSpecifyVax2.Enabled = false;
                 chckBoxSpecifyVax3.Enabled = false;
                 chckBoxSpecifyVax4.Enabled = false;
-                chckBoxOther.Enabled = false;
+                txtBoxOther.Enabled = false;
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
             }
@@ -121,7 +146,7 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax2.Enabled = false;
                 chckBoxSpecifyVax3.Enabled = false;
                 chckBoxSpecifyVax4.Enabled = false;
-                chckBoxOther.Enabled = false;
+                txtBoxOther.Enabled = false;
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
             }
@@ -138,18 +163,20 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax2.Enabled = false;
                 chckBoxSpecifyVax3.Enabled = false;
                 chckBoxSpecifyVax4.Enabled = false;
-                chckBoxOther.Enabled = false;
+                txtBoxOther.Enabled = false;
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
+                txtBoxOther.Text = "";
             }
             else if (chckBoxSpecifyVax.Checked == false)
             {
                 chckBoxSpecifyVax2.Enabled = true;
                 chckBoxSpecifyVax3.Enabled = true;
                 chckBoxSpecifyVax4.Enabled = true;
-                chckBoxOther.Enabled = true;
+                txtBoxOther.Enabled = true;
                 lblSpecify.Enabled = true;
                 txtBoxOther.Enabled = true;
+                txtBoxOther.Text = "";
             }
         }
 
@@ -160,18 +187,20 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax.Enabled = false;
                 chckBoxSpecifyVax3.Enabled = false;
                 chckBoxSpecifyVax4.Enabled = false;
-                chckBoxOther.Enabled = false;
+                txtBoxOther.Enabled = false;
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
+                txtBoxOther.Text = "";
             }
             else if (chckBoxSpecifyVax2.Checked == false)
             {
                 chckBoxSpecifyVax.Enabled = true;
                 chckBoxSpecifyVax3.Enabled = true;
                 chckBoxSpecifyVax4.Enabled = true;
-                chckBoxOther.Enabled = true;
+                txtBoxOther.Enabled = true;
                 lblSpecify.Enabled = true;
                 txtBoxOther.Enabled = true;
+                txtBoxOther.Text = "";
             }
         }
 
@@ -182,18 +211,20 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax.Enabled = false;
                 chckBoxSpecifyVax2.Enabled = false;
                 chckBoxSpecifyVax4.Enabled = false;
-                chckBoxOther.Enabled = false;
+                txtBoxOther.Enabled = false;
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
+                txtBoxOther.Text = "";
             }
             else if (chckBoxSpecifyVax3.Checked == false)
             {
                 chckBoxSpecifyVax.Enabled = true;
                 chckBoxSpecifyVax2.Enabled = true;
                 chckBoxSpecifyVax4.Enabled = true;
-                chckBoxOther.Enabled = true;
+                txtBoxOther.Enabled = true;
                 lblSpecify.Enabled = true;
                 txtBoxOther.Enabled = true;
+                txtBoxOther.Text = "";
             }
         }
 
@@ -204,36 +235,44 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax.Enabled = false;
                 chckBoxSpecifyVax2.Enabled = false;
                 chckBoxSpecifyVax3.Enabled = false;
-                chckBoxOther.Enabled = false;
+                txtBoxOther.Enabled = false;
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
+                txtBoxOther.Text = "";
             }
             else if (chckBoxSpecifyVax4.Checked == false)
             {
                 chckBoxSpecifyVax.Enabled = true;
                 chckBoxSpecifyVax2.Enabled = true;
                 chckBoxSpecifyVax3.Enabled = true;
-                chckBoxOther.Enabled = true;
+                txtBoxOther.Enabled = true;
                 lblSpecify.Enabled = true;
                 txtBoxOther.Enabled = true;
+                txtBoxOther.Text = "";
             }
         }
 
-        private void chckBoxOther_CheckedChanged(object sender, EventArgs e)
+        private void chckBoxSymptomsYes_CheckedChanged(object sender, EventArgs e)
         {
-            if (chckBoxOther.Checked == true)
+            if (chckBoxSymptomsYes.Checked == true)
             {
-                chckBoxSpecifyVax.Enabled = false;
-                chckBoxSpecifyVax2.Enabled = false;
-                chckBoxSpecifyVax3.Enabled = false;
-                chckBoxSpecifyVax4.Enabled = false;
+                chckBoxSymptomsNo.Enabled = false;
             }
-            else if (chckBoxOther.Checked == false)
+            else if (chckBoxSymptomsYes.Checked == false)
             {
-                chckBoxSpecifyVax.Enabled = true;
-                chckBoxSpecifyVax2.Enabled = true;
-                chckBoxSpecifyVax3.Enabled = true;
-                chckBoxSpecifyVax4.Enabled = true;
+                chckBoxSymptomsNo.Enabled = true;
+            }
+        }
+
+        private void chckBoxSymptomsNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxSymptomsNo.Checked == true)
+            {
+                chckBoxSymptomsYes.Enabled = false;
+            }
+            else if (chckBoxSymptomsNo.Checked == false)
+            {
+                chckBoxSymptomsYes.Enabled = true;
             }
         }
     }
