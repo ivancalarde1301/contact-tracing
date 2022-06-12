@@ -664,6 +664,7 @@ namespace Contact_Tracing_App
             this.chckBoxCough.TabIndex = 72;
             this.chckBoxCough.Text = "Cough";
             this.chckBoxCough.UseVisualStyleBackColor = true;
+            this.chckBoxCough.CheckedChanged += new System.EventHandler(this.chckBoxCough_CheckedChanged);
             // 
             // chckBoxTiredness
             // 
@@ -674,6 +675,7 @@ namespace Contact_Tracing_App
             this.chckBoxTiredness.TabIndex = 73;
             this.chckBoxTiredness.Text = "Tiredness";
             this.chckBoxTiredness.UseVisualStyleBackColor = true;
+            this.chckBoxTiredness.CheckedChanged += new System.EventHandler(this.chckBoxTiredness_CheckedChanged);
             // 
             // chckBoxLoss
             // 
@@ -684,6 +686,7 @@ namespace Contact_Tracing_App
             this.chckBoxLoss.TabIndex = 74;
             this.chckBoxLoss.Text = "Loss of Taste and/or Smell";
             this.chckBoxLoss.UseVisualStyleBackColor = true;
+            this.chckBoxLoss.CheckedChanged += new System.EventHandler(this.chckBoxLoss_CheckedChanged);
             // 
             // lblSpecify2
             // 

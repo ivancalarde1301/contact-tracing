@@ -148,13 +148,6 @@ namespace Contact_Tracing_App
             if (chckBoxVaxNo.Checked == true)
             {
                 chckBoxVaxYes.Enabled = false;
-                chckBoxSpecifyVax.Enabled = false;
-                chckBoxSpecifyVax2.Enabled = false;
-                chckBoxSpecifyVax3.Enabled = false;
-                chckBoxSpecifyVax4.Enabled = false;
-                txtBoxOther.Enabled = false;
-                lblSpecify.Enabled = false;
-                txtBoxOther.Enabled = false;
             }
             else if (chckBoxVaxNo.Checked == false)
             {
@@ -272,6 +265,12 @@ namespace Contact_Tracing_App
             }
             else if (chckBoxSymptomsYes.Checked == false)
             {
+                chckBoxFever.Checked = false;
+                chckBoxCough.Checked = false;
+                chckBoxTiredness.Checked = false;
+                chckBoxLoss.Checked = false;
+                lblSpecify2.Enabled = false;
+                txtBoxOther2.Text = "";
                 chckBoxSymptomsNo.Enabled = true;
                 chckBoxFever.Enabled = false;
                 chckBoxCough.Enabled = false;
@@ -303,6 +302,7 @@ namespace Contact_Tracing_App
                 chckBoxLoss.Enabled = false;
                 lblSpecify2.Enabled = false;
                 txtBoxOther2.Enabled = false;
+                txtBoxOther2.Text = "";
             }
             else if (chckBoxFever.Checked == false)
             {
@@ -311,6 +311,74 @@ namespace Contact_Tracing_App
                 chckBoxLoss.Enabled = true;
                 lblSpecify2.Enabled = true;
                 txtBoxOther2.Enabled = true;
+                txtBoxOther2.Text = "";
+            }
+        }
+
+        private void chckBoxCough_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxCough.Checked == true)
+            {
+                chckBoxFever.Enabled = false;
+                chckBoxTiredness.Enabled = false;
+                chckBoxLoss.Enabled = false;
+                lblSpecify2.Enabled = false;
+                txtBoxOther2.Enabled = false;
+                txtBoxOther2.Text = "";
+            }
+            else if (chckBoxCough.Checked == false)
+            {
+                chckBoxFever.Enabled = true;
+                chckBoxTiredness.Enabled = true;
+                chckBoxLoss.Enabled = true;
+                lblSpecify2.Enabled = true;
+                txtBoxOther2.Enabled = true;
+                txtBoxOther2.Text = "";
+            }
+        }
+
+        private void chckBoxTiredness_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxTiredness.Checked == true)
+            {
+                chckBoxFever.Enabled = false;
+                chckBoxCough.Enabled = false;
+                chckBoxLoss.Enabled = false;
+                lblSpecify2.Enabled = false;
+                txtBoxOther2.Enabled = false;
+                txtBoxOther2.Text = "";
+            }
+            else if (chckBoxCough.Checked == false)
+            {
+                chckBoxFever.Enabled = true;
+                chckBoxCough.Enabled = true;
+                chckBoxLoss.Enabled = true;
+                lblSpecify2.Enabled = true;
+                txtBoxOther2.Enabled = true;
+                txtBoxOther2.Text = "";
+            }
+        }
+
+        private void chckBoxLoss_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxLoss.Checked == true)
+            {
+                chckBoxFever.Enabled = false;
+                chckBoxCough.Enabled = false;
+                chckBoxTiredness.Enabled = false;
+                lblSpecify2.Enabled = false;
+                txtBoxOther2.Enabled = false;
+                txtBoxOther2.Text = "";
+
+            }
+            else if (chckBoxCough.Checked == false)
+            {
+                chckBoxFever.Enabled = true;
+                chckBoxCough.Enabled = true;
+                chckBoxTiredness.Enabled = true;
+                lblSpecify2.Enabled = true;
+                txtBoxOther2.Enabled = true;
+                txtBoxOther2.Text = "";
             }
         }
     }
