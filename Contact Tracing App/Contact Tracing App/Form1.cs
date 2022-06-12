@@ -19,7 +19,6 @@ namespace Contact_Tracing_App
 
             txtBoxSex.MaxLength = 6;
             txtBoxPhoneNumber.MaxLength = 11;
-            txtBoxZipCode.MaxLength = 4;
             chckBoxSpecifyVax.Enabled = false;
             chckBoxSpecifyVax2.Enabled = false;
             chckBoxSpecifyVax3.Enabled = false;
@@ -38,21 +37,11 @@ namespace Contact_Tracing_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\test.txt");
+            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
             file.WriteLine("PERSONAL INFORMATION");
             file.WriteLine("");
             file.WriteLine("Full Name: " + txtBoxFirstName.Text + " " + txtBoxMiddleName.Text
                            + " " + txtBoxLastName.Text + " " + txtBoxSuffix.Text);
-            {
-                //if (txtBoxSuffix.Text != "")
-                {
-                    //file.WriteLine("Suffix: " + txtBoxSuffix.Text);
-                }
-                //else if (txtBoxSuffix.Text != null)
-                {
-                    //file.WriteLine("Suffix: N/A");
-                }
-            }
             file.WriteLine("");
             file.WriteLine("Birth Date: " + mskdTxtBoxBirthDate.Text);
             file.WriteLine("");
@@ -62,15 +51,12 @@ namespace Contact_Tracing_App
             file.WriteLine("");
             file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);
             file.WriteLine("");
+            file.WriteLine("Email Address: " + txtBoxEmailAddress.Text);
+            file.WriteLine("");
             file.WriteLine("Full Address: " + txtBoxUBL.Text + " " + txtBoxStreet.Text
                            + " " + txtBoxBarangay.Text + " " + txtBoxCity.Text
-                           + " " + txtBoxProvince.Text + " " + txtBoxZipCode.Text);
+                           + " " + txtBoxProvince.Text);
             file.WriteLine("");
-            //file.WriteLine("Unit / Block / Lot: " + txtBoxUBL.Text);
-            //file.WriteLine("Street: " + txtBoxStreet.Text);
-            //file.WriteLine("Village / Subdivision: " + txtBoxBarangay.Text);
-            //file.WriteLine("City: " + txtBoxCity.Text);
-            //file.WriteLine("Zip Code: " + txtBoxZipCode.Text);
             file.WriteLine("HEALTH INFORMATION");
             file.WriteLine("");
             {
@@ -146,6 +132,53 @@ namespace Contact_Tracing_App
                 }
             }
             file.Close();
+            txtBoxFirstName.Text = "";
+            txtBoxMiddleName.Text = "";
+            txtBoxLastName.Text = "";
+            txtBoxSuffix.Text = "";
+            mskdTxtBoxBirthDate.Text = "";
+            txtBoxAge.Text = "";
+            txtBoxSex.Text = "";
+            txtBoxPhoneNumber.Text = "";
+            txtBoxUBL.Text = "";
+            txtBoxStreet.Text = "";
+            txtBoxBarangay.Text = "";
+            txtBoxCity.Text = "";
+            txtBoxProvince.Text = "";
+            txtBoxEmailAddress.Text = "";
+            chckBoxVaxYes.Checked = false;
+            chckBoxVaxNo.Checked = false;
+            chckBoxSpecifyVax.Checked = false;
+            chckBoxSpecifyVax2.Checked = false;
+            chckBoxSpecifyVax3.Checked = false;
+            chckBoxSpecifyVax4.Checked = false;
+            chckBoxSpecify.Checked = false;
+            txtBoxOther.Text = "";
+            chckBoxSymptomsYes.Checked = false;
+            chckBoxSymptomsNo.Checked = false;
+            chckBoxFever.Checked = false;
+            chckBoxCough.Checked = false;
+            chckBoxTiredness.Checked = false;
+            chckBoxLoss.Checked = false;
+            txtBoxOther2.Text = "";
+            chckBoxTravelYes.Checked = false;
+            chckBoxTravelNo.Checked = false;
+            txtBoxSpecifyTravel.Text = "";
+            chckBoxSpecifyVax.Enabled = false;
+            chckBoxSpecifyVax2.Enabled = false;
+            chckBoxSpecifyVax3.Enabled = false;
+            chckBoxSpecifyVax4.Enabled = false;
+            chckBoxSpecify.Enabled = false;
+            txtBoxOther.Enabled = false;
+            chckBoxFever.Enabled = false;
+            chckBoxCough.Enabled = false;
+            chckBoxTiredness.Enabled = false;
+            chckBoxLoss.Enabled = false;
+            lblSpecify2.Enabled = false;
+            txtBoxOther2.Enabled = false;
+            lblSpecifyTravel.Enabled = false;
+            txtBoxSpecifyTravel.Enabled = false;
+            MessageBox.Show("Thank you for providing your information.");
         }
 
         private void txtBoxAge_TextChanged(object sender, EventArgs e)

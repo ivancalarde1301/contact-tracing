@@ -65,8 +65,7 @@ namespace Contact_Tracing_App
             this.txtBoxBarangay = new System.Windows.Forms.TextBox();
             this.txtBoxCity = new System.Windows.Forms.TextBox();
             this.txtBoxProvince = new System.Windows.Forms.TextBox();
-            this.txtBoxZipCode = new System.Windows.Forms.TextBox();
-            this.lblZipCode = new System.Windows.Forms.Label();
+            this.txtBoxEmailAddress = new System.Windows.Forms.TextBox();
             this.mskdTxtBoxBirthDate = new System.Windows.Forms.MaskedTextBox();
             this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblVax = new System.Windows.Forms.Label();
@@ -96,6 +95,7 @@ namespace Contact_Tracing_App
             this.txtBoxSpecifyTravel = new System.Windows.Forms.TextBox();
             this.chckBoxSpecify = new System.Windows.Forms.CheckBox();
             this.lblSpecify2 = new System.Windows.Forms.Label();
+            this.lblEmailAddress = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,9 +104,9 @@ namespace Contact_Tracing_App
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(373, 678);
+            this.btnSubmit.Location = new System.Drawing.Point(407, 678);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(148, 32);
+            this.btnSubmit.Size = new System.Drawing.Size(150, 32);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@ namespace Contact_Tracing_App
             this.picboxDesign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picboxDesign.Location = new System.Drawing.Point(-5, -1);
             this.picboxDesign.Name = "picboxDesign";
-            this.picboxDesign.Size = new System.Drawing.Size(911, 63);
+            this.picboxDesign.Size = new System.Drawing.Size(962, 63);
             this.picboxDesign.TabIndex = 7;
             this.picboxDesign.TabStop = false;
             // 
@@ -129,7 +129,7 @@ namespace Contact_Tracing_App
             this.lblHeader.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Location = new System.Drawing.Point(12, 13);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(877, 39);
+            this.lblHeader.Size = new System.Drawing.Size(929, 39);
             this.lblHeader.TabIndex = 8;
             this.lblHeader.Text = "Online Contact Tracing Form";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,7 +139,7 @@ namespace Contact_Tracing_App
             this.lblHeader2.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader2.Location = new System.Drawing.Point(12, 65);
             this.lblHeader2.Name = "lblHeader2";
-            this.lblHeader2.Size = new System.Drawing.Size(877, 26);
+            this.lblHeader2.Size = new System.Drawing.Size(945, 26);
             this.lblHeader2.TabIndex = 9;
             this.lblHeader2.Text = "Personal Information";
             this.lblHeader2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +149,7 @@ namespace Contact_Tracing_App
             this.lblPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPI.Location = new System.Drawing.Point(12, 91);
             this.lblPI.Name = "lblPI";
-            this.lblPI.Size = new System.Drawing.Size(877, 20);
+            this.lblPI.Size = new System.Drawing.Size(929, 20);
             this.lblPI.TabIndex = 10;
             this.lblPI.Text = "Please enter your personal information.";
             this.lblPI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,7 +159,7 @@ namespace Contact_Tracing_App
             this.picBoxInfo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBoxInfo1.Location = new System.Drawing.Point(-5, 114);
             this.picBoxInfo1.Name = "picBoxInfo1";
-            this.picBoxInfo1.Size = new System.Drawing.Size(911, 613);
+            this.picBoxInfo1.Size = new System.Drawing.Size(962, 613);
             this.picBoxInfo1.TabIndex = 11;
             this.picBoxInfo1.TabStop = false;
             // 
@@ -361,7 +361,7 @@ namespace Contact_Tracing_App
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(-5, 297);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(911, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(962, 51);
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
@@ -370,7 +370,7 @@ namespace Contact_Tracing_App
             this.lblHealthInformation.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHealthInformation.Location = new System.Drawing.Point(12, 300);
             this.lblHealthInformation.Name = "lblHealthInformation";
-            this.lblHealthInformation.Size = new System.Drawing.Size(877, 26);
+            this.lblHealthInformation.Size = new System.Drawing.Size(945, 26);
             this.lblHealthInformation.TabIndex = 40;
             this.lblHealthInformation.Text = "Health Information";
             this.lblHealthInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -417,25 +417,16 @@ namespace Contact_Tracing_App
             // 
             this.txtBoxProvince.Location = new System.Drawing.Point(591, 255);
             this.txtBoxProvince.Name = "txtBoxProvince";
-            this.txtBoxProvince.Size = new System.Drawing.Size(131, 22);
+            this.txtBoxProvince.Size = new System.Drawing.Size(135, 22);
             this.txtBoxProvince.TabIndex = 46;
             // 
-            // txtBoxZipCode
+            // txtBoxEmailAddress
             // 
-            this.txtBoxZipCode.Location = new System.Drawing.Point(728, 255);
-            this.txtBoxZipCode.Name = "txtBoxZipCode";
-            this.txtBoxZipCode.Size = new System.Drawing.Size(153, 22);
-            this.txtBoxZipCode.TabIndex = 47;
-            // 
-            // lblZipCode
-            // 
-            this.lblZipCode.AutoSize = true;
-            this.lblZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZipCode.Location = new System.Drawing.Point(725, 236);
-            this.lblZipCode.Name = "lblZipCode";
-            this.lblZipCode.Size = new System.Drawing.Size(62, 16);
-            this.lblZipCode.TabIndex = 48;
-            this.lblZipCode.Text = "Zip Code";
+            this.txtBoxEmailAddress.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtBoxEmailAddress.Location = new System.Drawing.Point(732, 255);
+            this.txtBoxEmailAddress.Name = "txtBoxEmailAddress";
+            this.txtBoxEmailAddress.Size = new System.Drawing.Size(209, 22);
+            this.txtBoxEmailAddress.TabIndex = 47;
             // 
             // mskdTxtBoxBirthDate
             // 
@@ -450,14 +441,14 @@ namespace Contact_Tracing_App
             // 
             this.txtBoxPhoneNumber.Location = new System.Drawing.Point(732, 174);
             this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
-            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(153, 22);
+            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(209, 22);
             this.txtBoxPhoneNumber.TabIndex = 34;
             // 
             // lblVax
             // 
             this.lblVax.AutoSize = true;
             this.lblVax.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVax.Location = new System.Drawing.Point(12, 371);
+            this.lblVax.Location = new System.Drawing.Point(132, 371);
             this.lblVax.Name = "lblVax";
             this.lblVax.Size = new System.Drawing.Size(175, 16);
             this.lblVax.TabIndex = 50;
@@ -466,7 +457,7 @@ namespace Contact_Tracing_App
             // chckBoxVaxYes
             // 
             this.chckBoxVaxYes.AutoSize = true;
-            this.chckBoxVaxYes.Location = new System.Drawing.Point(213, 371);
+            this.chckBoxVaxYes.Location = new System.Drawing.Point(333, 371);
             this.chckBoxVaxYes.Name = "chckBoxVaxYes";
             this.chckBoxVaxYes.Size = new System.Drawing.Size(53, 20);
             this.chckBoxVaxYes.TabIndex = 51;
@@ -477,7 +468,7 @@ namespace Contact_Tracing_App
             // chckBoxVaxNo
             // 
             this.chckBoxVaxNo.AutoSize = true;
-            this.chckBoxVaxNo.Location = new System.Drawing.Point(272, 371);
+            this.chckBoxVaxNo.Location = new System.Drawing.Point(392, 371);
             this.chckBoxVaxNo.Name = "chckBoxVaxNo";
             this.chckBoxVaxNo.Size = new System.Drawing.Size(47, 20);
             this.chckBoxVaxNo.TabIndex = 52;
@@ -488,7 +479,7 @@ namespace Contact_Tracing_App
             // lblVaxSpecify
             // 
             this.lblVaxSpecify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVaxSpecify.Location = new System.Drawing.Point(12, 407);
+            this.lblVaxSpecify.Location = new System.Drawing.Point(132, 407);
             this.lblVaxSpecify.Name = "lblVaxSpecify";
             this.lblVaxSpecify.Size = new System.Drawing.Size(175, 35);
             this.lblVaxSpecify.TabIndex = 53;
@@ -497,7 +488,7 @@ namespace Contact_Tracing_App
             // chckBoxSpecifyVax
             // 
             this.chckBoxSpecifyVax.AutoSize = true;
-            this.chckBoxSpecifyVax.Location = new System.Drawing.Point(213, 407);
+            this.chckBoxSpecifyVax.Location = new System.Drawing.Point(333, 407);
             this.chckBoxSpecifyVax.Name = "chckBoxSpecifyVax";
             this.chckBoxSpecifyVax.Size = new System.Drawing.Size(127, 20);
             this.chckBoxSpecifyVax.TabIndex = 54;
@@ -508,7 +499,7 @@ namespace Contact_Tracing_App
             // chckBoxSpecifyVax2
             // 
             this.chckBoxSpecifyVax2.AutoSize = true;
-            this.chckBoxSpecifyVax2.Location = new System.Drawing.Point(345, 407);
+            this.chckBoxSpecifyVax2.Location = new System.Drawing.Point(465, 407);
             this.chckBoxSpecifyVax2.Name = "chckBoxSpecifyVax2";
             this.chckBoxSpecifyVax2.Size = new System.Drawing.Size(83, 20);
             this.chckBoxSpecifyVax2.TabIndex = 55;
@@ -519,7 +510,7 @@ namespace Contact_Tracing_App
             // chckBoxSpecifyVax3
             // 
             this.chckBoxSpecifyVax3.AutoSize = true;
-            this.chckBoxSpecifyVax3.Location = new System.Drawing.Point(434, 407);
+            this.chckBoxSpecifyVax3.Location = new System.Drawing.Point(554, 407);
             this.chckBoxSpecifyVax3.Name = "chckBoxSpecifyVax3";
             this.chckBoxSpecifyVax3.Size = new System.Drawing.Size(106, 20);
             this.chckBoxSpecifyVax3.TabIndex = 56;
@@ -530,7 +521,7 @@ namespace Contact_Tracing_App
             // chckBoxSpecifyVax4
             // 
             this.chckBoxSpecifyVax4.AutoSize = true;
-            this.chckBoxSpecifyVax4.Location = new System.Drawing.Point(546, 407);
+            this.chckBoxSpecifyVax4.Location = new System.Drawing.Point(666, 407);
             this.chckBoxSpecifyVax4.Name = "chckBoxSpecifyVax4";
             this.chckBoxSpecifyVax4.Size = new System.Drawing.Size(78, 20);
             this.chckBoxSpecifyVax4.TabIndex = 58;
@@ -541,7 +532,7 @@ namespace Contact_Tracing_App
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 474);
+            this.label3.Location = new System.Drawing.Point(132, 474);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 48);
             this.label3.TabIndex = 59;
@@ -550,7 +541,7 @@ namespace Contact_Tracing_App
             // chckBoxSymptomsYes
             // 
             this.chckBoxSymptomsYes.AutoSize = true;
-            this.chckBoxSymptomsYes.Location = new System.Drawing.Point(213, 474);
+            this.chckBoxSymptomsYes.Location = new System.Drawing.Point(333, 474);
             this.chckBoxSymptomsYes.Name = "chckBoxSymptomsYes";
             this.chckBoxSymptomsYes.Size = new System.Drawing.Size(53, 20);
             this.chckBoxSymptomsYes.TabIndex = 60;
@@ -561,7 +552,7 @@ namespace Contact_Tracing_App
             // chckBoxSymptomsNo
             // 
             this.chckBoxSymptomsNo.AutoSize = true;
-            this.chckBoxSymptomsNo.Location = new System.Drawing.Point(272, 474);
+            this.chckBoxSymptomsNo.Location = new System.Drawing.Point(392, 474);
             this.chckBoxSymptomsNo.Name = "chckBoxSymptomsNo";
             this.chckBoxSymptomsNo.Size = new System.Drawing.Size(47, 20);
             this.chckBoxSymptomsNo.TabIndex = 61;
@@ -572,7 +563,7 @@ namespace Contact_Tracing_App
             // lblTemperature
             // 
             this.lblTemperature.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTemperature.Location = new System.Drawing.Point(12, 615);
+            this.lblTemperature.Location = new System.Drawing.Point(132, 615);
             this.lblTemperature.Name = "lblTemperature";
             this.lblTemperature.Size = new System.Drawing.Size(175, 53);
             this.lblTemperature.TabIndex = 62;
@@ -581,7 +572,7 @@ namespace Contact_Tracing_App
             // chckBoxTravelYes
             // 
             this.chckBoxTravelYes.AutoSize = true;
-            this.chckBoxTravelYes.Location = new System.Drawing.Point(213, 615);
+            this.chckBoxTravelYes.Location = new System.Drawing.Point(333, 615);
             this.chckBoxTravelYes.Name = "chckBoxTravelYes";
             this.chckBoxTravelYes.Size = new System.Drawing.Size(53, 20);
             this.chckBoxTravelYes.TabIndex = 63;
@@ -603,7 +594,7 @@ namespace Contact_Tracing_App
             this.lblHI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHI.Location = new System.Drawing.Point(15, 326);
             this.lblHI.Name = "lblHI";
-            this.lblHI.Size = new System.Drawing.Size(874, 20);
+            this.lblHI.Size = new System.Drawing.Size(942, 20);
             this.lblHI.TabIndex = 65;
             this.lblHI.Text = "Please enter your health information.";
             this.lblHI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -611,7 +602,7 @@ namespace Contact_Tracing_App
             // chckBoxTravelNo
             // 
             this.chckBoxTravelNo.AutoSize = true;
-            this.chckBoxTravelNo.Location = new System.Drawing.Point(272, 615);
+            this.chckBoxTravelNo.Location = new System.Drawing.Point(392, 615);
             this.chckBoxTravelNo.Name = "chckBoxTravelNo";
             this.chckBoxTravelNo.Size = new System.Drawing.Size(47, 20);
             this.chckBoxTravelNo.TabIndex = 66;
@@ -621,7 +612,7 @@ namespace Contact_Tracing_App
             // 
             // txtBoxOther
             // 
-            this.txtBoxOther.Location = new System.Drawing.Point(390, 432);
+            this.txtBoxOther.Location = new System.Drawing.Point(510, 432);
             this.txtBoxOther.Name = "txtBoxOther";
             this.txtBoxOther.Size = new System.Drawing.Size(302, 22);
             this.txtBoxOther.TabIndex = 68;
@@ -629,7 +620,7 @@ namespace Contact_Tracing_App
             // lblSpecifySymptoms
             // 
             this.lblSpecifySymptoms.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecifySymptoms.Location = new System.Drawing.Point(12, 542);
+            this.lblSpecifySymptoms.Location = new System.Drawing.Point(132, 542);
             this.lblSpecifySymptoms.Name = "lblSpecifySymptoms";
             this.lblSpecifySymptoms.Size = new System.Drawing.Size(175, 35);
             this.lblSpecifySymptoms.TabIndex = 70;
@@ -638,7 +629,7 @@ namespace Contact_Tracing_App
             // chckBoxFever
             // 
             this.chckBoxFever.AutoSize = true;
-            this.chckBoxFever.Location = new System.Drawing.Point(213, 542);
+            this.chckBoxFever.Location = new System.Drawing.Point(333, 542);
             this.chckBoxFever.Name = "chckBoxFever";
             this.chckBoxFever.Size = new System.Drawing.Size(64, 20);
             this.chckBoxFever.TabIndex = 71;
@@ -649,7 +640,7 @@ namespace Contact_Tracing_App
             // chckBoxCough
             // 
             this.chckBoxCough.AutoSize = true;
-            this.chckBoxCough.Location = new System.Drawing.Point(283, 542);
+            this.chckBoxCough.Location = new System.Drawing.Point(403, 542);
             this.chckBoxCough.Name = "chckBoxCough";
             this.chckBoxCough.Size = new System.Drawing.Size(68, 20);
             this.chckBoxCough.TabIndex = 72;
@@ -660,7 +651,7 @@ namespace Contact_Tracing_App
             // chckBoxTiredness
             // 
             this.chckBoxTiredness.AutoSize = true;
-            this.chckBoxTiredness.Location = new System.Drawing.Point(357, 542);
+            this.chckBoxTiredness.Location = new System.Drawing.Point(477, 542);
             this.chckBoxTiredness.Name = "chckBoxTiredness";
             this.chckBoxTiredness.Size = new System.Drawing.Size(90, 20);
             this.chckBoxTiredness.TabIndex = 73;
@@ -671,7 +662,7 @@ namespace Contact_Tracing_App
             // chckBoxLoss
             // 
             this.chckBoxLoss.AutoSize = true;
-            this.chckBoxLoss.Location = new System.Drawing.Point(453, 542);
+            this.chckBoxLoss.Location = new System.Drawing.Point(573, 542);
             this.chckBoxLoss.Name = "chckBoxLoss";
             this.chckBoxLoss.Size = new System.Drawing.Size(189, 20);
             this.chckBoxLoss.TabIndex = 74;
@@ -681,7 +672,7 @@ namespace Contact_Tracing_App
             // 
             // txtBoxOther2
             // 
-            this.txtBoxOther2.Location = new System.Drawing.Point(390, 567);
+            this.txtBoxOther2.Location = new System.Drawing.Point(510, 567);
             this.txtBoxOther2.Name = "txtBoxOther2";
             this.txtBoxOther2.Size = new System.Drawing.Size(302, 22);
             this.txtBoxOther2.TabIndex = 76;
@@ -690,7 +681,7 @@ namespace Contact_Tracing_App
             // 
             this.lblSpecifyTravel.AutoSize = true;
             this.lblSpecifyTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecifyTravel.Location = new System.Drawing.Point(210, 638);
+            this.lblSpecifyTravel.Location = new System.Drawing.Point(330, 638);
             this.lblSpecifyTravel.Name = "lblSpecifyTravel";
             this.lblSpecifyTravel.Size = new System.Drawing.Size(138, 16);
             this.lblSpecifyTravel.TabIndex = 77;
@@ -698,7 +689,7 @@ namespace Contact_Tracing_App
             // 
             // txtBoxSpecifyTravel
             // 
-            this.txtBoxSpecifyTravel.Location = new System.Drawing.Point(390, 635);
+            this.txtBoxSpecifyTravel.Location = new System.Drawing.Point(510, 635);
             this.txtBoxSpecifyTravel.Name = "txtBoxSpecifyTravel";
             this.txtBoxSpecifyTravel.Size = new System.Drawing.Size(302, 22);
             this.txtBoxSpecifyTravel.TabIndex = 78;
@@ -706,7 +697,7 @@ namespace Contact_Tracing_App
             // chckBoxSpecify
             // 
             this.chckBoxSpecify.AutoSize = true;
-            this.chckBoxSpecify.Location = new System.Drawing.Point(213, 434);
+            this.chckBoxSpecify.Location = new System.Drawing.Point(333, 434);
             this.chckBoxSpecify.Name = "chckBoxSpecify";
             this.chckBoxSpecify.Size = new System.Drawing.Size(171, 20);
             this.chckBoxSpecify.TabIndex = 79;
@@ -717,17 +708,28 @@ namespace Contact_Tracing_App
             // lblSpecify2
             // 
             this.lblSpecify2.AutoSize = true;
-            this.lblSpecify2.Location = new System.Drawing.Point(210, 570);
+            this.lblSpecify2.Location = new System.Drawing.Point(330, 570);
             this.lblSpecify2.Name = "lblSpecify2";
             this.lblSpecify2.Size = new System.Drawing.Size(163, 16);
             this.lblSpecify2.TabIndex = 82;
             this.lblSpecify2.Text = "Describe your symptom/s:";
             // 
+            // lblEmailAddress
+            // 
+            this.lblEmailAddress.AutoSize = true;
+            this.lblEmailAddress.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailAddress.Location = new System.Drawing.Point(728, 228);
+            this.lblEmailAddress.Name = "lblEmailAddress";
+            this.lblEmailAddress.Size = new System.Drawing.Size(103, 24);
+            this.lblEmailAddress.TabIndex = 83;
+            this.lblEmailAddress.Text = "Email Address";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 722);
+            this.ClientSize = new System.Drawing.Size(953, 722);
+            this.Controls.Add(this.lblEmailAddress);
             this.Controls.Add(this.lblSpecify2);
             this.Controls.Add(this.chckBoxSpecify);
             this.Controls.Add(this.txtBoxSpecifyTravel);
@@ -755,8 +757,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.chckBoxVaxYes);
             this.Controls.Add(this.lblVax);
             this.Controls.Add(this.mskdTxtBoxBirthDate);
-            this.Controls.Add(this.lblZipCode);
-            this.Controls.Add(this.txtBoxZipCode);
+            this.Controls.Add(this.txtBoxEmailAddress);
             this.Controls.Add(this.txtBoxProvince);
             this.Controls.Add(this.txtBoxCity);
             this.Controls.Add(this.txtBoxBarangay);
@@ -843,8 +844,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxBarangay;
         private System.Windows.Forms.TextBox txtBoxCity;
         private System.Windows.Forms.TextBox txtBoxProvince;
-        private System.Windows.Forms.TextBox txtBoxZipCode;
-        private System.Windows.Forms.Label lblZipCode;
+        private System.Windows.Forms.TextBox txtBoxEmailAddress;
         private EventHandler label3_Click;
         private EventHandler pictureBox1_Click;
         private System.Windows.Forms.MaskedTextBox mskdTxtBoxBirthDate;
@@ -876,6 +876,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxSpecifyTravel;
         private System.Windows.Forms.CheckBox chckBoxSpecify;
         private System.Windows.Forms.Label lblSpecify2;
+        private System.Windows.Forms.Label lblEmailAddress;
     }
 }
 
