@@ -17,8 +17,8 @@ namespace Contact_Tracing_App
         {
             InitializeComponent();
 
-            txtBoxAge.MaxLength = 6;
-            txtBoxSex.MaxLength = 11;
+            txtBoxAge.MaxLength = 3;
+            txtBoxPhoneNumber.MaxLength = 11;
             chckBoxSpecifyVax.Enabled = false;
             chckBoxSpecifyVax2.Enabled = false;
             chckBoxSpecifyVax3.Enabled = false;
@@ -184,15 +184,15 @@ namespace Contact_Tracing_App
         private void txtBoxAge_TextChanged(object sender, EventArgs e)
         {
             int box_int = 0;
-            Int32.TryParse(txtBoxBirthdate.Text, out box_int);
-            if (box_int < 1 && txtBoxBirthdate.Text != "")
+            Int32.TryParse(txtBoxAge.Text, out box_int);
+            if (box_int < 1 && txtBoxAge.Text != "")
             {
-                txtBoxBirthdate.Text = "0";
+                txtBoxAge.Text = "0";
                 MessageBox.Show("Please enter a different age.");
             }
-            else if (box_int > 122 && txtBoxBirthdate.Text != "")
+            else if (box_int > 122 && txtBoxAge.Text != "")
             {
-                txtBoxBirthdate.Text = "0";
+                txtBoxAge.Text = "0";
                 MessageBox.Show("Please enter a different age.");
             }
         }
