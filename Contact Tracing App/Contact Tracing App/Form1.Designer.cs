@@ -86,7 +86,6 @@ namespace Contact_Tracing_App
             this.lblHI = new System.Windows.Forms.Label();
             this.chckBoxTravelNo = new System.Windows.Forms.CheckBox();
             this.txtBoxOther = new System.Windows.Forms.TextBox();
-            this.lblSpecify = new System.Windows.Forms.Label();
             this.lblSpecifySymptoms = new System.Windows.Forms.Label();
             this.chckBoxFever = new System.Windows.Forms.CheckBox();
             this.chckBoxCough = new System.Windows.Forms.CheckBox();
@@ -96,6 +95,7 @@ namespace Contact_Tracing_App
             this.txtBoxOther2 = new System.Windows.Forms.TextBox();
             this.lblSpecifyTravel = new System.Windows.Forms.Label();
             this.txtBoxSpecifyTravel = new System.Windows.Forms.TextBox();
+            this.chckBoxSpecify = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -622,20 +622,10 @@ namespace Contact_Tracing_App
             // 
             // txtBoxOther
             // 
-            this.txtBoxOther.Location = new System.Drawing.Point(345, 432);
+            this.txtBoxOther.Location = new System.Drawing.Point(370, 432);
             this.txtBoxOther.Name = "txtBoxOther";
-            this.txtBoxOther.Size = new System.Drawing.Size(277, 22);
+            this.txtBoxOther.Size = new System.Drawing.Size(252, 22);
             this.txtBoxOther.TabIndex = 68;
-            // 
-            // lblSpecify
-            // 
-            this.lblSpecify.AutoSize = true;
-            this.lblSpecify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecify.Location = new System.Drawing.Point(190, 435);
-            this.lblSpecify.Name = "lblSpecify";
-            this.lblSpecify.Size = new System.Drawing.Size(149, 16);
-            this.lblSpecify.TabIndex = 69;
-            this.lblSpecify.Text = "Others (Please specify):";
             // 
             // lblSpecifySymptoms
             // 
@@ -724,11 +714,23 @@ namespace Contact_Tracing_App
             this.txtBoxSpecifyTravel.Size = new System.Drawing.Size(277, 22);
             this.txtBoxSpecifyTravel.TabIndex = 78;
             // 
+            // chckBoxSpecify
+            // 
+            this.chckBoxSpecify.AutoSize = true;
+            this.chckBoxSpecify.Location = new System.Drawing.Point(193, 434);
+            this.chckBoxSpecify.Name = "chckBoxSpecify";
+            this.chckBoxSpecify.Size = new System.Drawing.Size(171, 20);
+            this.chckBoxSpecify.TabIndex = 79;
+            this.chckBoxSpecify.Text = "Others (Please specify):";
+            this.chckBoxSpecify.UseVisualStyleBackColor = true;
+            this.chckBoxSpecify.CheckedChanged += new System.EventHandler(this.chckBoxSpecify_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 722);
+            this.Controls.Add(this.chckBoxSpecify);
             this.Controls.Add(this.txtBoxSpecifyTravel);
             this.Controls.Add(this.lblSpecifyTravel);
             this.Controls.Add(this.txtBoxOther2);
@@ -738,7 +740,6 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.chckBoxCough);
             this.Controls.Add(this.chckBoxFever);
             this.Controls.Add(this.lblSpecifySymptoms);
-            this.Controls.Add(this.lblSpecify);
             this.Controls.Add(this.txtBoxOther);
             this.Controls.Add(this.chckBoxTravelNo);
             this.Controls.Add(this.lblHI);
@@ -867,7 +868,6 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lblHI;
         private System.Windows.Forms.CheckBox chckBoxTravelNo;
         private System.Windows.Forms.TextBox txtBoxOther;
-        private System.Windows.Forms.Label lblSpecify;
         private System.Windows.Forms.Label lblSpecifySymptoms;
         private System.Windows.Forms.CheckBox chckBoxFever;
         private System.Windows.Forms.CheckBox chckBoxCough;
@@ -877,6 +877,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxOther2;
         private System.Windows.Forms.Label lblSpecifyTravel;
         private System.Windows.Forms.TextBox txtBoxSpecifyTravel;
+        private System.Windows.Forms.CheckBox chckBoxSpecify;
     }
 }
 
