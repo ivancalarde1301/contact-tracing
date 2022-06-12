@@ -32,6 +32,8 @@ namespace Contact_Tracing_App
             chckBoxLoss.Enabled = false;
             lblSpecify2.Enabled = false;
             txtBoxOther2.Enabled = false;
+            lblSpecifyTravel.Enabled = false;
+            txtBoxSpecifyTravel.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -255,7 +257,7 @@ namespace Contact_Tracing_App
         {
             if (chckBoxSymptomsYes.Checked == true)
             {
-                chckBoxSymptomsNo.Enabled = false;
+                chckBoxSymptomsNo.Checked = false;
                 chckBoxFever.Enabled = true;
                 chckBoxCough.Enabled = true;
                 chckBoxTiredness.Enabled = true;
@@ -271,7 +273,7 @@ namespace Contact_Tracing_App
                 chckBoxLoss.Checked = false;
                 lblSpecify2.Enabled = false;
                 txtBoxOther2.Text = "";
-                chckBoxSymptomsNo.Enabled = true;
+                chckBoxSymptomsNo.Checked = true;
                 chckBoxFever.Enabled = false;
                 chckBoxCough.Enabled = false;
                 chckBoxTiredness.Enabled = false;
@@ -285,11 +287,11 @@ namespace Contact_Tracing_App
         {
             if (chckBoxSymptomsNo.Checked == true)
             {
-                chckBoxSymptomsYes.Enabled = false;
+                chckBoxSymptomsYes.Checked = false;
             }
             else if (chckBoxSymptomsNo.Checked == false)
             {
-                chckBoxSymptomsYes.Enabled = true;
+                chckBoxSymptomsYes.Checked = true;
             }
         }
 
@@ -379,6 +381,31 @@ namespace Contact_Tracing_App
                 lblSpecify2.Enabled = true;
                 txtBoxOther2.Enabled = true;
                 txtBoxOther2.Text = "";
+            }
+        }
+
+        private void chckBoxTravelYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxTravelYes.Checked == true)
+            {
+                lblSpecifyTravel.Enabled = true;
+                txtBoxSpecifyTravel.Enabled = true;
+                chckBoxTravelYes.Checked = true;
+                chckBoxTravelNo.Checked = false;
+            }
+            else if (chckBoxTravelYes.Checked == false)
+            {
+                lblSpecifyTravel.Enabled = false;
+                txtBoxSpecifyTravel.Enabled = false;
+                txtBoxSpecifyTravel.Text = "";
+            }
+        }
+
+        private void chckBoxTravelNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxTravelNo.Checked == true)
+            {
+                chckBoxTravelYes.Checked = false;
             }
         }
     }

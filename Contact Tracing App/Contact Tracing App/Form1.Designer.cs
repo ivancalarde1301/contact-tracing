@@ -588,6 +588,7 @@ namespace Contact_Tracing_App
             this.chckBoxTravelYes.TabIndex = 63;
             this.chckBoxTravelYes.Text = "Yes";
             this.chckBoxTravelYes.UseVisualStyleBackColor = true;
+            this.chckBoxTravelYes.CheckedChanged += new System.EventHandler(this.chckBoxTravelYes_CheckedChanged);
             // 
             // pictureBox2
             // 
@@ -617,6 +618,7 @@ namespace Contact_Tracing_App
             this.chckBoxTravelNo.TabIndex = 66;
             this.chckBoxTravelNo.Text = "No";
             this.chckBoxTravelNo.UseVisualStyleBackColor = true;
+            this.chckBoxTravelNo.CheckedChanged += new System.EventHandler(this.chckBoxTravelNo_CheckedChanged);
             // 
             // txtBoxOther
             // 
