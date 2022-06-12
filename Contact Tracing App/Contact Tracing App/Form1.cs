@@ -19,6 +19,7 @@ namespace Contact_Tracing_App
 
             txtBoxSex.MaxLength = 6;
             txtBoxPhoneNumber.MaxLength = 11;
+            txtBoxZipCode.MaxLength = 4;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,7 +29,6 @@ namespace Contact_Tracing_App
             file.WriteLine("First Name: " + txtBoxFirstName.Text);
             file.WriteLine("Middle Name: " + txtBoxMiddleName.Text);
             file.WriteLine("Last Name: " + txtBoxLastName.Text);
-            //file.WriteLine("Suffix: " + txtBoxSuffix.Text);
             {
                 if (txtBoxSuffix.Text != "")
                 {
