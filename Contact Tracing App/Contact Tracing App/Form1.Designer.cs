@@ -45,9 +45,9 @@ namespace Contact_Tracing_App
             this.lvlBirthDate = new System.Windows.Forms.Label();
             this.lblmmddyyy = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
-            this.txtBoxAge = new System.Windows.Forms.TextBox();
+            this.txtBoxBirthdate = new System.Windows.Forms.TextBox();
             this.lblFullAddress = new System.Windows.Forms.Label();
-            this.txtBoxSex = new System.Windows.Forms.TextBox();
+            this.txtBoxAge = new System.Windows.Forms.TextBox();
             this.lblUBL = new System.Windows.Forms.Label();
             this.lblStreet = new System.Windows.Forms.Label();
             this.lblBarangay = new System.Windows.Forms.Label();
@@ -59,15 +59,14 @@ namespace Contact_Tracing_App
             this.lblSuffix = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblHealthInformation = new System.Windows.Forms.Label();
-            this.txtBoxUBL = new System.Windows.Forms.TextBox();
+            this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblSex = new System.Windows.Forms.Label();
+            this.txtBoxUBL = new System.Windows.Forms.TextBox();
             this.txtBoxStreet = new System.Windows.Forms.TextBox();
             this.txtBoxBarangay = new System.Windows.Forms.TextBox();
             this.txtBoxCity = new System.Windows.Forms.TextBox();
             this.txtBoxProvince = new System.Windows.Forms.TextBox();
-            this.txtBoxEmailAddress = new System.Windows.Forms.TextBox();
-            this.mskdTxtBoxBirthDate = new System.Windows.Forms.MaskedTextBox();
-            this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtBoxSex = new System.Windows.Forms.TextBox();
             this.lblVax = new System.Windows.Forms.Label();
             this.chckBoxVaxYes = new System.Windows.Forms.CheckBox();
             this.chckBoxVaxNo = new System.Windows.Forms.CheckBox();
@@ -96,6 +95,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecify = new System.Windows.Forms.CheckBox();
             this.lblSpecify2 = new System.Windows.Forms.Label();
             this.lblEmailAddress = new System.Windows.Forms.Label();
+            this.txtBoxEmailAddress = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,7 +107,7 @@ namespace Contact_Tracing_App
             this.btnSubmit.Location = new System.Drawing.Point(407, 678);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(150, 32);
-            this.btnSubmit.TabIndex = 0;
+            this.btnSubmit.TabIndex = 35;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
@@ -188,28 +188,28 @@ namespace Contact_Tracing_App
             this.txtBoxFirstName.Location = new System.Drawing.Point(16, 174);
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(113, 22);
-            this.txtBoxFirstName.TabIndex = 14;
+            this.txtBoxFirstName.TabIndex = 1;
             // 
             // txtBoxMiddleName
             // 
             this.txtBoxMiddleName.Location = new System.Drawing.Point(135, 174);
             this.txtBoxMiddleName.Name = "txtBoxMiddleName";
             this.txtBoxMiddleName.Size = new System.Drawing.Size(113, 22);
-            this.txtBoxMiddleName.TabIndex = 15;
+            this.txtBoxMiddleName.TabIndex = 2;
             // 
             // txtBoxLastName
             // 
             this.txtBoxLastName.Location = new System.Drawing.Point(254, 174);
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.Size = new System.Drawing.Size(113, 22);
-            this.txtBoxLastName.TabIndex = 16;
+            this.txtBoxLastName.TabIndex = 3;
             // 
             // txtBoxSuffix
             // 
             this.txtBoxSuffix.Location = new System.Drawing.Point(373, 174);
             this.txtBoxSuffix.Name = "txtBoxSuffix";
             this.txtBoxSuffix.Size = new System.Drawing.Size(46, 22);
-            this.txtBoxSuffix.TabIndex = 17;
+            this.txtBoxSuffix.TabIndex = 4;
             // 
             // lvlBirthDate
             // 
@@ -241,13 +241,13 @@ namespace Contact_Tracing_App
             this.lblAge.TabIndex = 21;
             this.lblAge.Text = "Age";
             // 
-            // txtBoxAge
+            // txtBoxBirthdate
             // 
-            this.txtBoxAge.Location = new System.Drawing.Point(573, 174);
-            this.txtBoxAge.Name = "txtBoxAge";
-            this.txtBoxAge.Size = new System.Drawing.Size(54, 22);
-            this.txtBoxAge.TabIndex = 22;
-            this.txtBoxAge.TextChanged += new System.EventHandler(this.txtBoxAge_TextChanged);
+            this.txtBoxBirthdate.Location = new System.Drawing.Point(425, 174);
+            this.txtBoxBirthdate.Name = "txtBoxBirthdate";
+            this.txtBoxBirthdate.Size = new System.Drawing.Size(141, 22);
+            this.txtBoxBirthdate.TabIndex = 5;
+            this.txtBoxBirthdate.TextChanged += new System.EventHandler(this.txtBoxAge_TextChanged);
             // 
             // lblFullAddress
             // 
@@ -259,12 +259,15 @@ namespace Contact_Tracing_App
             this.lblFullAddress.TabIndex = 23;
             this.lblFullAddress.Text = "Full Address";
             // 
-            // txtBoxSex
+            // txtBoxAge
             // 
-            this.txtBoxSex.Location = new System.Drawing.Point(633, 174);
-            this.txtBoxSex.Name = "txtBoxSex";
-            this.txtBoxSex.Size = new System.Drawing.Size(93, 22);
-            this.txtBoxSex.TabIndex = 24;
+            this.txtBoxAge.AutoCompleteCustomSource.AddRange(new string[] {
+            "Male",
+            "Female"});
+            this.txtBoxAge.Location = new System.Drawing.Point(572, 174);
+            this.txtBoxAge.Name = "txtBoxAge";
+            this.txtBoxAge.Size = new System.Drawing.Size(55, 22);
+            this.txtBoxAge.TabIndex = 6;
             // 
             // lblUBL
             // 
@@ -375,12 +378,12 @@ namespace Contact_Tracing_App
             this.lblHealthInformation.Text = "Health Information";
             this.lblHealthInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtBoxUBL
+            // txtBoxPhoneNumber
             // 
-            this.txtBoxUBL.Location = new System.Drawing.Point(15, 255);
-            this.txtBoxUBL.Name = "txtBoxUBL";
-            this.txtBoxUBL.Size = new System.Drawing.Size(129, 22);
-            this.txtBoxUBL.TabIndex = 41;
+            this.txtBoxPhoneNumber.Location = new System.Drawing.Point(732, 174);
+            this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
+            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(209, 22);
+            this.txtBoxPhoneNumber.TabIndex = 8;
             // 
             // lblSex
             // 
@@ -392,57 +395,48 @@ namespace Contact_Tracing_App
             this.lblSex.TabIndex = 42;
             this.lblSex.Text = "Sex";
             // 
+            // txtBoxUBL
+            // 
+            this.txtBoxUBL.Location = new System.Drawing.Point(15, 255);
+            this.txtBoxUBL.Name = "txtBoxUBL";
+            this.txtBoxUBL.Size = new System.Drawing.Size(129, 22);
+            this.txtBoxUBL.TabIndex = 9;
+            // 
             // txtBoxStreet
             // 
             this.txtBoxStreet.Location = new System.Drawing.Point(150, 255);
             this.txtBoxStreet.Name = "txtBoxStreet";
             this.txtBoxStreet.Size = new System.Drawing.Size(131, 22);
-            this.txtBoxStreet.TabIndex = 43;
+            this.txtBoxStreet.TabIndex = 10;
             // 
             // txtBoxBarangay
             // 
             this.txtBoxBarangay.Location = new System.Drawing.Point(287, 255);
             this.txtBoxBarangay.Name = "txtBoxBarangay";
             this.txtBoxBarangay.Size = new System.Drawing.Size(161, 22);
-            this.txtBoxBarangay.TabIndex = 44;
+            this.txtBoxBarangay.TabIndex = 11;
             // 
             // txtBoxCity
             // 
             this.txtBoxCity.Location = new System.Drawing.Point(454, 255);
             this.txtBoxCity.Name = "txtBoxCity";
             this.txtBoxCity.Size = new System.Drawing.Size(131, 22);
-            this.txtBoxCity.TabIndex = 45;
+            this.txtBoxCity.TabIndex = 12;
             // 
             // txtBoxProvince
             // 
+            this.txtBoxProvince.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtBoxProvince.Location = new System.Drawing.Point(591, 255);
             this.txtBoxProvince.Name = "txtBoxProvince";
             this.txtBoxProvince.Size = new System.Drawing.Size(135, 22);
-            this.txtBoxProvince.TabIndex = 46;
+            this.txtBoxProvince.TabIndex = 13;
             // 
-            // txtBoxEmailAddress
+            // txtBoxSex
             // 
-            this.txtBoxEmailAddress.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtBoxEmailAddress.Location = new System.Drawing.Point(732, 255);
-            this.txtBoxEmailAddress.Name = "txtBoxEmailAddress";
-            this.txtBoxEmailAddress.Size = new System.Drawing.Size(209, 22);
-            this.txtBoxEmailAddress.TabIndex = 47;
-            // 
-            // mskdTxtBoxBirthDate
-            // 
-            this.mskdTxtBoxBirthDate.Location = new System.Drawing.Point(425, 174);
-            this.mskdTxtBoxBirthDate.Mask = "00-00-0000";
-            this.mskdTxtBoxBirthDate.Name = "mskdTxtBoxBirthDate";
-            this.mskdTxtBoxBirthDate.Size = new System.Drawing.Size(141, 22);
-            this.mskdTxtBoxBirthDate.TabIndex = 49;
-            this.mskdTxtBoxBirthDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtBoxPhoneNumber
-            // 
-            this.txtBoxPhoneNumber.Location = new System.Drawing.Point(732, 174);
-            this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
-            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(209, 22);
-            this.txtBoxPhoneNumber.TabIndex = 34;
+            this.txtBoxSex.Location = new System.Drawing.Point(633, 174);
+            this.txtBoxSex.Name = "txtBoxSex";
+            this.txtBoxSex.Size = new System.Drawing.Size(93, 22);
+            this.txtBoxSex.TabIndex = 7;
             // 
             // lblVax
             // 
@@ -460,7 +454,7 @@ namespace Contact_Tracing_App
             this.chckBoxVaxYes.Location = new System.Drawing.Point(333, 371);
             this.chckBoxVaxYes.Name = "chckBoxVaxYes";
             this.chckBoxVaxYes.Size = new System.Drawing.Size(53, 20);
-            this.chckBoxVaxYes.TabIndex = 51;
+            this.chckBoxVaxYes.TabIndex = 15;
             this.chckBoxVaxYes.Text = "Yes";
             this.chckBoxVaxYes.UseVisualStyleBackColor = true;
             this.chckBoxVaxYes.CheckedChanged += new System.EventHandler(this.chckBoxVaxYes_CheckedChanged);
@@ -471,7 +465,7 @@ namespace Contact_Tracing_App
             this.chckBoxVaxNo.Location = new System.Drawing.Point(392, 371);
             this.chckBoxVaxNo.Name = "chckBoxVaxNo";
             this.chckBoxVaxNo.Size = new System.Drawing.Size(47, 20);
-            this.chckBoxVaxNo.TabIndex = 52;
+            this.chckBoxVaxNo.TabIndex = 16;
             this.chckBoxVaxNo.Text = "No";
             this.chckBoxVaxNo.UseVisualStyleBackColor = true;
             this.chckBoxVaxNo.CheckedChanged += new System.EventHandler(this.chckBoxVaxNo_CheckedChanged);
@@ -491,7 +485,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax.Location = new System.Drawing.Point(333, 407);
             this.chckBoxSpecifyVax.Name = "chckBoxSpecifyVax";
             this.chckBoxSpecifyVax.Size = new System.Drawing.Size(127, 20);
-            this.chckBoxSpecifyVax.TabIndex = 54;
+            this.chckBoxSpecifyVax.TabIndex = 17;
             this.chckBoxSpecifyVax.Text = "Pfizer-BioNTech";
             this.chckBoxSpecifyVax.UseVisualStyleBackColor = true;
             this.chckBoxSpecifyVax.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax_CheckedChanged);
@@ -502,7 +496,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax2.Location = new System.Drawing.Point(465, 407);
             this.chckBoxSpecifyVax2.Name = "chckBoxSpecifyVax2";
             this.chckBoxSpecifyVax2.Size = new System.Drawing.Size(83, 20);
-            this.chckBoxSpecifyVax2.TabIndex = 55;
+            this.chckBoxSpecifyVax2.TabIndex = 18;
             this.chckBoxSpecifyVax2.Text = "Moderna";
             this.chckBoxSpecifyVax2.UseVisualStyleBackColor = true;
             this.chckBoxSpecifyVax2.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax2_CheckedChanged);
@@ -513,7 +507,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax3.Location = new System.Drawing.Point(554, 407);
             this.chckBoxSpecifyVax3.Name = "chckBoxSpecifyVax3";
             this.chckBoxSpecifyVax3.Size = new System.Drawing.Size(106, 20);
-            this.chckBoxSpecifyVax3.TabIndex = 56;
+            this.chckBoxSpecifyVax3.TabIndex = 19;
             this.chckBoxSpecifyVax3.Text = "AstraZeneca";
             this.chckBoxSpecifyVax3.UseVisualStyleBackColor = true;
             this.chckBoxSpecifyVax3.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax3_CheckedChanged);
@@ -524,7 +518,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax4.Location = new System.Drawing.Point(666, 407);
             this.chckBoxSpecifyVax4.Name = "chckBoxSpecifyVax4";
             this.chckBoxSpecifyVax4.Size = new System.Drawing.Size(78, 20);
-            this.chckBoxSpecifyVax4.TabIndex = 58;
+            this.chckBoxSpecifyVax4.TabIndex = 20;
             this.chckBoxSpecifyVax4.Text = "Sinovac";
             this.chckBoxSpecifyVax4.UseVisualStyleBackColor = true;
             this.chckBoxSpecifyVax4.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax4_CheckedChanged);
@@ -544,7 +538,7 @@ namespace Contact_Tracing_App
             this.chckBoxSymptomsYes.Location = new System.Drawing.Point(333, 474);
             this.chckBoxSymptomsYes.Name = "chckBoxSymptomsYes";
             this.chckBoxSymptomsYes.Size = new System.Drawing.Size(53, 20);
-            this.chckBoxSymptomsYes.TabIndex = 60;
+            this.chckBoxSymptomsYes.TabIndex = 23;
             this.chckBoxSymptomsYes.Text = "Yes";
             this.chckBoxSymptomsYes.UseVisualStyleBackColor = true;
             this.chckBoxSymptomsYes.CheckedChanged += new System.EventHandler(this.chckBoxSymptomsYes_CheckedChanged);
@@ -555,7 +549,7 @@ namespace Contact_Tracing_App
             this.chckBoxSymptomsNo.Location = new System.Drawing.Point(392, 474);
             this.chckBoxSymptomsNo.Name = "chckBoxSymptomsNo";
             this.chckBoxSymptomsNo.Size = new System.Drawing.Size(47, 20);
-            this.chckBoxSymptomsNo.TabIndex = 61;
+            this.chckBoxSymptomsNo.TabIndex = 24;
             this.chckBoxSymptomsNo.Text = "No";
             this.chckBoxSymptomsNo.UseVisualStyleBackColor = true;
             this.chckBoxSymptomsNo.CheckedChanged += new System.EventHandler(this.chckBoxSymptomsNo_CheckedChanged);
@@ -566,7 +560,7 @@ namespace Contact_Tracing_App
             this.lblTemperature.Location = new System.Drawing.Point(132, 615);
             this.lblTemperature.Name = "lblTemperature";
             this.lblTemperature.Size = new System.Drawing.Size(175, 53);
-            this.lblTemperature.TabIndex = 62;
+            this.lblTemperature.TabIndex = 1;
             this.lblTemperature.Text = "Have you traveled outside the country in the last 14 days?";
             // 
             // chckBoxTravelYes
@@ -575,7 +569,7 @@ namespace Contact_Tracing_App
             this.chckBoxTravelYes.Location = new System.Drawing.Point(333, 615);
             this.chckBoxTravelYes.Name = "chckBoxTravelYes";
             this.chckBoxTravelYes.Size = new System.Drawing.Size(53, 20);
-            this.chckBoxTravelYes.TabIndex = 63;
+            this.chckBoxTravelYes.TabIndex = 31;
             this.chckBoxTravelYes.Text = "Yes";
             this.chckBoxTravelYes.UseVisualStyleBackColor = true;
             this.chckBoxTravelYes.CheckedChanged += new System.EventHandler(this.chckBoxTravelYes_CheckedChanged);
@@ -605,7 +599,7 @@ namespace Contact_Tracing_App
             this.chckBoxTravelNo.Location = new System.Drawing.Point(392, 615);
             this.chckBoxTravelNo.Name = "chckBoxTravelNo";
             this.chckBoxTravelNo.Size = new System.Drawing.Size(47, 20);
-            this.chckBoxTravelNo.TabIndex = 66;
+            this.chckBoxTravelNo.TabIndex = 32;
             this.chckBoxTravelNo.Text = "No";
             this.chckBoxTravelNo.UseVisualStyleBackColor = true;
             this.chckBoxTravelNo.CheckedChanged += new System.EventHandler(this.chckBoxTravelNo_CheckedChanged);
@@ -615,7 +609,7 @@ namespace Contact_Tracing_App
             this.txtBoxOther.Location = new System.Drawing.Point(510, 432);
             this.txtBoxOther.Name = "txtBoxOther";
             this.txtBoxOther.Size = new System.Drawing.Size(302, 22);
-            this.txtBoxOther.TabIndex = 68;
+            this.txtBoxOther.TabIndex = 22;
             // 
             // lblSpecifySymptoms
             // 
@@ -632,7 +626,7 @@ namespace Contact_Tracing_App
             this.chckBoxFever.Location = new System.Drawing.Point(333, 542);
             this.chckBoxFever.Name = "chckBoxFever";
             this.chckBoxFever.Size = new System.Drawing.Size(64, 20);
-            this.chckBoxFever.TabIndex = 71;
+            this.chckBoxFever.TabIndex = 25;
             this.chckBoxFever.Text = "Fever";
             this.chckBoxFever.UseVisualStyleBackColor = true;
             this.chckBoxFever.CheckedChanged += new System.EventHandler(this.chckBoxFever_CheckedChanged);
@@ -643,7 +637,7 @@ namespace Contact_Tracing_App
             this.chckBoxCough.Location = new System.Drawing.Point(403, 542);
             this.chckBoxCough.Name = "chckBoxCough";
             this.chckBoxCough.Size = new System.Drawing.Size(68, 20);
-            this.chckBoxCough.TabIndex = 72;
+            this.chckBoxCough.TabIndex = 26;
             this.chckBoxCough.Text = "Cough";
             this.chckBoxCough.UseVisualStyleBackColor = true;
             this.chckBoxCough.CheckedChanged += new System.EventHandler(this.chckBoxCough_CheckedChanged);
@@ -654,7 +648,7 @@ namespace Contact_Tracing_App
             this.chckBoxTiredness.Location = new System.Drawing.Point(477, 542);
             this.chckBoxTiredness.Name = "chckBoxTiredness";
             this.chckBoxTiredness.Size = new System.Drawing.Size(90, 20);
-            this.chckBoxTiredness.TabIndex = 73;
+            this.chckBoxTiredness.TabIndex = 27;
             this.chckBoxTiredness.Text = "Tiredness";
             this.chckBoxTiredness.UseVisualStyleBackColor = true;
             this.chckBoxTiredness.CheckedChanged += new System.EventHandler(this.chckBoxTiredness_CheckedChanged);
@@ -665,7 +659,7 @@ namespace Contact_Tracing_App
             this.chckBoxLoss.Location = new System.Drawing.Point(573, 542);
             this.chckBoxLoss.Name = "chckBoxLoss";
             this.chckBoxLoss.Size = new System.Drawing.Size(189, 20);
-            this.chckBoxLoss.TabIndex = 74;
+            this.chckBoxLoss.TabIndex = 28;
             this.chckBoxLoss.Text = "Loss of Taste and/or Smell";
             this.chckBoxLoss.UseVisualStyleBackColor = true;
             this.chckBoxLoss.CheckedChanged += new System.EventHandler(this.chckBoxLoss_CheckedChanged);
@@ -675,7 +669,7 @@ namespace Contact_Tracing_App
             this.txtBoxOther2.Location = new System.Drawing.Point(510, 567);
             this.txtBoxOther2.Name = "txtBoxOther2";
             this.txtBoxOther2.Size = new System.Drawing.Size(302, 22);
-            this.txtBoxOther2.TabIndex = 76;
+            this.txtBoxOther2.TabIndex = 30;
             // 
             // lblSpecifyTravel
             // 
@@ -684,7 +678,7 @@ namespace Contact_Tracing_App
             this.lblSpecifyTravel.Location = new System.Drawing.Point(330, 638);
             this.lblSpecifyTravel.Name = "lblSpecifyTravel";
             this.lblSpecifyTravel.Size = new System.Drawing.Size(138, 16);
-            this.lblSpecifyTravel.TabIndex = 77;
+            this.lblSpecifyTravel.TabIndex = 33;
             this.lblSpecifyTravel.Text = "Please specify where:";
             // 
             // txtBoxSpecifyTravel
@@ -692,7 +686,7 @@ namespace Contact_Tracing_App
             this.txtBoxSpecifyTravel.Location = new System.Drawing.Point(510, 635);
             this.txtBoxSpecifyTravel.Name = "txtBoxSpecifyTravel";
             this.txtBoxSpecifyTravel.Size = new System.Drawing.Size(302, 22);
-            this.txtBoxSpecifyTravel.TabIndex = 78;
+            this.txtBoxSpecifyTravel.TabIndex = 34;
             // 
             // chckBoxSpecify
             // 
@@ -700,7 +694,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecify.Location = new System.Drawing.Point(333, 434);
             this.chckBoxSpecify.Name = "chckBoxSpecify";
             this.chckBoxSpecify.Size = new System.Drawing.Size(171, 20);
-            this.chckBoxSpecify.TabIndex = 79;
+            this.chckBoxSpecify.TabIndex = 21;
             this.chckBoxSpecify.Text = "Others (Please specify):";
             this.chckBoxSpecify.UseVisualStyleBackColor = true;
             this.chckBoxSpecify.CheckedChanged += new System.EventHandler(this.chckBoxSpecify_CheckedChanged);
@@ -711,7 +705,7 @@ namespace Contact_Tracing_App
             this.lblSpecify2.Location = new System.Drawing.Point(330, 570);
             this.lblSpecify2.Name = "lblSpecify2";
             this.lblSpecify2.Size = new System.Drawing.Size(163, 16);
-            this.lblSpecify2.TabIndex = 82;
+            this.lblSpecify2.TabIndex = 29;
             this.lblSpecify2.Text = "Describe your symptom/s:";
             // 
             // lblEmailAddress
@@ -724,11 +718,19 @@ namespace Contact_Tracing_App
             this.lblEmailAddress.TabIndex = 83;
             this.lblEmailAddress.Text = "Email Address";
             // 
+            // txtBoxEmailAddress
+            // 
+            this.txtBoxEmailAddress.Location = new System.Drawing.Point(732, 255);
+            this.txtBoxEmailAddress.Name = "txtBoxEmailAddress";
+            this.txtBoxEmailAddress.Size = new System.Drawing.Size(209, 22);
+            this.txtBoxEmailAddress.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 722);
+            this.Controls.Add(this.txtBoxEmailAddress);
             this.Controls.Add(this.lblEmailAddress);
             this.Controls.Add(this.lblSpecify2);
             this.Controls.Add(this.chckBoxSpecify);
@@ -756,14 +758,13 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.chckBoxVaxNo);
             this.Controls.Add(this.chckBoxVaxYes);
             this.Controls.Add(this.lblVax);
-            this.Controls.Add(this.mskdTxtBoxBirthDate);
-            this.Controls.Add(this.txtBoxEmailAddress);
             this.Controls.Add(this.txtBoxProvince);
             this.Controls.Add(this.txtBoxCity);
             this.Controls.Add(this.txtBoxBarangay);
             this.Controls.Add(this.txtBoxStreet);
-            this.Controls.Add(this.lblSex);
             this.Controls.Add(this.txtBoxUBL);
+            this.Controls.Add(this.lblSex);
+            this.Controls.Add(this.txtBoxPhoneNumber);
             this.Controls.Add(this.lblHealthInformation);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.pictureBox1);
@@ -771,15 +772,15 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblMiddleName);
             this.Controls.Add(this.lblPhoneNumber);
-            this.Controls.Add(this.txtBoxPhoneNumber);
+            this.Controls.Add(this.txtBoxSex);
             this.Controls.Add(this.lblProvince);
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.lblBarangay);
             this.Controls.Add(this.lblStreet);
             this.Controls.Add(this.lblUBL);
-            this.Controls.Add(this.txtBoxSex);
-            this.Controls.Add(this.lblFullAddress);
             this.Controls.Add(this.txtBoxAge);
+            this.Controls.Add(this.lblFullAddress);
+            this.Controls.Add(this.txtBoxBirthdate);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblmmddyyy);
             this.Controls.Add(this.lvlBirthDate);
@@ -823,9 +824,9 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lvlBirthDate;
         private System.Windows.Forms.Label lblmmddyyy;
         private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.TextBox txtBoxAge;
+        private System.Windows.Forms.TextBox txtBoxBirthdate;
         private System.Windows.Forms.Label lblFullAddress;
-        private System.Windows.Forms.TextBox txtBoxSex;
+        private System.Windows.Forms.TextBox txtBoxAge;
         private System.Windows.Forms.Label lblUBL;
         private System.Windows.Forms.Label lblStreet;
         private System.Windows.Forms.Label lblBarangay;
@@ -838,17 +839,16 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Label lblSuffix;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblHealthInformation;
-        private System.Windows.Forms.TextBox txtBoxUBL;
+        private System.Windows.Forms.TextBox txtBoxPhoneNumber;
         private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.TextBox txtBoxUBL;
         private System.Windows.Forms.TextBox txtBoxStreet;
         private System.Windows.Forms.TextBox txtBoxBarangay;
         private System.Windows.Forms.TextBox txtBoxCity;
         private System.Windows.Forms.TextBox txtBoxProvince;
-        private System.Windows.Forms.TextBox txtBoxEmailAddress;
         private EventHandler label3_Click;
         private EventHandler pictureBox1_Click;
-        private System.Windows.Forms.MaskedTextBox mskdTxtBoxBirthDate;
-        private System.Windows.Forms.TextBox txtBoxPhoneNumber;
+        private System.Windows.Forms.TextBox txtBoxSex;
         private System.Windows.Forms.Label lblVax;
         private System.Windows.Forms.CheckBox chckBoxVaxYes;
         private System.Windows.Forms.CheckBox chckBoxVaxNo;
@@ -877,6 +877,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.CheckBox chckBoxSpecify;
         private System.Windows.Forms.Label lblSpecify2;
         private System.Windows.Forms.Label lblEmailAddress;
+        private System.Windows.Forms.TextBox txtBoxEmailAddress;
     }
 }
 

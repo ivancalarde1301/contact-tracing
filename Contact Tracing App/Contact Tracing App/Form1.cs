@@ -17,8 +17,8 @@ namespace Contact_Tracing_App
         {
             InitializeComponent();
 
-            txtBoxSex.MaxLength = 6;
-            txtBoxPhoneNumber.MaxLength = 11;
+            txtBoxAge.MaxLength = 6;
+            txtBoxSex.MaxLength = 11;
             chckBoxSpecifyVax.Enabled = false;
             chckBoxSpecifyVax2.Enabled = false;
             chckBoxSpecifyVax3.Enabled = false;
@@ -43,19 +43,19 @@ namespace Contact_Tracing_App
             file.WriteLine("Full Name: " + txtBoxFirstName.Text + " " + txtBoxMiddleName.Text
                            + " " + txtBoxLastName.Text + " " + txtBoxSuffix.Text);
             file.WriteLine("");
-            file.WriteLine("Birth Date: " + mskdTxtBoxBirthDate.Text);
+            file.WriteLine("Birth Date: " + txtBoxEmailAddress.Text);
             file.WriteLine("");
-            file.WriteLine("Age: " + txtBoxAge.Text);
+            file.WriteLine("Age: " + txtBoxBirthdate.Text);
             file.WriteLine("");
-            file.WriteLine("Sex: " + txtBoxSex.Text);
+            file.WriteLine("Sex: " + txtBoxAge.Text);
             file.WriteLine("");
-            file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);
+            file.WriteLine("Phone Number: " + txtBoxSex.Text);
             file.WriteLine("");
-            file.WriteLine("Email Address: " + txtBoxEmailAddress.Text);
+            file.WriteLine("Email Address: " + txtBoxProvince.Text);
             file.WriteLine("");
-            file.WriteLine("Full Address: " + txtBoxUBL.Text + " " + txtBoxStreet.Text
-                           + " " + txtBoxBarangay.Text + " " + txtBoxCity.Text
-                           + " " + txtBoxProvince.Text);
+            file.WriteLine("Full Address: " + txtBoxPhoneNumber.Text + " " + txtBoxUBL.Text
+                           + " " + txtBoxStreet.Text + " " + txtBoxBarangay.Text
+                           + " " + txtBoxCity.Text);
             file.WriteLine("");
             file.WriteLine("HEALTH INFORMATION");
             file.WriteLine("");
@@ -136,7 +136,8 @@ namespace Contact_Tracing_App
             txtBoxMiddleName.Text = "";
             txtBoxLastName.Text = "";
             txtBoxSuffix.Text = "";
-            mskdTxtBoxBirthDate.Text = "";
+            txtBoxEmailAddress.Text = "";
+            txtBoxBirthdate.Text = "";
             txtBoxAge.Text = "";
             txtBoxSex.Text = "";
             txtBoxPhoneNumber.Text = "";
@@ -145,7 +146,6 @@ namespace Contact_Tracing_App
             txtBoxBarangay.Text = "";
             txtBoxCity.Text = "";
             txtBoxProvince.Text = "";
-            txtBoxEmailAddress.Text = "";
             chckBoxVaxYes.Checked = false;
             chckBoxVaxNo.Checked = false;
             chckBoxSpecifyVax.Checked = false;
@@ -184,15 +184,15 @@ namespace Contact_Tracing_App
         private void txtBoxAge_TextChanged(object sender, EventArgs e)
         {
             int box_int = 0;
-            Int32.TryParse(txtBoxAge.Text, out box_int);
-            if (box_int < 1 && txtBoxAge.Text != "")
+            Int32.TryParse(txtBoxBirthdate.Text, out box_int);
+            if (box_int < 1 && txtBoxBirthdate.Text != "")
             {
-                txtBoxAge.Text = "0";
+                txtBoxBirthdate.Text = "0";
                 MessageBox.Show("Please enter a different age.");
             }
-            else if (box_int > 122 && txtBoxAge.Text != "")
+            else if (box_int > 122 && txtBoxBirthdate.Text != "")
             {
-                txtBoxAge.Text = "0";
+                txtBoxBirthdate.Text = "0";
                 MessageBox.Show("Please enter a different age.");
             }
         }
