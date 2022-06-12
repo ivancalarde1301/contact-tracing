@@ -20,6 +20,13 @@ namespace Contact_Tracing_App
             txtBoxSex.MaxLength = 6;
             txtBoxPhoneNumber.MaxLength = 11;
             txtBoxZipCode.MaxLength = 4;
+            chckBoxSpecifyVax.Enabled = false;
+            chckBoxSpecifyVax2.Enabled = false;
+            chckBoxSpecifyVax3.Enabled = false;
+            chckBoxSpecifyVax4.Enabled = false;
+            chckBoxOther.Enabled = false;
+            lblSpecify.Enabled = false;
+            txtBoxOther.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,10 +91,24 @@ namespace Contact_Tracing_App
             if (chckBoxVaxYes.Checked == true)
             {
                 chckBoxVaxNo.Enabled = false;
+                chckBoxSpecifyVax.Enabled = true;
+                chckBoxSpecifyVax2.Enabled = true;
+                chckBoxSpecifyVax3.Enabled = true;
+                chckBoxSpecifyVax4.Enabled = true;
+                chckBoxOther.Enabled = true;
+                lblSpecify.Enabled = true;
+                txtBoxOther.Enabled = true;
             }
             else if (chckBoxVaxYes.Checked == false)
             {
                 chckBoxVaxNo.Enabled = true;
+                chckBoxSpecifyVax.Enabled = false;
+                chckBoxSpecifyVax2.Enabled = false;
+                chckBoxSpecifyVax3.Enabled = false;
+                chckBoxSpecifyVax4.Enabled = false;
+                chckBoxOther.Enabled = false;
+                lblSpecify.Enabled = false;
+                txtBoxOther.Enabled = false;
             }
         }
 
@@ -107,13 +128,6 @@ namespace Contact_Tracing_App
             else if (chckBoxVaxNo.Checked == false)
             {
                 chckBoxVaxYes.Enabled = true;
-                chckBoxSpecifyVax.Enabled = true;
-                chckBoxSpecifyVax2.Enabled = true;
-                chckBoxSpecifyVax3.Enabled = true;
-                chckBoxSpecifyVax4.Enabled = true;
-                chckBoxOther.Enabled = true;
-                lblSpecify.Enabled = true;
-                txtBoxOther.Enabled = true;
             }
         }
 
