@@ -25,6 +25,7 @@ namespace Contact_Tracing_App
         private void button1_Click(object sender, EventArgs e)
         {
             StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\test.txt");
+            file.WriteLine("PERSONAL INFORMATION");
             file.WriteLine("FULL NAME");
             file.WriteLine("First Name: " + txtBoxFirstName.Text);
             file.WriteLine("Middle Name: " + txtBoxMiddleName.Text);
@@ -41,14 +42,24 @@ namespace Contact_Tracing_App
             }
             file.WriteLine("Birth Date: " + mskdTxtBoxBirthDate.Text);
             file.WriteLine("Age: " + txtBoxAge.Text);
-            file.WriteLine("Sex: " + txtBoxUBL.Text);
+            file.WriteLine("Sex: " + txtBoxSex.Text);
             file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);
             file.WriteLine("FULL ADDRESS");
-            file.WriteLine("Unit / Block / Lot: " + txtBoxSex.Text);
+            file.WriteLine("Unit / Block / Lot: " + txtBoxUBL.Text);
             file.WriteLine("Street: " + txtBoxStreet.Text);
             file.WriteLine("Village / Subdivision: " + txtBoxVillageSubdivision.Text);
             file.WriteLine("City: " + txtBoxCity.Text);
             file.WriteLine("Zip Code: " + txtBoxZipCode.Text);
+            {
+                if (chckBoxVaxYes.Checked == true)
+                {
+                    file.WriteLine("Vaccinated: Yes");
+                }
+                if (chckBoxVaxNo.Checked == true)
+                {
+                    file.WriteLine("Vaccinated: No");
+                }
+            }
             file.Close();
         }
 
@@ -65,6 +76,42 @@ namespace Contact_Tracing_App
             {
                 txtBoxAge.Text = "0";
                 MessageBox.Show("Please enter a different age.");
+            }
+        }
+
+        private void chckBoxVaxYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxVaxYes.Checked == true)
+            {
+                chckBoxVaxNo.Enabled = false;
+            }
+        }
+
+        private void chckBoxVaxNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxVaxNo.Checked == true)
+            {
+                chckBoxVaxYes.Enabled = false;
+                chckBoxSpecifyVax.Enabled = false;
+                chckBoxSpecifyVax2.Enabled = false;
+                chckBoxSpecifyVax3.Enabled = false;
+                chckBoxSpecifyVax4.Enabled = false;
+                chckBoxOther.Enabled = false;
+                lblSpecify.Enabled = false;
+                txtBoxOther.Enabled = false;
+            }
+        }
+
+        private void chckBoxSpecifyVax_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chckBoxSpecifyVax.Checked == true)
+            {
+                chckBoxSpecifyVax2.Enabled = false;
+                chckBoxSpecifyVax3.Enabled = false;
+                chckBoxSpecifyVax4.Enabled = false;
+                chckBoxOther.Enabled = false;
+                lblSpecify.Enabled = false;
+                txtBoxOther.Enabled = false;
             }
         }
     }

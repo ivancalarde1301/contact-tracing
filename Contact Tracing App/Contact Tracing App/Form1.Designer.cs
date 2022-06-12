@@ -77,7 +77,6 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax2 = new System.Windows.Forms.CheckBox();
             this.chckBoxSpecifyVax3 = new System.Windows.Forms.CheckBox();
             this.chckBoxSpecifyVax4 = new System.Windows.Forms.CheckBox();
-            this.chckBoxSpecifyVax5 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.chckBoxSymptomsYes = new System.Windows.Forms.CheckBox();
             this.chckBoxSymptomsNo = new System.Windows.Forms.CheckBox();
@@ -97,9 +96,9 @@ namespace Contact_Tracing_App
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(366, 523);
+            this.btnSubmit.Location = new System.Drawing.Point(373, 523);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(165, 32);
+            this.btnSubmit.Size = new System.Drawing.Size(148, 32);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -460,22 +459,24 @@ namespace Contact_Tracing_App
             // chckBoxVaxYes
             // 
             this.chckBoxVaxYes.AutoSize = true;
-            this.chckBoxVaxYes.Location = new System.Drawing.Point(193, 365);
+            this.chckBoxVaxYes.Location = new System.Drawing.Point(198, 365);
             this.chckBoxVaxYes.Name = "chckBoxVaxYes";
             this.chckBoxVaxYes.Size = new System.Drawing.Size(53, 20);
             this.chckBoxVaxYes.TabIndex = 51;
             this.chckBoxVaxYes.Text = "Yes";
             this.chckBoxVaxYes.UseVisualStyleBackColor = true;
+            this.chckBoxVaxYes.CheckedChanged += new System.EventHandler(this.chckBoxVaxYes_CheckedChanged);
             // 
             // chckBoxVaxNo
             // 
             this.chckBoxVaxNo.AutoSize = true;
-            this.chckBoxVaxNo.Location = new System.Drawing.Point(252, 365);
+            this.chckBoxVaxNo.Location = new System.Drawing.Point(257, 365);
             this.chckBoxVaxNo.Name = "chckBoxVaxNo";
             this.chckBoxVaxNo.Size = new System.Drawing.Size(47, 20);
             this.chckBoxVaxNo.TabIndex = 52;
             this.chckBoxVaxNo.Text = "No";
             this.chckBoxVaxNo.UseVisualStyleBackColor = true;
+            this.chckBoxVaxNo.CheckedChanged += new System.EventHandler(this.chckBoxVaxNo_CheckedChanged);
             // 
             // lblVaxSpecify
             // 
@@ -489,17 +490,18 @@ namespace Contact_Tracing_App
             // chckBoxSpecifyVax
             // 
             this.chckBoxSpecifyVax.AutoSize = true;
-            this.chckBoxSpecifyVax.Location = new System.Drawing.Point(193, 402);
+            this.chckBoxSpecifyVax.Location = new System.Drawing.Point(198, 402);
             this.chckBoxSpecifyVax.Name = "chckBoxSpecifyVax";
             this.chckBoxSpecifyVax.Size = new System.Drawing.Size(127, 20);
             this.chckBoxSpecifyVax.TabIndex = 54;
             this.chckBoxSpecifyVax.Text = "Pfizer-BioNTech";
             this.chckBoxSpecifyVax.UseVisualStyleBackColor = true;
+            this.chckBoxSpecifyVax.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax_CheckedChanged);
             // 
             // chckBoxSpecifyVax2
             // 
             this.chckBoxSpecifyVax2.AutoSize = true;
-            this.chckBoxSpecifyVax2.Location = new System.Drawing.Point(326, 402);
+            this.chckBoxSpecifyVax2.Location = new System.Drawing.Point(331, 402);
             this.chckBoxSpecifyVax2.Name = "chckBoxSpecifyVax2";
             this.chckBoxSpecifyVax2.Size = new System.Drawing.Size(83, 20);
             this.chckBoxSpecifyVax2.TabIndex = 55;
@@ -509,7 +511,7 @@ namespace Contact_Tracing_App
             // chckBoxSpecifyVax3
             // 
             this.chckBoxSpecifyVax3.AutoSize = true;
-            this.chckBoxSpecifyVax3.Location = new System.Drawing.Point(415, 402);
+            this.chckBoxSpecifyVax3.Location = new System.Drawing.Point(420, 402);
             this.chckBoxSpecifyVax3.Name = "chckBoxSpecifyVax3";
             this.chckBoxSpecifyVax3.Size = new System.Drawing.Size(106, 20);
             this.chckBoxSpecifyVax3.TabIndex = 56;
@@ -519,22 +521,12 @@ namespace Contact_Tracing_App
             // chckBoxSpecifyVax4
             // 
             this.chckBoxSpecifyVax4.AutoSize = true;
-            this.chckBoxSpecifyVax4.Location = new System.Drawing.Point(527, 402);
+            this.chckBoxSpecifyVax4.Location = new System.Drawing.Point(532, 402);
             this.chckBoxSpecifyVax4.Name = "chckBoxSpecifyVax4";
-            this.chckBoxSpecifyVax4.Size = new System.Drawing.Size(160, 20);
-            this.chckBoxSpecifyVax4.TabIndex = 57;
-            this.chckBoxSpecifyVax4.Text = "Johnson and Johnson";
+            this.chckBoxSpecifyVax4.Size = new System.Drawing.Size(78, 20);
+            this.chckBoxSpecifyVax4.TabIndex = 58;
+            this.chckBoxSpecifyVax4.Text = "Sinovac";
             this.chckBoxSpecifyVax4.UseVisualStyleBackColor = true;
-            // 
-            // chckBoxSpecifyVax5
-            // 
-            this.chckBoxSpecifyVax5.AutoSize = true;
-            this.chckBoxSpecifyVax5.Location = new System.Drawing.Point(693, 402);
-            this.chckBoxSpecifyVax5.Name = "chckBoxSpecifyVax5";
-            this.chckBoxSpecifyVax5.Size = new System.Drawing.Size(78, 20);
-            this.chckBoxSpecifyVax5.TabIndex = 58;
-            this.chckBoxSpecifyVax5.Text = "Sinovac";
-            this.chckBoxSpecifyVax5.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -548,7 +540,7 @@ namespace Contact_Tracing_App
             // chckBoxSymptomsYes
             // 
             this.chckBoxSymptomsYes.AutoSize = true;
-            this.chckBoxSymptomsYes.Location = new System.Drawing.Point(193, 449);
+            this.chckBoxSymptomsYes.Location = new System.Drawing.Point(198, 449);
             this.chckBoxSymptomsYes.Name = "chckBoxSymptomsYes";
             this.chckBoxSymptomsYes.Size = new System.Drawing.Size(53, 20);
             this.chckBoxSymptomsYes.TabIndex = 60;
@@ -558,7 +550,7 @@ namespace Contact_Tracing_App
             // chckBoxSymptomsNo
             // 
             this.chckBoxSymptomsNo.AutoSize = true;
-            this.chckBoxSymptomsNo.Location = new System.Drawing.Point(252, 449);
+            this.chckBoxSymptomsNo.Location = new System.Drawing.Point(257, 449);
             this.chckBoxSymptomsNo.Name = "chckBoxSymptomsNo";
             this.chckBoxSymptomsNo.Size = new System.Drawing.Size(47, 20);
             this.chckBoxSymptomsNo.TabIndex = 61;
@@ -577,7 +569,7 @@ namespace Contact_Tracing_App
             // chckBoxTravelYes
             // 
             this.chckBoxTravelYes.AutoSize = true;
-            this.chckBoxTravelYes.Location = new System.Drawing.Point(193, 508);
+            this.chckBoxTravelYes.Location = new System.Drawing.Point(198, 508);
             this.chckBoxTravelYes.Name = "chckBoxTravelYes";
             this.chckBoxTravelYes.Size = new System.Drawing.Size(53, 20);
             this.chckBoxTravelYes.TabIndex = 63;
@@ -606,7 +598,7 @@ namespace Contact_Tracing_App
             // chckBoxTravelNo
             // 
             this.chckBoxTravelNo.AutoSize = true;
-            this.chckBoxTravelNo.Location = new System.Drawing.Point(252, 508);
+            this.chckBoxTravelNo.Location = new System.Drawing.Point(257, 508);
             this.chckBoxTravelNo.Name = "chckBoxTravelNo";
             this.chckBoxTravelNo.Size = new System.Drawing.Size(53, 20);
             this.chckBoxTravelNo.TabIndex = 66;
@@ -616,7 +608,7 @@ namespace Contact_Tracing_App
             // chckBoxOther
             // 
             this.chckBoxOther.AutoSize = true;
-            this.chckBoxOther.Location = new System.Drawing.Point(777, 402);
+            this.chckBoxOther.Location = new System.Drawing.Point(616, 402);
             this.chckBoxOther.Name = "chckBoxOther";
             this.chckBoxOther.Size = new System.Drawing.Size(61, 20);
             this.chckBoxOther.TabIndex = 67;
@@ -625,7 +617,7 @@ namespace Contact_Tracing_App
             // 
             // txtBoxOther
             // 
-            this.txtBoxOther.Location = new System.Drawing.Point(777, 447);
+            this.txtBoxOther.Location = new System.Drawing.Point(788, 400);
             this.txtBoxOther.Name = "txtBoxOther";
             this.txtBoxOther.Size = new System.Drawing.Size(104, 22);
             this.txtBoxOther.TabIndex = 68;
@@ -634,7 +626,7 @@ namespace Contact_Tracing_App
             // 
             this.lblSpecify.AutoSize = true;
             this.lblSpecify.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecify.Location = new System.Drawing.Point(776, 428);
+            this.lblSpecify.Location = new System.Drawing.Point(683, 403);
             this.lblSpecify.Name = "lblSpecify";
             this.lblSpecify.Size = new System.Drawing.Size(99, 16);
             this.lblSpecify.TabIndex = 69;
@@ -655,7 +647,6 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.chckBoxSymptomsNo);
             this.Controls.Add(this.chckBoxSymptomsYes);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.chckBoxSpecifyVax5);
             this.Controls.Add(this.chckBoxSpecifyVax4);
             this.Controls.Add(this.chckBoxSpecifyVax3);
             this.Controls.Add(this.chckBoxSpecifyVax2);
@@ -767,7 +758,6 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.CheckBox chckBoxSpecifyVax2;
         private System.Windows.Forms.CheckBox chckBoxSpecifyVax3;
         private System.Windows.Forms.CheckBox chckBoxSpecifyVax4;
-        private System.Windows.Forms.CheckBox chckBoxSpecifyVax5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox chckBoxSymptomsYes;
         private System.Windows.Forms.CheckBox chckBoxSymptomsNo;
