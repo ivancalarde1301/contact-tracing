@@ -85,6 +85,10 @@ namespace Contact_Tracing_App
             {
                 chckBoxVaxNo.Enabled = false;
             }
+            else if (chckBoxVaxYes.Checked == false)
+            {
+                chckBoxVaxNo.Enabled = true;
+            }
         }
 
         private void chckBoxVaxNo_CheckedChanged(object sender, EventArgs e)
@@ -100,11 +104,22 @@ namespace Contact_Tracing_App
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
             }
+            else if (chckBoxVaxNo.Checked == false)
+            {
+                chckBoxVaxYes.Enabled = true;
+                chckBoxSpecifyVax.Enabled = true;
+                chckBoxSpecifyVax2.Enabled = true;
+                chckBoxSpecifyVax3.Enabled = true;
+                chckBoxSpecifyVax4.Enabled = true;
+                chckBoxOther.Enabled = true;
+                lblSpecify.Enabled = true;
+                txtBoxOther.Enabled = true;
+            }
         }
 
         private void chckBoxSpecifyVax_CheckedChanged(object sender, EventArgs e)
         {
-            if(chckBoxSpecifyVax.Checked == true)
+            if (chckBoxSpecifyVax.Checked == true)
             {
                 chckBoxSpecifyVax2.Enabled = false;
                 chckBoxSpecifyVax3.Enabled = false;
@@ -112,6 +127,99 @@ namespace Contact_Tracing_App
                 chckBoxOther.Enabled = false;
                 lblSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
+            }
+            else if (chckBoxSpecifyVax.Checked == false)
+            {
+                chckBoxSpecifyVax2.Enabled = true;
+                chckBoxSpecifyVax3.Enabled = true;
+                chckBoxSpecifyVax4.Enabled = true;
+                chckBoxOther.Enabled = true;
+                lblSpecify.Enabled = true;
+                txtBoxOther.Enabled = true;
+            }
+        }
+
+        private void chckBoxSpecifyVax2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxSpecifyVax2.Checked == true)
+            {
+                chckBoxSpecifyVax.Enabled = false;
+                chckBoxSpecifyVax3.Enabled = false;
+                chckBoxSpecifyVax4.Enabled = false;
+                chckBoxOther.Enabled = false;
+                lblSpecify.Enabled = false;
+                txtBoxOther.Enabled = false;
+            }
+            else if (chckBoxSpecifyVax2.Checked == false)
+            {
+                chckBoxSpecifyVax.Enabled = true;
+                chckBoxSpecifyVax3.Enabled = true;
+                chckBoxSpecifyVax4.Enabled = true;
+                chckBoxOther.Enabled = true;
+                lblSpecify.Enabled = true;
+                txtBoxOther.Enabled = true;
+            }
+        }
+
+        private void chckBoxSpecifyVax3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxSpecifyVax3.Checked == true)
+            {
+                chckBoxSpecifyVax.Enabled = false;
+                chckBoxSpecifyVax2.Enabled = false;
+                chckBoxSpecifyVax4.Enabled = false;
+                chckBoxOther.Enabled = false;
+                lblSpecify.Enabled = false;
+                txtBoxOther.Enabled = false;
+            }
+            else if (chckBoxSpecifyVax3.Checked == false)
+            {
+                chckBoxSpecifyVax.Enabled = true;
+                chckBoxSpecifyVax2.Enabled = true;
+                chckBoxSpecifyVax4.Enabled = true;
+                chckBoxOther.Enabled = true;
+                lblSpecify.Enabled = true;
+                txtBoxOther.Enabled = true;
+            }
+        }
+
+        private void chckBoxSpecifyVax4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxSpecifyVax4.Checked == true)
+            {
+                chckBoxSpecifyVax.Enabled = false;
+                chckBoxSpecifyVax2.Enabled = false;
+                chckBoxSpecifyVax3.Enabled = false;
+                chckBoxOther.Enabled = false;
+                lblSpecify.Enabled = false;
+                txtBoxOther.Enabled = false;
+            }
+            else if (chckBoxSpecifyVax4.Checked == false)
+            {
+                chckBoxSpecifyVax.Enabled = true;
+                chckBoxSpecifyVax2.Enabled = true;
+                chckBoxSpecifyVax3.Enabled = true;
+                chckBoxOther.Enabled = true;
+                lblSpecify.Enabled = true;
+                txtBoxOther.Enabled = true;
+            }
+        }
+
+        private void chckBoxOther_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxOther.Checked == true)
+            {
+                chckBoxSpecifyVax.Enabled = false;
+                chckBoxSpecifyVax2.Enabled = false;
+                chckBoxSpecifyVax3.Enabled = false;
+                chckBoxSpecifyVax4.Enabled = false;
+            }
+            else if (chckBoxOther.Checked == false)
+            {
+                chckBoxSpecifyVax.Enabled = true;
+                chckBoxSpecifyVax2.Enabled = true;
+                chckBoxSpecifyVax3.Enabled = true;
+                chckBoxSpecifyVax4.Enabled = true;
             }
         }
     }

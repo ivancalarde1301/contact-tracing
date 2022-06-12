@@ -507,6 +507,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax2.TabIndex = 55;
             this.chckBoxSpecifyVax2.Text = "Moderna";
             this.chckBoxSpecifyVax2.UseVisualStyleBackColor = true;
+            this.chckBoxSpecifyVax2.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax2_CheckedChanged);
             // 
             // chckBoxSpecifyVax3
             // 
@@ -517,6 +518,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax3.TabIndex = 56;
             this.chckBoxSpecifyVax3.Text = "AstraZeneca";
             this.chckBoxSpecifyVax3.UseVisualStyleBackColor = true;
+            this.chckBoxSpecifyVax3.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax3_CheckedChanged);
             // 
             // chckBoxSpecifyVax4
             // 
@@ -527,6 +529,7 @@ namespace Contact_Tracing_App
             this.chckBoxSpecifyVax4.TabIndex = 58;
             this.chckBoxSpecifyVax4.Text = "Sinovac";
             this.chckBoxSpecifyVax4.UseVisualStyleBackColor = true;
+            this.chckBoxSpecifyVax4.CheckedChanged += new System.EventHandler(this.chckBoxSpecifyVax4_CheckedChanged);
             // 
             // label3
             // 
@@ -614,6 +617,7 @@ namespace Contact_Tracing_App
             this.chckBoxOther.TabIndex = 67;
             this.chckBoxOther.Text = "Other";
             this.chckBoxOther.UseVisualStyleBackColor = true;
+            this.chckBoxOther.CheckedChanged += new System.EventHandler(this.chckBoxOther_CheckedChanged);
             // 
             // txtBoxOther
             // 
