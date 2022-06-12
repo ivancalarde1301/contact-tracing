@@ -30,6 +30,7 @@ namespace Contact_Tracing_App
             chckBoxCough.Enabled = false;
             chckBoxTiredness.Enabled = false;
             chckBoxLoss.Enabled = false;
+            chckBoxAll.Enabled = false;
             lblSpecify2.Enabled = false;
             txtBoxOther2.Enabled = false;
             lblSpecifyTravel.Enabled = false;
@@ -94,6 +95,30 @@ namespace Contact_Tracing_App
                 {
                     file.WriteLine("Vaccinated: No");
                 }
+                if (chckBoxSymptomsYes.Checked == true)
+                {
+                    file.WriteLine("Experienced any COVID-19 symptoms recently: Yes");
+                }
+                if (chckBoxFever.Checked == true)
+                {
+                    file.WriteLine("Symptoms: Fever");
+                }
+                if (chckBoxCough.Checked == true)
+                {
+                    file.WriteLine("Symptom: Cough");
+                }
+                if (chckBoxTiredness.Checked == true)
+                {
+                    file.WriteLine("Symptom: Tiredness");
+                }
+                if (chckBoxLoss.Checked == true)
+                {
+                    file.WriteLine("Symptom: Loss of Taste and/or Smell");
+                }
+                if (txtBoxOther2.Text != "")
+                {
+                    file.WriteLine("Description of Symptom/s: " + txtBoxOther2.Text);
+                }
             }
             file.Close();
         }
@@ -123,23 +148,22 @@ namespace Contact_Tracing_App
                 chckBoxSpecifyVax2.Enabled = true;
                 chckBoxSpecifyVax3.Enabled = true;
                 chckBoxSpecifyVax4.Enabled = true;
-                txtBoxOther.Enabled = true;
                 chckBoxSpecify.Enabled = true;
                 txtBoxOther.Enabled = true;
             }
             else if (chckBoxVaxYes.Checked == false)
             {
+                chckBoxVaxNo.Enabled = true;
                 chckBoxSpecifyVax.Checked = false;
                 chckBoxSpecifyVax2.Checked = false;
                 chckBoxSpecifyVax3.Checked = false;
                 chckBoxSpecifyVax4.Checked = false;
+                chckBoxSpecify.Checked = false;
                 txtBoxOther.Text = "";
-                chckBoxVaxNo.Enabled = true;
                 chckBoxSpecifyVax.Enabled = false;
                 chckBoxSpecifyVax2.Enabled = false;
                 chckBoxSpecifyVax3.Enabled = false;
                 chckBoxSpecifyVax4.Enabled = false;
-                txtBoxOther.Enabled = false;
                 chckBoxSpecify.Enabled = false;
                 txtBoxOther.Enabled = false;
             }
@@ -225,6 +249,7 @@ namespace Contact_Tracing_App
                 chckBoxCough.Enabled = true;
                 chckBoxTiredness.Enabled = true;
                 chckBoxLoss.Enabled = true;
+                chckBoxAll.Enabled = true;
                 lblSpecify2.Enabled = true;
                 txtBoxOther2.Enabled = true;
             }
@@ -234,6 +259,7 @@ namespace Contact_Tracing_App
                 chckBoxCough.Checked = false;
                 chckBoxTiredness.Checked = false;
                 chckBoxLoss.Checked = false;
+                chckBoxAll.Checked = false;
                 lblSpecify2.Enabled = false;
                 txtBoxOther2.Text = "";
                 chckBoxFever.Enabled = false;
@@ -302,6 +328,24 @@ namespace Contact_Tracing_App
                 lblSpecify2.Enabled = true;
                 txtBoxOther2.Enabled = true;
                 txtBoxOther2.Text = "";
+            }
+        }
+
+        private void chckBoxAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxAll.Checked == true)
+            {
+                chckBoxFever.Checked = true;
+                chckBoxCough.Checked = true;
+                chckBoxTiredness.Checked = true;
+                chckBoxLoss.Checked = true;
+            }
+            else if(chckBoxAll.Checked == false)
+            {
+                chckBoxFever.Checked = false;
+                chckBoxCough.Checked = false;
+                chckBoxTiredness.Checked = false;
+                chckBoxLoss.Checked = false;
             }
         }
 
