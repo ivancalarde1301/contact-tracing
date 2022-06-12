@@ -26,6 +26,12 @@ namespace Contact_Tracing_App
             chckBoxSpecifyVax4.Enabled = false;
             lblSpecify.Enabled = false;
             txtBoxOther.Enabled = false;
+            chckBoxFever.Enabled = false;
+            chckBoxCough.Enabled = false;
+            chckBoxTiredness.Enabled = false;
+            chckBoxLoss.Enabled = false;
+            lblSpecify2.Enabled = false;
+            txtBoxOther2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -257,10 +263,22 @@ namespace Contact_Tracing_App
             if (chckBoxSymptomsYes.Checked == true)
             {
                 chckBoxSymptomsNo.Enabled = false;
+                chckBoxFever.Enabled = true;
+                chckBoxCough.Enabled = true;
+                chckBoxTiredness.Enabled = true;
+                chckBoxLoss.Enabled = true;
+                lblSpecify2.Enabled = true;
+                txtBoxOther2.Enabled = true;
             }
             else if (chckBoxSymptomsYes.Checked == false)
             {
                 chckBoxSymptomsNo.Enabled = true;
+                chckBoxFever.Enabled = false;
+                chckBoxCough.Enabled = false;
+                chckBoxTiredness.Enabled = false;
+                chckBoxLoss.Enabled = false;
+                lblSpecify2.Enabled = false;
+                txtBoxOther2.Enabled = false;
             }
         }
 
@@ -273,6 +291,26 @@ namespace Contact_Tracing_App
             else if (chckBoxSymptomsNo.Checked == false)
             {
                 chckBoxSymptomsYes.Enabled = true;
+            }
+        }
+
+        private void chckBoxFever_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBoxFever.Checked == true)
+            {
+                chckBoxCough.Enabled = false;
+                chckBoxTiredness.Enabled = false;
+                chckBoxLoss.Enabled = false;
+                lblSpecify2.Enabled = false;
+                txtBoxOther2.Enabled = false;
+            }
+            else if (chckBoxFever.Checked == false)
+            {
+                chckBoxCough.Enabled = true;
+                chckBoxTiredness.Enabled = true;
+                chckBoxLoss.Enabled = true;
+                lblSpecify2.Enabled = true;
+                txtBoxOther2.Enabled = true;
             }
         }
     }
