@@ -37,6 +37,75 @@ namespace Contact_Tracing_App
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //if (txtBoxFirstName.Text == "" || txtBoxMiddleName.Text == "" || txtBoxLastName.Text == ""
+            //    || txtBoxBirthdate.Text == "" || txtBoxAge.Text == "" || txtBoxSex.Text == ""
+            //    || txtBoxPhoneNumber.Text == "" || txtBoxUBL.Text == "" || txtBoxStreet.Text == ""
+            //    || txtBoxBarangay.Text == "" || txtBoxCity.Text == "" || txtBoxProvince.Text == ""
+            //    || txtBoxEmailAddress.Text == "")
+            //{
+            //    MessageBox.Show("Please fill in the blank spaces.");
+            //}
+            Boolean isFill = true;
+            if (txtBoxFirstName.Text == "")
+            {
+                isFill = false;
+                txtBoxFirstName.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxFirstName.BackColor = Color.White;
+            }
+            if (txtBoxMiddleName.Text == "")
+            {
+                isFill = false;
+                txtBoxMiddleName.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxMiddleName.BackColor = Color.White;
+            }
+            if (txtBoxLastName.Text == "")
+            {
+                isFill = false;
+                txtBoxLastName.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxLastName.BackColor = Color.White;
+            }
+            if (txtBoxBirthdate.Text == "")
+            {
+                isFill = false;
+                txtBoxBirthdate.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxBirthdate.BackColor = Color.White;
+            }
+            if (txtBoxAge.Text == "")
+            {
+                isFill = false;
+                txtBoxAge.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxAge.BackColor = Color.White;
+            }
+            if (!isFill)
+            {
+                MessageBox.Show("Please fill in the blank spaces.");
+                txtBoxAge.BackColor = Color.White;
+            }
+            else
+            {
+                processFile();
+                MessageBox.Show("Information submitted. Thank you!");
+                resetValues();
+            }
+        }
+
+        private void processFile()
+        {
             StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
             file.WriteLine("PERSONAL INFORMATION");
             file.WriteLine("");
@@ -68,7 +137,7 @@ namespace Contact_Tracing_App
                 {
                     file.WriteLine("Vaccine: Pfizer-BioNTech");
                 }
-                 if (chckBoxSpecifyVax2.Checked == true)
+                if (chckBoxSpecifyVax2.Checked == true)
                 {
                     file.WriteLine("Vaccine: Moderna");
                 }
@@ -132,6 +201,10 @@ namespace Contact_Tracing_App
                 }
             }
             file.Close();
+        }
+
+        private void resetValues()
+        {
             txtBoxFirstName.Text = "";
             txtBoxMiddleName.Text = "";
             txtBoxLastName.Text = "";
@@ -178,19 +251,18 @@ namespace Contact_Tracing_App
             txtBoxOther2.Enabled = false;
             lblSpecifyTravel.Enabled = false;
             txtBoxSpecifyTravel.Enabled = false;
-            MessageBox.Show("Thank you for providing your information.");
         }
 
         private void txtBoxAge_TextChanged(object sender, EventArgs e)
         {
-            int box_int = 0;
-            Int32.TryParse(txtBoxAge.Text, out box_int);
-            if (box_int < 1 && txtBoxAge.Text != "")
+            int boxInt = 0;
+            Int32.TryParse(txtBoxAge.Text, out boxInt);
+            if (boxInt < 1 && txtBoxAge.Text != "")
             {
                 txtBoxAge.Text = "0";
                 MessageBox.Show("Please enter a different age.");
             }
-            else if (box_int > 122 && txtBoxAge.Text != "")
+            else if (boxInt > 122 && txtBoxAge.Text != "")
             {
                 txtBoxAge.Text = "0";
                 MessageBox.Show("Please enter a different age.");

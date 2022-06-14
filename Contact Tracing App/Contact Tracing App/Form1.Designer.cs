@@ -42,7 +42,7 @@ namespace Contact_Tracing_App
             this.txtBoxMiddleName = new System.Windows.Forms.TextBox();
             this.txtBoxLastName = new System.Windows.Forms.TextBox();
             this.txtBoxSuffix = new System.Windows.Forms.TextBox();
-            this.lvlBirthDate = new System.Windows.Forms.Label();
+            this.lvlBirthdate = new System.Windows.Forms.Label();
             this.lblmmddyyy = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.txtBoxBirthdate = new System.Windows.Forms.TextBox();
@@ -211,15 +211,15 @@ namespace Contact_Tracing_App
             this.txtBoxSuffix.Size = new System.Drawing.Size(46, 22);
             this.txtBoxSuffix.TabIndex = 4;
             // 
-            // lvlBirthDate
+            // lvlBirthdate
             // 
-            this.lvlBirthDate.AutoSize = true;
-            this.lvlBirthDate.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvlBirthDate.Location = new System.Drawing.Point(421, 131);
-            this.lvlBirthDate.Name = "lvlBirthDate";
-            this.lvlBirthDate.Size = new System.Drawing.Size(77, 24);
-            this.lvlBirthDate.TabIndex = 18;
-            this.lvlBirthDate.Text = "Birth Date";
+            this.lvlBirthdate.AutoSize = true;
+            this.lvlBirthdate.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlBirthdate.Location = new System.Drawing.Point(421, 131);
+            this.lvlBirthdate.Name = "lvlBirthdate";
+            this.lvlBirthdate.Size = new System.Drawing.Size(74, 24);
+            this.lvlBirthdate.TabIndex = 18;
+            this.lvlBirthdate.Text = "Birthdate";
             // 
             // lblmmddyyy
             // 
@@ -783,7 +783,7 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.txtBoxBirthdate);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblmmddyyy);
-            this.Controls.Add(this.lvlBirthDate);
+            this.Controls.Add(this.lvlBirthdate);
             this.Controls.Add(this.txtBoxSuffix);
             this.Controls.Add(this.txtBoxLastName);
             this.Controls.Add(this.txtBoxMiddleName);
@@ -796,7 +796,10 @@ namespace Contact_Tracing_App
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.picboxDesign);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Tracing App";
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).EndInit();
@@ -821,7 +824,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxMiddleName;
         private System.Windows.Forms.TextBox txtBoxLastName;
         private System.Windows.Forms.TextBox txtBoxSuffix;
-        private System.Windows.Forms.Label lvlBirthDate;
+        private System.Windows.Forms.Label lvlBirthdate;
         private System.Windows.Forms.Label lblmmddyyy;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.TextBox txtBoxBirthdate;
