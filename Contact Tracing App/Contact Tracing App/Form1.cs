@@ -91,10 +91,90 @@ namespace Contact_Tracing_App
             {
                 txtBoxAge.BackColor = Color.White;
             }
+            if (txtBoxSex.Text == "")
+            {
+                isFill = false;
+                txtBoxSex.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxSex.BackColor = Color.White;
+            }
+            if (txtBoxAge.Text == "")
+            {
+                isFill = false;
+                txtBoxAge.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxAge.BackColor = Color.White;
+            }
+            if (txtBoxPhoneNumber.Text == "")
+            {
+                isFill = false;
+                txtBoxPhoneNumber.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxPhoneNumber.BackColor = Color.White;
+            }
+            if (txtBoxUBL.Text == "")
+            {
+                isFill = false;
+                txtBoxUBL.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxUBL.BackColor = Color.White;
+            }
+            if (txtBoxStreet.Text == "")
+            {
+                isFill = false;
+                txtBoxStreet.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxStreet.BackColor = Color.White;
+            }
+            if (txtBoxBarangay.Text == "")
+            {
+                isFill = false;
+                txtBoxBarangay.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxBarangay.BackColor = Color.White;
+            }
+            if (txtBoxCity.Text == "")
+            {
+                isFill = false;
+                txtBoxCity.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxCity.BackColor = Color.White;
+            }
+            if (txtBoxProvince.Text == "")
+            {
+                isFill = false;
+                txtBoxProvince.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxProvince.BackColor = Color.White;
+            }
+            if (txtBoxEmailAddress.Text == "")
+            {
+                isFill = false;
+                txtBoxEmailAddress.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxEmailAddress.BackColor = Color.White;
+            }
             if (!isFill)
             {
                 MessageBox.Show("Please fill in the blank spaces.");
-                txtBoxAge.BackColor = Color.White;
             }
             else
             {
