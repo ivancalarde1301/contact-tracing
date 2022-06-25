@@ -37,14 +37,6 @@ namespace Contact_Tracing_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (txtBoxFirstName.Text == "" || txtBoxMiddleName.Text == "" || txtBoxLastName.Text == ""
-            //    || txtBoxBirthdate.Text == "" || txtBoxAge.Text == "" || txtBoxSex.Text == ""
-            //    || txtBoxPhoneNumber.Text == "" || txtBoxUBL.Text == "" || txtBoxStreet.Text == ""
-            //    || txtBoxBarangay.Text == "" || txtBoxCity.Text == "" || txtBoxProvince.Text == ""
-            //    || txtBoxEmailAddress.Text == "")
-            //{
-            //    MessageBox.Show("Please fill in the blank spaces.");
-            //}
             Boolean isFill = true;
             if (txtBoxFirstName.Text == "")
             {
@@ -186,7 +178,8 @@ namespace Contact_Tracing_App
 
         private void processFile()
         {
-            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
+            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt", true);
+            file.WriteLine("");
             file.WriteLine("PERSONAL INFORMATION");
             file.WriteLine("");
             file.WriteLine("Full Name: " + txtBoxFirstName.Text + " " + txtBoxMiddleName.Text
