@@ -205,19 +205,19 @@ namespace Contact_Tracing_App
             file.WriteLine("Full Name: " + txtBoxFirstName.Text + " " + txtBoxMiddleName.Text
                            + " " + txtBoxLastName.Text + " " + txtBoxSuffix.Text);
             file.WriteLine("");
-            file.WriteLine("Birth Date: " + txtBoxEmailAddress.Text);
+            file.WriteLine("Birth Date: " + txtBoxBirthdate.Text);
             file.WriteLine("");
-            file.WriteLine("Age: " + txtBoxBirthdate.Text);
+            file.WriteLine("Age: " + txtBoxAge.Text);
             file.WriteLine("");
-            file.WriteLine("Sex: " + txtBoxAge.Text);
+            file.WriteLine("Sex: " + txtBoxSex.Text);
             file.WriteLine("");
-            file.WriteLine("Phone Number: " + txtBoxSex.Text);
+            file.WriteLine("Phone Number: " + txtBoxPhoneNumber.Text);
             file.WriteLine("");
-            file.WriteLine("Email Address: " + txtBoxProvince.Text);
+            file.WriteLine("Email Address: " + txtBoxEmailAddress.Text);
             file.WriteLine("");
-            file.WriteLine("Full Address: " + txtBoxPhoneNumber.Text + " " + txtBoxUBL.Text
-                           + " " + txtBoxStreet.Text + " " + txtBoxBarangay.Text
-                           + " " + txtBoxCity.Text);
+            file.WriteLine("Full Address: " + txtBoxUBL.Text + " " + txtBoxStreet.Text
+                           + " " + txtBoxBarangay.Text + " " + txtBoxCity.Text
+                           + " " + txtBoxProvince.Text);
             file.WriteLine("");
             file.WriteLine("HEALTH INFORMATION");
             file.WriteLine("");

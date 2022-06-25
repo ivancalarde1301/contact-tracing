@@ -21,8 +21,9 @@ namespace Contact_Tracing_App
         private void button1_Click(object sender, EventArgs e)
         {
             StreamReader reader = new StreamReader(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
-            String line = reader.ReadLine();
-            MessageBox.Show(line);
+            String all = reader.ReadToEnd();
+            MessageBox.Show(all);
+            
         }
     }
 }
