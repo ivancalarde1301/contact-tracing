@@ -197,7 +197,6 @@ namespace Contact_Tracing_App
         private void processFile()
         {
             StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
-            file.WriteLine("");
             file.WriteLine("Date: " + txtBoxDate.Text);
             file.WriteLine("Time: " + txtBoxTime.Text);
             file.WriteLine("");
@@ -300,6 +299,8 @@ namespace Contact_Tracing_App
 
         private void resetValues()
         {
+            txtBoxDate.Text = "";
+            txtBoxTime.Text = "";
             txtBoxFirstName.Text = "";
             txtBoxMiddleName.Text = "";
             txtBoxLastName.Text = "";
@@ -346,22 +347,6 @@ namespace Contact_Tracing_App
             txtBoxOther2.Enabled = false;
             lblSpecifyTravel.Enabled = false;
             txtBoxSpecifyTravel.Enabled = false;
-        }
-
-        private void txtBoxAge_TextChanged(object sender, EventArgs e)
-        {
-            int boxInt = 0;
-            Int32.TryParse(txtBoxAge.Text, out boxInt);
-            if (boxInt < 1 && txtBoxAge.Text != "")
-            {
-                txtBoxAge.Text = "0";
-                MessageBox.Show("Please enter a different age.");
-            }
-            else if (boxInt > 122 && txtBoxAge.Text != "")
-            {
-                txtBoxAge.Text = "0";
-                MessageBox.Show("Please enter a different age.");
-            }
         }
 
         private void chckBoxVaxYes_CheckedChanged(object sender, EventArgs e)
@@ -581,6 +566,13 @@ namespace Contact_Tracing_App
             {
                 chckBoxTravelYes.Checked = false;
             }
+        }
+
+        private void btnReviewSubmission_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = new StreamReader(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
+            String line = reader.ReadLine();
+            MessageBox.Show(line);
         }
     }
 }
