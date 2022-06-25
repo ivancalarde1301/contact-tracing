@@ -111,7 +111,7 @@ namespace Contact_Tracing_App
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(407, 747);
+            this.btnSubmit.Location = new System.Drawing.Point(407, 752);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(150, 26);
             this.btnSubmit.TabIndex = 37;
@@ -776,11 +776,11 @@ namespace Contact_Tracing_App
             // 
             // btnReviewSubmission
             // 
-            this.btnReviewSubmission.Location = new System.Drawing.Point(407, 779);
+            this.btnReviewSubmission.Location = new System.Drawing.Point(407, 785);
             this.btnReviewSubmission.Name = "btnReviewSubmission";
             this.btnReviewSubmission.Size = new System.Drawing.Size(150, 26);
             this.btnReviewSubmission.TabIndex = 38;
-            this.btnReviewSubmission.Text = "Review Submission";
+            this.btnReviewSubmission.Text = "Review Submissions";
             this.btnReviewSubmission.UseVisualStyleBackColor = true;
             this.btnReviewSubmission.Click += new System.EventHandler(this.btnReviewSubmission_Click);
             // 
@@ -788,7 +788,7 @@ namespace Contact_Tracing_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 812);
+            this.ClientSize = new System.Drawing.Size(953, 824);
             this.Controls.Add(this.btnReviewSubmission);
             this.Controls.Add(this.txtBoxTime);
             this.Controls.Add(this.lblTime);

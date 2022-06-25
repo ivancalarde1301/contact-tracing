@@ -570,10 +570,6 @@ namespace Contact_Tracing_App
 
         private void btnReviewSubmission_Click(object sender, EventArgs e)
         {
-            //StreamReader reader = new StreamReader(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
-            //String line = reader.ReadLine();
-            //MessageBox.Show(line);
-
             Form2 f2 = new Form2();
             f2.ShowDialog();
         }
