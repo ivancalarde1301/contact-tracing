@@ -33,13 +33,13 @@
             this.lblPleaseEnter = new System.Windows.Forms.Label();
             this.lblEnterTime = new System.Windows.Forms.Label();
             this.txtBoxEnterTime = new System.Windows.Forms.TextBox();
-            this.btnEnterSubmission = new System.Windows.Forms.Button();
+            this.btnFilterSubmission = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEnterDate
             // 
             this.lblEnterDate.AutoSize = true;
-            this.lblEnterDate.Location = new System.Drawing.Point(50, 73);
+            this.lblEnterDate.Location = new System.Drawing.Point(42, 81);
             this.lblEnterDate.Name = "lblEnterDate";
             this.lblEnterDate.Size = new System.Drawing.Size(39, 16);
             this.lblEnterDate.TabIndex = 0;
@@ -47,25 +47,25 @@
             // 
             // txtBoxEnterDate
             // 
-            this.txtBoxEnterDate.Location = new System.Drawing.Point(95, 70);
+            this.txtBoxEnterDate.Location = new System.Drawing.Point(87, 78);
             this.txtBoxEnterDate.Name = "txtBoxEnterDate";
-            this.txtBoxEnterDate.Size = new System.Drawing.Size(133, 22);
+            this.txtBoxEnterDate.Size = new System.Drawing.Size(157, 22);
             this.txtBoxEnterDate.TabIndex = 1;
             // 
             // lblPleaseEnter
             // 
             this.lblPleaseEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPleaseEnter.Location = new System.Drawing.Point(-2, 9);
+            this.lblPleaseEnter.Location = new System.Drawing.Point(12, 9);
             this.lblPleaseEnter.Name = "lblPleaseEnter";
-            this.lblPleaseEnter.Size = new System.Drawing.Size(297, 58);
+            this.lblPleaseEnter.Size = new System.Drawing.Size(271, 64);
             this.lblPleaseEnter.TabIndex = 2;
-            this.lblPleaseEnter.Text = "Enter the Date and Time of the submission you want to review.";
+            this.lblPleaseEnter.Text = "Enter a specific Date and Time of the submission you want to review.";
             this.lblPleaseEnter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEnterTime
             // 
             this.lblEnterTime.AutoSize = true;
-            this.lblEnterTime.Location = new System.Drawing.Point(50, 110);
+            this.lblEnterTime.Location = new System.Drawing.Point(42, 118);
             this.lblEnterTime.Name = "lblEnterTime";
             this.lblEnterTime.Size = new System.Drawing.Size(41, 16);
             this.lblEnterTime.TabIndex = 3;
@@ -73,27 +73,27 @@
             // 
             // txtBoxEnterTime
             // 
-            this.txtBoxEnterTime.Location = new System.Drawing.Point(95, 107);
+            this.txtBoxEnterTime.Location = new System.Drawing.Point(87, 115);
             this.txtBoxEnterTime.Name = "txtBoxEnterTime";
-            this.txtBoxEnterTime.Size = new System.Drawing.Size(133, 22);
+            this.txtBoxEnterTime.Size = new System.Drawing.Size(157, 22);
             this.txtBoxEnterTime.TabIndex = 4;
             // 
-            // btnEnterSubmission
+            // btnFilterSubmission
             // 
-            this.btnEnterSubmission.Location = new System.Drawing.Point(95, 149);
-            this.btnEnterSubmission.Name = "btnEnterSubmission";
-            this.btnEnterSubmission.Size = new System.Drawing.Size(133, 23);
-            this.btnEnterSubmission.TabIndex = 5;
-            this.btnEnterSubmission.Text = "Enter";
-            this.btnEnterSubmission.UseVisualStyleBackColor = true;
-            this.btnEnterSubmission.Click += new System.EventHandler(this.button1_Click);
+            this.btnFilterSubmission.Location = new System.Drawing.Point(87, 157);
+            this.btnFilterSubmission.Name = "btnFilterSubmission";
+            this.btnFilterSubmission.Size = new System.Drawing.Size(157, 23);
+            this.btnFilterSubmission.TabIndex = 5;
+            this.btnFilterSubmission.Text = "Enter";
+            this.btnFilterSubmission.UseVisualStyleBackColor = true;
+            this.btnFilterSubmission.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 193);
-            this.Controls.Add(this.btnEnterSubmission);
+            this.ClientSize = new System.Drawing.Size(295, 203);
+            this.Controls.Add(this.btnFilterSubmission);
             this.Controls.Add(this.txtBoxEnterTime);
             this.Controls.Add(this.lblEnterTime);
             this.Controls.Add(this.lblPleaseEnter);
@@ -118,6 +118,6 @@
         private System.Windows.Forms.Label lblPleaseEnter;
         private System.Windows.Forms.Label lblEnterTime;
         private System.Windows.Forms.TextBox txtBoxEnterTime;
-        private System.Windows.Forms.Button btnEnterSubmission;
+        private System.Windows.Forms.Button btnFilterSubmission;
     }
 }

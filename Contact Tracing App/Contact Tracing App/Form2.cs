@@ -23,7 +23,6 @@ namespace Contact_Tracing_App
             StreamReader reader = new StreamReader(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
             String all = reader.ReadToEnd();
             MessageBox.Show(all);
-            
         }
     }
 }

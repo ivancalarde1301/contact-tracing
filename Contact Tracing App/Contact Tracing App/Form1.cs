@@ -568,6 +568,13 @@ namespace Contact_Tracing_App
             }
         }
 
+        private void btnAllRecords_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = new StreamReader(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
+            String all = reader.ReadToEnd();
+            MessageBox.Show(all);
+        }
+
         private void btnReviewSubmission_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
