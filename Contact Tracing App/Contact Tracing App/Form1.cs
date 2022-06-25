@@ -38,6 +38,24 @@ namespace Contact_Tracing_App
         private void button1_Click(object sender, EventArgs e)
         {
             Boolean isFill = true;
+            if (txtBoxDate.Text == "")
+            {
+                isFill = false;
+                txtBoxDate.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxDate.BackColor = Color.White;
+            }
+            if (txtBoxTime.Text == "")
+            {
+                isFill = false;
+                txtBoxTime.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxTime.BackColor = Color.White;
+            }
             if (txtBoxFirstName.Text == "")
             {
                 isFill = false;
@@ -178,7 +196,10 @@ namespace Contact_Tracing_App
 
         private void processFile()
         {
-            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt", true);
+            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
+            file.WriteLine("");
+            file.WriteLine("Date: " + txtBoxDate.Text);
+            file.WriteLine("Time: " + txtBoxTime.Text);
             file.WriteLine("");
             file.WriteLine("PERSONAL INFORMATION");
             file.WriteLine("");
@@ -273,6 +294,7 @@ namespace Contact_Tracing_App
                     file.WriteLine("Traveled Outside the Country in the Last 14 Days: No");
                 }
             }
+            file.WriteLine("");
             file.Close();
         }
 
