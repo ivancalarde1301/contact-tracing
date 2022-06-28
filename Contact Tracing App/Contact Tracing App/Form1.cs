@@ -196,7 +196,7 @@ namespace Contact_Tracing_App
 
         private void processFile()
         {
-            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
+            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt", true);
             file.WriteLine("Date: " + txtBoxDate.Text);
             file.WriteLine("Time: " + txtBoxTime.Text);
             file.WriteLine("");
@@ -293,7 +293,7 @@ namespace Contact_Tracing_App
                     file.WriteLine("Traveled Outside the Country in the Last 14 Days: No");
                 }
             }
-            file.WriteLine("");
+            file.WriteLine("-------------------------");
             file.Close();
         }
 
@@ -577,8 +577,24 @@ namespace Contact_Tracing_App
 
         private void btnReviewSubmission_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
+            string date = "Date: December 25, 2022";
+            string textFile = @"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt";
+            string text = File.ReadAllText(textFile);
+
+            string[] recSeparator = { "-------------------------" };
+            string[] records = text.Split(recSeparator, StringSplitOptions.RemoveEmptyEntries);
+            int i = 0;
+            foreach (string record in records)
+            {
+                if (record.Contains(date))
+                {
+                    MessageBox.Show(record);
+                    Console.WriteLine(record);
+                    i++;
+                }
+            }
+            Console.WriteLine("Records Found: " + i);
+            Console.ReadLine();
         }
     }
 }

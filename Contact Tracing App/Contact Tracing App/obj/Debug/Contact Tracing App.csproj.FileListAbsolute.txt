@@ -9,4 +9,3 @@ C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Co
 C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.csproj.CoreCompileInputs.cache
 C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.exe
 C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.pdb
-C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact_Tracing_App.Form2.resources

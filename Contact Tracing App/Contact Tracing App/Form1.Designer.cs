@@ -104,6 +104,7 @@ namespace Contact_Tracing_App
             this.btnReviewSubmission = new System.Windows.Forms.Button();
             this.btnAllRecords = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.txtBoxEnterDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,7 +115,7 @@ namespace Contact_Tracing_App
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(407, 747);
+            this.btnSubmit.Location = new System.Drawing.Point(333, 747);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(150, 26);
             this.btnSubmit.TabIndex = 37;
@@ -779,21 +780,21 @@ namespace Contact_Tracing_App
             // 
             // btnReviewSubmission
             // 
-            this.btnReviewSubmission.Location = new System.Drawing.Point(485, 798);
+            this.btnReviewSubmission.Location = new System.Drawing.Point(394, 813);
             this.btnReviewSubmission.Name = "btnReviewSubmission";
-            this.btnReviewSubmission.Size = new System.Drawing.Size(150, 26);
+            this.btnReviewSubmission.Size = new System.Drawing.Size(174, 26);
             this.btnReviewSubmission.TabIndex = 38;
-            this.btnReviewSubmission.Text = "Filter Records";
+            this.btnReviewSubmission.Text = "Show Filtered Records";
             this.btnReviewSubmission.UseVisualStyleBackColor = true;
             this.btnReviewSubmission.Click += new System.EventHandler(this.btnReviewSubmission_Click);
             // 
             // btnAllRecords
             // 
-            this.btnAllRecords.Location = new System.Drawing.Point(329, 798);
+            this.btnAllRecords.Location = new System.Drawing.Point(489, 747);
             this.btnAllRecords.Name = "btnAllRecords";
             this.btnAllRecords.Size = new System.Drawing.Size(150, 26);
             this.btnAllRecords.TabIndex = 85;
-            this.btnAllRecords.Text = "All Records";
+            this.btnAllRecords.Text = "Show All Records";
             this.btnAllRecords.UseVisualStyleBackColor = true;
             this.btnAllRecords.Click += new System.EventHandler(this.btnAllRecords_Click);
             // 
@@ -802,15 +803,24 @@ namespace Contact_Tracing_App
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Location = new System.Drawing.Point(-5, 740);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(962, 41);
+            this.pictureBox4.Size = new System.Drawing.Size(962, 39);
             this.pictureBox4.TabIndex = 86;
             this.pictureBox4.TabStop = false;
+            // 
+            // txtBoxEnterDate
+            // 
+            this.txtBoxEnterDate.Location = new System.Drawing.Point(394, 785);
+            this.txtBoxEnterDate.Name = "txtBoxEnterDate";
+            this.txtBoxEnterDate.Size = new System.Drawing.Size(174, 22);
+            this.txtBoxEnterDate.TabIndex = 87;
+            this.txtBoxEnterDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 841);
+            this.ClientSize = new System.Drawing.Size(953, 846);
+            this.Controls.Add(this.txtBoxEnterDate);
             this.Controls.Add(this.btnAllRecords);
             this.Controls.Add(this.btnReviewSubmission);
             this.Controls.Add(this.txtBoxTime);
@@ -980,6 +990,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Button btnReviewSubmission;
         private System.Windows.Forms.Button btnAllRecords;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox txtBoxEnterDate;
     }
 }
 
