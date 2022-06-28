@@ -577,17 +577,16 @@ namespace Contact_Tracing_App
 
         private void btnReviewSubmission_Click(object sender, EventArgs e)
         {
-            string date = "Date: June 27, 2022";
+            string date = txtBoxEnterDate.Text;
             string textFile = @"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt";
             string text = File.ReadAllText(textFile);
 
             string[] recSeparator = { "-------------------------" };
             string[] records = text.Split(recSeparator, StringSplitOptions.RemoveEmptyEntries);
-            int i = 0;
             if (txtBoxEnterDate.Text == "")
             {
                 txtBoxEnterDate.BackColor = Color.PaleVioletRed;
-                MessageBox.Show("Please Enter a Date");
+                MessageBox.Show("Please Enter a Valid Date");
             }
             else
             {
@@ -598,13 +597,9 @@ namespace Contact_Tracing_App
                     {
                         MessageBox.Show(record);
                         txtBoxEnterDate.Text = "";
-                        Console.WriteLine(record);
-                        i++;
                     }
                 }
             }
-            Console.WriteLine("Records Found: " + i);
-            Console.ReadLine();
         }
     }
 }
