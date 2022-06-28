@@ -584,13 +584,23 @@ namespace Contact_Tracing_App
             string[] recSeparator = { "-------------------------" };
             string[] records = text.Split(recSeparator, StringSplitOptions.RemoveEmptyEntries);
             int i = 0;
-            foreach (string record in records)
+            if (txtBoxEnterDate.Text == "")
             {
-                if (record.Contains(date))
+                txtBoxEnterDate.BackColor = Color.PaleVioletRed;
+                MessageBox.Show("Please Enter a Date");
+            }
+            else
+            {
+                txtBoxEnterDate.BackColor = Color.White;
+                foreach (string record in records)
                 {
-                    MessageBox.Show(record);
-                    Console.WriteLine(record);
-                    i++;
+                    if (record.Contains(date))
+                    {
+                        MessageBox.Show(record);
+                        txtBoxEnterDate.Text = "";
+                        Console.WriteLine(record);
+                        i++;
+                    }
                 }
             }
             Console.WriteLine("Records Found: " + i);
