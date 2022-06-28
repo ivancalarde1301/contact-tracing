@@ -577,7 +577,7 @@ namespace Contact_Tracing_App
 
         private void btnReviewSubmission_Click(object sender, EventArgs e)
         {
-            string date = "Date: December 25, 2022";
+            string date = "Date: June 27, 2022";
             string textFile = @"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt";
             string text = File.ReadAllText(textFile);
 
