@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,7 +60,7 @@ namespace Contact_Tracing_App
                 Result result = barcode.Decode((Bitmap)picBoxQRScanner.Image);
                 if (result != null)
                 {
-                    txtBoxScanned.Text = result.ToString();
+                    textBox1.Text = result.ToString();
                     timer1.Stop();
                     if (captureDevice.IsRunning)
                         captureDevice.Stop();
@@ -70,6 +71,19 @@ namespace Contact_Tracing_App
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            processFile();
+            Close();
+        }
+
+        private void processFile()
+        {
+            StreamWriter file = new StreamWriter(@"C:\Users\ivanc\Downloads\QRCode-Personal-Information.txt");
+            file.WriteLine(textBox1.Text);
+            file.Close();
         }
     }
 }

@@ -35,8 +35,9 @@
             this.cmbBoxSelectCamera = new System.Windows.Forms.ComboBox();
             this.lblCamera = new System.Windows.Forms.Label();
             this.btnScan = new System.Windows.Forms.Button();
-            this.txtBoxScanned = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnDone = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxQRScanner)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,25 +97,36 @@
             this.btnScan.UseVisualStyleBackColor = true;
             this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
-            // txtBoxScanned
-            // 
-            this.txtBoxScanned.Location = new System.Drawing.Point(12, 397);
-            this.txtBoxScanned.Name = "txtBoxScanned";
-            this.txtBoxScanned.Size = new System.Drawing.Size(313, 22);
-            this.txtBoxScanned.TabIndex = 6;
-            // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 396);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBox1.Size = new System.Drawing.Size(310, 22);
+            this.textBox1.TabIndex = 6;
+            // 
+            // btnDone
+            // 
+            this.btnDone.Location = new System.Drawing.Point(126, 427);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(75, 23);
+            this.btnDone.TabIndex = 7;
+            this.btnDone.Text = "Done";
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(337, 442);
-            this.Controls.Add(this.txtBoxScanned);
+            this.ClientSize = new System.Drawing.Size(337, 462);
+            this.Controls.Add(this.btnDone);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.lblCamera);
             this.Controls.Add(this.cmbBoxSelectCamera);
@@ -142,7 +154,8 @@
         private System.Windows.Forms.ComboBox cmbBoxSelectCamera;
         private System.Windows.Forms.Label lblCamera;
         private System.Windows.Forms.Button btnScan;
-        private System.Windows.Forms.TextBox txtBoxScanned;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnDone;
     }
 }
