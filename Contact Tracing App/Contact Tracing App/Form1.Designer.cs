@@ -820,7 +820,7 @@ namespace Contact_Tracing_App
             // 
             // btnScan
             // 
-            this.btnScan.Location = new System.Drawing.Point(413, 96);
+            this.btnScan.Location = new System.Drawing.Point(413, 97);
             this.btnScan.Name = "btnScan";
             this.btnScan.Size = new System.Drawing.Size(123, 25);
             this.btnScan.TabIndex = 88;
@@ -831,12 +831,12 @@ namespace Contact_Tracing_App
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(355, 121);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(316, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 16);
+            this.label1.Size = new System.Drawing.Size(295, 16);
             this.label1.TabIndex = 89;
-            this.label1.Text = "(Scan QR Code to Auto-Fill Information)";
+            this.label1.Text = "(Scan QR Code to Auto-Fill Personal Information)";
             // 
             // Form1
             // 

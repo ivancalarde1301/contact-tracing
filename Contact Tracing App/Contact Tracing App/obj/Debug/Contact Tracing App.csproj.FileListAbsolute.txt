@@ -10,3 +10,14 @@ C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Co
 C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.exe
 C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.pdb
 C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact_Tracing_App.Form2.resources
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\AForge.dll
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\AForge.Video.dll
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\zxing.dll
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\zxing.presentation.dll
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\AForge.xml
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\AForge.Video.xml
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\zxing.xml
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\bin\Debug\zxing.presentation.xml
+C:\Users\ivanc\source\repos\Contact Tracing App\Contact Tracing App\obj\Debug\Contact Tracing App.csproj.CopyComplete
