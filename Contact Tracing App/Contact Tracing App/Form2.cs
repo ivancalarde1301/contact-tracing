@@ -17,7 +17,20 @@ namespace Contact_Tracing_App
 {
     public partial class Form2 : Form
     {
-        public static string passValue;
+        public static string passLine1 = "";
+        public static string passLine2;
+        public static string passLine3;
+        public static string passLine4;
+        public static string passLine5;
+        public static string passLine6;
+        public static string passLine7;
+        public static string passLine8;
+        public static string passLine9;
+        public static string passLine10;
+        public static string passLine11;
+        public static string passLine12;
+        public static string passLine13;
+        public static string passLine14;
         public Form2()
         {
             InitializeComponent();
@@ -67,6 +80,7 @@ namespace Contact_Tracing_App
                     timer1.Stop();
                     if (captureDevice.IsRunning)
                         captureDevice.Stop();
+                    MessageBox.Show("Scan Successful");
                 }
             }
         }
@@ -94,6 +108,20 @@ namespace Contact_Tracing_App
             String line12 = file.ReadLine();
             String line13 = file.ReadLine();
             String line14 = file.ReadLine();
+            passLine1 = line1;
+            passLine2 = line2;
+            passLine3 = line3;
+            passLine4 = line4;
+            passLine5 = line5;
+            passLine6 = line6;
+            passLine7 = line7;
+            passLine8 = line8;
+            passLine9 = line9;
+            passLine10 = line10;
+            passLine11 = line11;
+            passLine12 = line12;
+            passLine13 = line13;
+            passLine14 = line14;
             Close();
         }
 

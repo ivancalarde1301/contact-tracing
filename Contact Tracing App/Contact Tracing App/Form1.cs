@@ -85,6 +85,14 @@ namespace Contact_Tracing_App
             {
                 txtBoxLastName.BackColor = Color.White;
             }
+            if (txtBoxSuffix.Text == "")
+            {
+                txtBoxSuffix.BackColor = Color.White;
+            }
+            else
+            {
+                txtBoxSuffix.BackColor = Color.White;
+            }
             if (txtBoxBirthdate.Text == "")
             {
                 isFill = false;
@@ -607,12 +615,48 @@ namespace Contact_Tracing_App
         private void btnScan_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
-            f2.ShowDialog();
+            f2.FormClosed += F2_FormClosed;
+            f2.Show();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void F2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            txtBoxFirstName.Text = Form2.passValue;
+            if (txtBoxSuffix.Text.Length == 0)
+            {
+                txtBoxSuffix.BackColor = Color.White;
+            }
+            else
+            {
+                txtBoxSuffix.BackColor = Color.LightYellow;
+            }
+            txtBoxFirstName.Text = Form2.passLine1;
+            txtBoxMiddleName.Text = Form2.passLine2;
+            txtBoxLastName.Text = Form2.passLine3;
+            txtBoxSuffix.Text = Form2.passLine4;
+            txtBoxBirthdate.Text = Form2.passLine5;
+            txtBoxAge.Text = Form2.passLine6;
+            txtBoxSex.Text = Form2.passLine7;
+            txtBoxPhoneNumber.Text = Form2.passLine8;
+            txtBoxUBL.Text = Form2.passLine9;
+            txtBoxStreet.Text = Form2.passLine10;
+            txtBoxBarangay.Text = Form2.passLine11;
+            txtBoxCity.Text = Form2.passLine12;
+            txtBoxProvince.Text = Form2.passLine13;
+            txtBoxEmailAddress.Text = Form2.passLine14;
+            txtBoxFirstName.BackColor = Color.LightYellow;
+            txtBoxMiddleName.BackColor = Color.LightYellow;
+            txtBoxLastName.BackColor = Color.LightYellow;
+            //txtBoxSuffix.BackColor = Color.LightYellow;
+            txtBoxBirthdate.BackColor = Color.LightYellow;
+            txtBoxAge.BackColor = Color.LightYellow;
+            txtBoxSex.BackColor = Color.LightYellow;
+            txtBoxPhoneNumber.BackColor = Color.LightYellow;
+            txtBoxUBL.BackColor = Color.LightYellow;
+            txtBoxStreet.BackColor = Color.LightYellow;
+            txtBoxBarangay.BackColor = Color.LightYellow;
+            txtBoxCity.BackColor = Color.LightYellow;
+            txtBoxProvince.BackColor = Color.LightYellow;
+            txtBoxEmailAddress.BackColor = Color.LightYellow;
         }
     }
 }

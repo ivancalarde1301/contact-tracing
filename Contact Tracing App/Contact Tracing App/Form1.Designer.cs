@@ -834,7 +834,7 @@ namespace Contact_Tracing_App
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(316, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(295, 16);
+            this.label1.Size = new System.Drawing.Size(273, 15);
             this.label1.TabIndex = 89;
             this.label1.Text = "(Scan QR Code to Auto-Fill Personal Information)";
             // 
@@ -925,7 +925,6 @@ namespace Contact_Tracing_App
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Tracing App";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
