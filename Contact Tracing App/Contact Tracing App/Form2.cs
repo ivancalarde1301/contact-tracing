@@ -19,15 +19,6 @@ namespace Contact_Tracing_App
             InitializeComponent();
         }
 
-        FilterInfoCollection filterInfoCollection;
-        VideoCaptureDevice captureDevice;
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filterInfo in filterInfoCollection) ;
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
