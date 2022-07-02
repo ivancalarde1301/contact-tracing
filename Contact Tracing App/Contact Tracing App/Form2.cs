@@ -17,6 +17,7 @@ namespace Contact_Tracing_App
 {
     public partial class Form2 : Form
     {
+        public static string passValue;
         public Form2()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace Contact_Tracing_App
 
         FilterInfoCollection filter;
         VideoCaptureDevice captureDevice;
+        string firstLine;
+        private object reader;
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -76,6 +79,21 @@ namespace Contact_Tracing_App
         private void btnDone_Click(object sender, EventArgs e)
         {
             processFile();
+            StreamReader file = new StreamReader(@"C:\Users\ivanc\Downloads\QRCode-Personal-Information.txt");
+            String line1 = file.ReadLine();
+            String line2 = file.ReadLine();
+            String line3 = file.ReadLine();
+            String line4 = file.ReadLine();
+            String line5 = file.ReadLine();
+            String line6 = file.ReadLine();
+            String line7 = file.ReadLine();
+            String line8 = file.ReadLine();
+            String line9 = file.ReadLine();
+            String line10 = file.ReadLine();
+            String line11 = file.ReadLine();
+            String line12 = file.ReadLine();
+            String line13 = file.ReadLine();
+            String line14 = file.ReadLine();
             Close();
         }
 
