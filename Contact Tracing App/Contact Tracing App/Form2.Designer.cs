@@ -104,15 +104,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 396);
+            this.textBox1.Location = new System.Drawing.Point(12, 293);
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textBox1.Size = new System.Drawing.Size(310, 22);
             this.textBox1.TabIndex = 6;
+            this.textBox1.Visible = false;
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(126, 427);
+            this.btnDone.Location = new System.Drawing.Point(126, 392);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(75, 23);
             this.btnDone.TabIndex = 7;
@@ -125,7 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(337, 462);
+            this.ClientSize = new System.Drawing.Size(337, 428);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnScan);
