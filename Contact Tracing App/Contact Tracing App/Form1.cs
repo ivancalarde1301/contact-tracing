@@ -192,6 +192,86 @@ namespace Contact_Tracing_App
             {
                 txtBoxEmailAddress.BackColor = Color.White;
             }
+            if (chckBoxVaxYes.Checked == false && chckBoxVaxNo.Checked == false)
+            {
+                isFill = false;
+                chckBoxVaxYes.ForeColor = Color.Red;
+                chckBoxVaxNo.ForeColor = Color.Red;
+            }
+            else
+            {
+                chckBoxVaxYes.ForeColor = Color.Black;
+                chckBoxVaxNo.ForeColor = Color.Black;
+            }
+            if (chckBoxVaxYes.Checked == true)
+            {
+                if (chckBoxSpecifyVax.Checked == false && chckBoxSpecifyVax2.Checked == false
+                    && chckBoxSpecifyVax3.Checked == false && chckBoxSpecifyVax4.Checked == false
+                    && chckBoxSpecify.Checked == false)
+                {
+                    chckBoxSpecifyVax.ForeColor = Color.Red;
+                    chckBoxSpecifyVax2.ForeColor = Color.Red;
+                    chckBoxSpecifyVax3.ForeColor = Color.Red;
+                    chckBoxSpecifyVax4.ForeColor = Color.Red;
+                    chckBoxSpecify.ForeColor = Color.Red;
+                }
+                else
+                {
+                    chckBoxSpecifyVax.ForeColor = Color.Black;
+                    chckBoxSpecifyVax2.ForeColor = Color.Black;
+                    chckBoxSpecifyVax3.ForeColor = Color.Black;
+                    chckBoxSpecifyVax4.ForeColor = Color.Black;
+                    chckBoxSpecify.ForeColor = Color.Black;
+                }
+            }
+            if (chckBoxSymptomsYes.Checked == false && chckBoxSymptomsNo.Checked == false)
+            {
+                isFill = false;
+                chckBoxSymptomsYes.ForeColor = Color.Red;
+                chckBoxSymptomsNo.ForeColor = Color.Red;
+            }
+            else
+            {
+                chckBoxSymptomsYes.ForeColor = Color.Black;
+                chckBoxSymptomsNo.ForeColor = Color.Black;
+            }
+            if (chckBoxSymptomsYes.Checked == true)
+            {
+                if (chckBoxFever.Checked == false && chckBoxCough.Checked == false
+                    && chckBoxTiredness.Checked == false && chckBoxLoss.Checked == false)
+                {
+                    chckBoxFever.ForeColor = Color.Red;
+                    chckBoxCough.ForeColor = Color.Red;
+                    chckBoxTiredness.ForeColor = Color.Red;
+                    chckBoxLoss.ForeColor = Color.Red;
+                }
+            }
+            else
+            {
+                chckBoxFever.ForeColor = Color.Black;
+                chckBoxCough.ForeColor = Color.Black;
+                chckBoxTiredness.ForeColor = Color.Black;
+                chckBoxLoss.ForeColor = Color.Black;
+            }
+            if (chckBoxTravelYes.Checked == false && chckBoxTravelNo.Checked == false)
+            {
+                chckBoxTravelYes.ForeColor = Color.Red;
+                chckBoxTravelNo.ForeColor = Color.Red;
+            }
+            else
+            {
+                chckBoxTravelYes.ForeColor = Color.Black;
+                chckBoxTravelNo.ForeColor = Color.Black;
+            }
+            if (chckBoxTravelYes.Checked == true && txtBoxSpecifyTravel.Text.Length == 0)
+            {
+                isFill = false;
+                txtBoxSpecifyTravel.BackColor = Color.PaleVioletRed;
+            }
+            else
+            {
+                txtBoxSpecifyTravel.BackColor = Color.White;
+            }
             if (!isFill)
             {
                 MessageBox.Show("Please fill in the blank spaces.");
@@ -578,6 +658,58 @@ namespace Contact_Tracing_App
             }
         }
 
+        private void btnClearEntries_Click(object sender, EventArgs e)
+        {
+            txtBoxDate.Text = "";
+            txtBoxTime.Text = "";
+            txtBoxFirstName.Text = "";
+            txtBoxMiddleName.Text = "";
+            txtBoxLastName.Text = "";
+            txtBoxSuffix.Text = "";
+            txtBoxEmailAddress.Text = "";
+            txtBoxBirthdate.Text = "";
+            txtBoxAge.Text = "";
+            txtBoxSex.Text = "";
+            txtBoxPhoneNumber.Text = "";
+            txtBoxUBL.Text = "";
+            txtBoxStreet.Text = "";
+            txtBoxBarangay.Text = "";
+            txtBoxCity.Text = "";
+            txtBoxProvince.Text = "";
+            chckBoxVaxYes.Checked = false;
+            chckBoxVaxNo.Checked = false;
+            chckBoxSpecifyVax.Checked = false;
+            chckBoxSpecifyVax2.Checked = false;
+            chckBoxSpecifyVax3.Checked = false;
+            chckBoxSpecifyVax4.Checked = false;
+            chckBoxSpecify.Checked = false;
+            txtBoxOther.Text = "";
+            chckBoxSymptomsYes.Checked = false;
+            chckBoxSymptomsNo.Checked = false;
+            chckBoxFever.Checked = false;
+            chckBoxCough.Checked = false;
+            chckBoxTiredness.Checked = false;
+            chckBoxLoss.Checked = false;
+            txtBoxOther2.Text = "";
+            chckBoxTravelYes.Checked = false;
+            chckBoxTravelNo.Checked = false;
+            txtBoxSpecifyTravel.Text = "";
+            chckBoxSpecifyVax.Enabled = false;
+            chckBoxSpecifyVax2.Enabled = false;
+            chckBoxSpecifyVax3.Enabled = false;
+            chckBoxSpecifyVax4.Enabled = false;
+            chckBoxSpecify.Enabled = false;
+            txtBoxOther.Enabled = false;
+            chckBoxFever.Enabled = false;
+            chckBoxCough.Enabled = false;
+            chckBoxTiredness.Enabled = false;
+            chckBoxLoss.Enabled = false;
+            lblSpecify2.Enabled = false;
+            txtBoxOther2.Enabled = false;
+            lblSpecifyTravel.Enabled = false;
+            txtBoxSpecifyTravel.Enabled = false;
+        }
+
         private void btnAllRecords_Click(object sender, EventArgs e)
         {
             StreamReader reader = new StreamReader(@"C:\Users\ivanc\Downloads\Contact-Tracing-Information.txt");
@@ -621,14 +753,6 @@ namespace Contact_Tracing_App
 
         private void F2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (txtBoxSuffix.Text.Length == 0)
-            {
-                txtBoxSuffix.BackColor = Color.White;
-            }
-            else
-            {
-                txtBoxSuffix.BackColor = Color.LightYellow;
-            }
             txtBoxFirstName.Text = Form2.passLine1;
             txtBoxMiddleName.Text = Form2.passLine2;
             txtBoxLastName.Text = Form2.passLine3;
@@ -646,7 +770,6 @@ namespace Contact_Tracing_App
             txtBoxFirstName.BackColor = Color.LightYellow;
             txtBoxMiddleName.BackColor = Color.LightYellow;
             txtBoxLastName.BackColor = Color.LightYellow;
-            //txtBoxSuffix.BackColor = Color.LightYellow;
             txtBoxBirthdate.BackColor = Color.LightYellow;
             txtBoxAge.BackColor = Color.LightYellow;
             txtBoxSex.BackColor = Color.LightYellow;
@@ -657,6 +780,16 @@ namespace Contact_Tracing_App
             txtBoxCity.BackColor = Color.LightYellow;
             txtBoxProvince.BackColor = Color.LightYellow;
             txtBoxEmailAddress.BackColor = Color.LightYellow;
+            if (txtBoxSuffix.Text.Length == 0)
+            {
+                txtBoxSuffix.BackColor = Color.White;
+            }
+            else
+            {
+                txtBoxSuffix.BackColor = Color.LightYellow;
+            }
         }
+
+
     }
 }

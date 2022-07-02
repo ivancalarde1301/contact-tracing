@@ -107,6 +107,7 @@ namespace Contact_Tracing_App
             this.txtBoxEnterDate = new System.Windows.Forms.TextBox();
             this.btnScan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClearEntries = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,7 +118,7 @@ namespace Contact_Tracing_App
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(333, 747);
+            this.btnSubmit.Location = new System.Drawing.Point(246, 747);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(150, 26);
             this.btnSubmit.TabIndex = 37;
@@ -793,7 +794,7 @@ namespace Contact_Tracing_App
             // 
             // btnAllRecords
             // 
-            this.btnAllRecords.Location = new System.Drawing.Point(489, 747);
+            this.btnAllRecords.Location = new System.Drawing.Point(567, 747);
             this.btnAllRecords.Name = "btnAllRecords";
             this.btnAllRecords.Size = new System.Drawing.Size(150, 26);
             this.btnAllRecords.TabIndex = 85;
@@ -838,11 +839,22 @@ namespace Contact_Tracing_App
             this.label1.TabIndex = 89;
             this.label1.Text = "(Scan QR Code to Auto-Fill Personal Information)";
             // 
+            // btnClearEntries
+            // 
+            this.btnClearEntries.Location = new System.Drawing.Point(407, 747);
+            this.btnClearEntries.Name = "btnClearEntries";
+            this.btnClearEntries.Size = new System.Drawing.Size(150, 26);
+            this.btnClearEntries.TabIndex = 90;
+            this.btnClearEntries.Text = "Clear Entries";
+            this.btnClearEntries.UseVisualStyleBackColor = true;
+            this.btnClearEntries.Click += new System.EventHandler(this.btnClearEntries_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 846);
+            this.Controls.Add(this.btnClearEntries);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.txtBoxEnterDate);
@@ -1018,6 +1030,7 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.TextBox txtBoxEnterDate;
         private System.Windows.Forms.Button btnScan;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnClearEntries;
     }
 }
 
