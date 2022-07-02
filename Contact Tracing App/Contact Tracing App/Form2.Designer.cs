@@ -34,7 +34,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.cmbBoxSelectCamera = new System.Windows.Forms.ComboBox();
             this.lblCamera = new System.Windows.Forms.Label();
-            this.btnStartScan = new System.Windows.Forms.Button();
+            this.btnScan = new System.Windows.Forms.Button();
+            this.txtBoxScanned = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxQRScanner)).BeginInit();
             this.SuspendLayout();
@@ -85,25 +86,36 @@
             this.lblCamera.TabIndex = 4;
             this.lblCamera.Text = "Camera:";
             // 
-            // btnStartScan
+            // btnScan
             // 
-            this.btnStartScan.Location = new System.Drawing.Point(29, 327);
-            this.btnStartScan.Name = "btnStartScan";
-            this.btnStartScan.Size = new System.Drawing.Size(105, 23);
-            this.btnStartScan.TabIndex = 5;
-            this.btnStartScan.Text = "Scan";
-            this.btnStartScan.UseVisualStyleBackColor = true;
+            this.btnScan.Location = new System.Drawing.Point(29, 327);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(105, 23);
+            this.btnScan.TabIndex = 5;
+            this.btnScan.Text = "Scan";
+            this.btnScan.UseVisualStyleBackColor = true;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
+            // txtBoxScanned
+            // 
+            this.txtBoxScanned.Location = new System.Drawing.Point(12, 397);
+            this.txtBoxScanned.Name = "txtBoxScanned";
+            this.txtBoxScanned.Size = new System.Drawing.Size(313, 22);
+            this.txtBoxScanned.TabIndex = 6;
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(337, 395);
-            this.Controls.Add(this.btnStartScan);
+            this.ClientSize = new System.Drawing.Size(337, 442);
+            this.Controls.Add(this.txtBoxScanned);
+            this.Controls.Add(this.btnScan);
             this.Controls.Add(this.lblCamera);
             this.Controls.Add(this.cmbBoxSelectCamera);
             this.Controls.Add(this.btnCancel);
@@ -114,6 +126,8 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scan QR Code";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxQRScanner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,7 +141,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox cmbBoxSelectCamera;
         private System.Windows.Forms.Label lblCamera;
-        private System.Windows.Forms.Button btnStartScan;
+        private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.TextBox txtBoxScanned;
         private System.Windows.Forms.Timer timer1;
     }
 }
