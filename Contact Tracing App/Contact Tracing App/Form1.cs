@@ -601,5 +601,11 @@ namespace Contact_Tracing_App
                 }
             }
         }
+
+        private void btnScan_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
     }
 }

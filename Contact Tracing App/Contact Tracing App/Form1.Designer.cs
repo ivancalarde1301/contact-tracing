@@ -105,6 +105,8 @@ namespace Contact_Tracing_App
             this.btnAllRecords = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtBoxEnterDate = new System.Windows.Forms.TextBox();
+            this.btnScan = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picboxDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxInfo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -746,36 +748,37 @@ namespace Contact_Tracing_App
             // 
             // txtBoxDate
             // 
-            this.txtBoxDate.Location = new System.Drawing.Point(421, 75);
+            this.txtBoxDate.Location = new System.Drawing.Point(354, 68);
             this.txtBoxDate.Name = "txtBoxDate";
-            this.txtBoxDate.Size = new System.Drawing.Size(177, 22);
+            this.txtBoxDate.Size = new System.Drawing.Size(119, 22);
             this.txtBoxDate.TabIndex = 1;
             // 
             // lblDate
             // 
-            this.lblDate.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(350, 71);
+            this.lblDate.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDate.Location = new System.Drawing.Point(311, 67);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(65, 26);
+            this.lblDate.Size = new System.Drawing.Size(47, 22);
             this.lblDate.TabIndex = 6;
             this.lblDate.Text = "Date";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTime
             // 
-            this.lblTime.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(350, 104);
+            this.lblTime.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(469, 68);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(65, 26);
+            this.lblTime.Size = new System.Drawing.Size(48, 22);
             this.lblTime.TabIndex = 8;
             this.lblTime.Text = "Time";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtBoxTime
             // 
-            this.txtBoxTime.Location = new System.Drawing.Point(421, 109);
+            this.txtBoxTime.Location = new System.Drawing.Point(514, 68);
             this.txtBoxTime.Name = "txtBoxTime";
-            this.txtBoxTime.Size = new System.Drawing.Size(177, 22);
+            this.txtBoxTime.Size = new System.Drawing.Size(119, 22);
             this.txtBoxTime.TabIndex = 2;
             // 
             // btnReviewSubmission
@@ -815,11 +818,33 @@ namespace Contact_Tracing_App
             this.txtBoxEnterDate.TabIndex = 87;
             this.txtBoxEnterDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnScan
+            // 
+            this.btnScan.Location = new System.Drawing.Point(413, 96);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(123, 25);
+            this.btnScan.TabIndex = 88;
+            this.btnScan.Text = "Scan";
+            this.btnScan.UseVisualStyleBackColor = true;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(355, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 16);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "(Scan QR Code to Auto-Fill Information)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 846);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnScan);
             this.Controls.Add(this.txtBoxEnterDate);
             this.Controls.Add(this.btnAllRecords);
             this.Controls.Add(this.btnReviewSubmission);
@@ -991,6 +1016,8 @@ namespace Contact_Tracing_App
         private System.Windows.Forms.Button btnAllRecords;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox txtBoxEnterDate;
+        private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.Label label1;
     }
 }
 
